@@ -1,0 +1,570 @@
+const imgHero = "http://localhost:3845/assets/42470d353670078e32949fd0ac50221f13b2b8e9.png";
+const imgImage17 = "http://localhost:3845/assets/1b687277f0b8b84b5b0a7f9cbd52a6824fb89a32.png";
+const imgImageShowcase = "http://localhost:3845/assets/9c14dde1cb951a46f015b1bd31cb91d094914db2.png";
+const imgFrame62 = "http://localhost:3845/assets/4830ad5ab3d63beaa476edf5901776aab5534803.png";
+const imgFrame61 = "http://localhost:3845/assets/15deb87332443bcc34c5925730408fde86bddb54.png";
+const imgFrame63 = "http://localhost:3845/assets/ca15118feb168b20055a4e725818910bf64ee50a.png";
+const imgFrame59 = "http://localhost:3845/assets/e6378cf9696f344b5c9a5058e8bccc05296f4565.png";
+const imgCta = "http://localhost:3845/assets/3aaeaa54f01334f70b47d902d3e5790edd65dae0.png";
+const imgEnexLogoSlogan1 = "http://localhost:3845/assets/6b737a2eef2ac2b9bd153abe359a3ce7183ce405.svg";
+const imgGroup39499 = "http://localhost:3845/assets/db0dae7c35f644edc5dd866619058b7030b58fbb.svg";
+const imgGroup39501 = "http://localhost:3845/assets/b77aebd686a6ef69f12207ff176b212c166a9cac.svg";
+const imgLine5 = "http://localhost:3845/assets/2c295b56c83151b344a5c7a551c3effdcf842321.svg";
+const imgIdea = "http://localhost:3845/assets/d5b26dd22d77dfbed929a335d04b182447b6d307.svg";
+const imgFi1688843 = "http://localhost:3845/assets/4fec6de44cb8f103ac1af5db2505e35a2d2bb92b.svg";
+const imgLayer2 = "http://localhost:3845/assets/e66d4ed9758e968a7e0ac01d1e2ca453b0579a00.svg";
+const imgGroup39502 = "http://localhost:3845/assets/07c8a6356e4b2f7bbca7863c293b6f3e3a37d67e.svg";
+const imgLine6 = "http://localhost:3845/assets/7b74adbed95df93469b89f39957586ad4426d17a.svg";
+const imgGroup = "http://localhost:3845/assets/19502f0ab63874d67d9dbb2af1c464c8dfa89dfd.svg";
+const imgGroup1 = "http://localhost:3845/assets/1454767240a6ed8ddb5b08071bdaa332cd1438cc.svg";
+const imgFi12638125 = "http://localhost:3845/assets/7c9cefcc24469b206554c0a1d20ecb055deff4bc.svg";
+const imgFi10351056 = "http://localhost:3845/assets/101a23a211947efb96d50c4162b716b0a655d95a.svg";
+const imgGroup39503 = "http://localhost:3845/assets/66de2ef559fb6519865bb4d696b87702ccc114d3.svg";
+const imgLine7 = "http://localhost:3845/assets/c785326679332dce4b0554687dc05c24ce7ecb17.svg";
+const imgFi12327003 = "http://localhost:3845/assets/e9f8011e3fa788e8bb940e63f4a0ecd3bb1b1505.svg";
+const imgLayer3 = "http://localhost:3845/assets/2a6ef9c4f81adbed00c9f9bb3b0c779c892ec616.svg";
+const imgLayer10 = "http://localhost:3845/assets/e4fa6dc6c049fe4285cdfd5f50e89d9e61767f10.svg";
+const imgGroup39504 = "http://localhost:3845/assets/2d8f3009614bf230b278df71d2341c0a183361d7.svg";
+const imgLine8 = "http://localhost:3845/assets/218f7a0d4365e30499a9de84fc4f36e4b1c30121.svg";
+const imgFi12327004 = "http://localhost:3845/assets/b7011c67d9541b7ddf6aeb17b080a6a4df769a0d.svg";
+const imgLayer4 = "http://localhost:3845/assets/0b2a601782e4af0faec64ae84b4343a8a6f2eff0.svg";
+const imgGroup2 = "http://localhost:3845/assets/96e0b7e5da9731b8604962f50ff49d4bae5908b0.svg";
+const imgLine4 = "http://localhost:3845/assets/a90ee0529e440a9c5c5d6938d1ca78750ef94f9f.svg";
+const imgEnexLogo1 = "http://localhost:3845/assets/97793fcc67a741574f12970876ec92af9e8faf20.svg";
+const imgLine9 = "http://localhost:3845/assets/8c1d4ef003b87e05783155ad5e68806fa410fc1d.svg";
+
+export default function Leistungen() {
+  return (
+    <div className="bg-white content-stretch flex flex-col items-start relative size-full" data-node-id="2007:1582" data-name="Leistungen">
+      <div className="content-stretch flex flex-col gap-[10px] h-[960px] items-center overflow-clip pb-[20px] pt-[177px] px-[40px] relative shrink-0 w-full" data-node-id="2026:8455" data-name="Hero">
+        <div aria-hidden className="absolute inset-0 pointer-events-none">
+          <img alt="" className="absolute max-w-none object-cover size-full" src={imgHero} />
+          <div className="absolute bg-gradient-to-b from-[36.652%] from-[rgba(0,0,0,0.5)] inset-0 to-[rgba(0,0,0,0)]" />
+        </div>
+        <div className="absolute flex h-[186px] items-center justify-center right-0 top-0 w-[54px]">
+          <div className="-rotate-90 flex-none">
+            <div className="bg-[#48c7f4] content-stretch flex items-center px-[24px] py-[16px] relative w-[186px]" data-node-id="2026:8456">
+              <p className="[word-break:break-word] font-['Inter:Semi_Bold'] font-semibold leading-[1.4] not-italic relative shrink-0 text-[16px] text-center text-white tracking-[-0.32px] whitespace-nowrap" data-node-id="2026:8457">
+                Jetzt kontaktieren
+              </p>
+            </div>
+          </div>
+        </div>
+        <div className="absolute content-stretch flex gap-[52px] items-center left-[40px] top-[25px]" data-node-id="2026:8458">
+          <div className="h-[48px] relative shrink-0 w-[172px]" data-node-id="2026:8459" data-name="ENEX Logo Slogan 1">
+            <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgEnexLogoSlogan1} />
+          </div>
+          <div className="[word-break:break-word] content-stretch flex font-['Inter:Medium'] font-medium gap-[40px] h-[49px] items-center leading-[1.4] not-italic px-[24px] py-[12px] relative rounded-[4px] shrink-0 text-[14px] text-[rgba(255,255,255,0.8)] text-center tracking-[-0.56px] whitespace-nowrap" data-node-id="2026:8491">
+            <p className="relative shrink-0" data-node-id="2026:8492">
+              Home
+            </p>
+            <p className="relative shrink-0" data-node-id="2026:8493">
+              Leistungen
+            </p>
+            <p className="relative shrink-0" data-node-id="2026:8494">
+              Referenzen
+            </p>
+            <p className="relative shrink-0" data-node-id="2026:8495">
+              Über uns
+            </p>
+          </div>
+        </div>
+        <div className="content-stretch flex flex-col items-start relative shrink-0 w-full" data-node-id="2026:8496">
+          <div className="[word-break:break-word] content-stretch flex flex-col gap-[24px] items-start not-italic relative shrink-0 text-white w-[900px]" data-node-id="2026:8501">
+            <p className="font-['Inter:Semi_Bold'] font-semibold leading-[0] min-w-full relative shrink-0 text-[0px] tracking-[-6.6px] w-[min-content]" data-node-id="2026:8502">
+              <span className="leading-[0.9] text-[110px]">{`Unsere `}</span>
+              <span className="leading-[0.9] text-[110px] text-[rgba(255,255,255,0.6)]">{`Leistungen `}</span>
+              <span className="leading-[0.9] text-[110px]">für Ihr Projekt</span>
+            </p>
+            <p className="font-['Inter:Medium'] font-medium leading-[1.5] relative shrink-0 text-[16px] tracking-[-0.32px] w-[580px]" data-node-id="2026:8503">
+              Elektroinstallationen, Ladetechnik, Wärmepumpen und mehr. Für private, gewerbliche und industrielle Projekte in Bonn und der Region.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div className="bg-white content-stretch flex flex-col items-start overflow-clip px-[40px] py-[100px] relative shrink-0 w-full" data-node-id="2007:1631">
+        <div className="content-stretch flex flex-col gap-[80px] items-end relative shrink-0 w-full" data-node-id="2007:1632">
+          <div className="content-stretch flex flex-col gap-[60px] items-start relative shrink-0 w-full" data-node-id="2007:1633">
+            <div className="bg-[#edeff4] content-stretch flex gap-[12px] items-center pl-[12px] pr-[16px] py-[4px] relative shrink-0" data-node-id="2007:1634">
+              <div className="relative shrink-0 size-[12px]" data-node-id="2007:1635">
+                <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgGroup39499} />
+              </div>
+              <p className="[word-break:break-word] font-['Inter:Semi_Bold'] font-semibold leading-[1.2] not-italic relative shrink-0 text-[#030303] text-[18px] tracking-[-0.36px] whitespace-nowrap" data-node-id="2007:1640">
+                Übersicht der Leistungen
+              </p>
+            </div>
+            <p className="[text-box-edge:cap_alphabetic] [text-box-trim:trim-both] [word-break:break-word] font-['Inter:Medium'] font-medium leading-[1.2] min-w-full not-italic relative shrink-0 text-[#2b2e31] text-[50px] tracking-[-3px] w-[min-content]" data-node-id="2007:1641">
+              Wir decken das gesamte Spektrum moderner Elektrotechnik ab. Von der klassischen Installation bis zur Ladeinfrastruktur und Wärmepumpenanbindung, alles aus einer Hand und fachgerecht umgesetzt.
+            </p>
+          </div>
+          <div className="bg-white h-[255.944px] overflow-clip relative shrink-0 w-[454.451px]" data-node-id="2007:1642" data-name="Hero">
+            <div className="absolute h-[255.855px] left-0 top-0 w-[454.611px]" data-node-id="2007:1643" data-name="image 17">
+              <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgImage17} />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="h-[929px] relative shrink-0 w-[1440px]" data-node-id="2026:8508" data-name="Image showcase">
+        <div aria-hidden className="absolute inset-0 pointer-events-none">
+          <img alt="" className="absolute max-w-none object-cover size-full" src={imgImageShowcase} />
+          <img alt="" className="absolute max-w-none object-cover size-full" src={imgImage17} />
+        </div>
+      </div>
+      <div className="bg-[#fafafa] content-stretch flex flex-col items-start overflow-clip px-[40px] py-[100px] relative shrink-0 w-[1440px]" data-node-id="2007:1646" data-name="Srvice card stack">
+        <div className="content-stretch flex flex-col gap-[80px] items-center relative shrink-0 w-[1360px]" data-node-id="2007:1647">
+          <div className="content-stretch flex flex-col gap-[60px] items-center relative shrink-0 w-full" data-node-id="2007:1648">
+            <div className="bg-[#edeff4] content-stretch flex gap-[12px] items-center pl-[12px] pr-[16px] py-[4px] relative shrink-0" data-node-id="2007:1649">
+              <div className="relative shrink-0 size-[12px]" data-node-id="2007:1650">
+                <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgGroup39499} />
+              </div>
+              <p className="[word-break:break-word] font-['Inter:Semi_Bold'] font-semibold leading-[1.2] not-italic relative shrink-0 text-[#030303] text-[18px] tracking-[-0.36px] whitespace-nowrap" data-node-id="2007:1655">
+                Services
+              </p>
+            </div>
+            <p className="[text-box-edge:cap_alphabetic] [text-box-trim:trim-both] [word-break:break-word] font-['Inter:Medium'] font-medium leading-[0] min-w-full not-italic relative shrink-0 text-[#2b2e31] text-[80px] text-center tracking-[-4.8px] w-[min-content]" data-node-id="2007:1656">
+              <span className="leading-[1.1]">{`Alle Leistungen aus `}</span>
+              <span className="leading-[1.1] text-[rgba(43,46,49,0.6)]">einer Hand</span>
+            </p>
+          </div>
+          <div className="content-stretch flex flex-col items-center relative shrink-0 w-full" data-node-id="2007:1657">
+            <div className="-translate-y-1/2 absolute bg-white border-[0.94px] border-[rgba(43,46,49,0.1)] border-solid content-stretch flex gap-[20.679px] items-start left-[115px] p-[11.279px] top-[calc(50%+99.52px)] w-[1130px]" data-node-id="2007:1658">
+              <div className="bg-[#eee] border-[0.94px] border-[rgba(0,0,0,0.1)] border-solid flex-[1_0_0] h-[526.376px] min-w-px overflow-clip relative" data-node-id="2007:1659">
+                <div className="absolute h-[693.688px] left-[-0.94px] top-[-103.34px] w-[658.909px]" data-node-id="2007:1660">
+                  <div className="absolute inset-0 overflow-hidden pointer-events-none">
+                    <img alt="" className="absolute h-[99.94%] left-0 max-w-none top-[0.04%] w-full" src={imgFrame62} />
+                  </div>
+                </div>
+              </div>
+              <div className="content-stretch flex flex-[1_0_0] flex-col items-start justify-between min-w-px p-[22.559px] relative self-stretch" data-node-id="2007:1661">
+                <div className="content-stretch flex items-start justify-between relative shrink-0 w-full" data-node-id="2007:1662">
+                  <p className="[word-break:break-word] font-['Space_Mono:Regular'] leading-[1.4] not-italic relative shrink-0 text-[15.039px] text-[rgba(3,3,3,0.4)] whitespace-nowrap" data-node-id="2007:1663">
+                    002/004
+                  </p>
+                  <div className="bg-[#48c7f4] content-stretch flex items-center overflow-clip p-[9.4px] relative rounded-[93.996px] shrink-0" data-node-id="2007:1664">
+                    <div className="overflow-clip relative shrink-0 size-[22.559px]" data-node-id="2007:1665" data-name="arrow-right">
+                      <div className="absolute inset-[20.83%_20.83%_20.84%_20.83%]" data-node-id="2007:1666">
+                        <div className="absolute inset-[-5.36%_-5.35%_-5.36%_-5.36%]">
+                          <img alt="" className="block max-w-none size-full" src={imgGroup39501} />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="content-stretch flex flex-col gap-[37.598px] items-start relative shrink-0 w-full" data-node-id="2007:1669">
+                  <div className="[word-break:break-word] content-stretch flex flex-col font-normal gap-[11.279px] items-start relative shrink-0 w-full" data-node-id="2007:1670">
+                    <p className="font-['DM_Sans:Regular'] leading-[1.1] relative shrink-0 text-[#030303] text-[46.998px] tracking-[-0.94px] whitespace-nowrap" data-node-id="2007:1671" style={{ fontVariationSettings: '"opsz" 14' }}>
+                      Allgemeine Elektrotechnik
+                    </p>
+                    <p className="font-['Inter:Regular'] leading-[1.5] min-w-full not-italic relative shrink-0 text-[15.039px] text-[rgba(3,3,3,0.8)] tracking-[-0.9024px] w-[min-content]" data-node-id="2007:1672">
+                      Maßgeschneiderte Elektro-Lösungen, die auf die spezifischen Anforderungen jedes Projekts abgestimmt sind. Wir kombinieren Fachwissen und Erfahrung, um zuverlässige Ergebnisse in Wohn-, Gewerbe- und Industrieanwendungen zu liefern.
+                    </p>
+                  </div>
+                  <div className="h-0 relative shrink-0 w-full" data-node-id="2007:1673">
+                    <div className="absolute inset-[-0.94px_0_0_0]">
+                      <img alt="" className="block max-w-none size-full" src={imgLine5} />
+                    </div>
+                  </div>
+                  <div className="content-stretch flex gap-[11.279px] items-start relative shrink-0 w-full" data-node-id="2007:1674">
+                    <div className="content-stretch flex flex-[1_0_0] flex-col gap-[9.4px] items-start min-w-px relative" data-node-id="2007:1675">
+                      <div className="overflow-clip relative shrink-0 size-[30.079px]" data-node-id="2007:1676" data-name="fi_2153534">
+                        <div className="absolute inset-[6.25%_10.94%]" data-node-id="2007:1677" data-name="Idea">
+                          <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgIdea} />
+                        </div>
+                      </div>
+                      <div className="[word-break:break-word] content-stretch flex flex-col gap-[1.88px] items-start leading-[1.4] not-italic relative shrink-0 w-full" data-node-id="2007:1686">
+                        <p className="font-['Inter:Semi_Bold'] font-semibold relative shrink-0 text-[#030303] text-[15.039px] tracking-[-0.6016px] w-full" data-node-id="2007:1687">
+                          Maßgeschneiderte Lösungen
+                        </p>
+                        <p className="font-['Inter:Regular'] font-normal relative shrink-0 text-[13.159px] text-[rgba(3,3,3,0.8)] tracking-[-0.2632px] w-full" data-node-id="2007:1688">
+                          Individuelle elektrische Systeme für Haushalte und Unternehmen
+                        </p>
+                      </div>
+                    </div>
+                    <div className="content-stretch flex flex-[1_0_0] flex-col gap-[9.4px] items-start min-w-px relative" data-node-id="2007:1689">
+                      <div className="relative shrink-0 size-[30.079px]" data-node-id="2007:1690" data-name="fi_1688843">
+                        <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgFi1688843} />
+                      </div>
+                      <div className="[word-break:break-word] content-stretch flex flex-col gap-[1.88px] items-start leading-[1.4] not-italic relative shrink-0 w-full" data-node-id="2007:1693">
+                        <p className="font-['Inter:Semi_Bold'] font-semibold relative shrink-0 text-[#030303] text-[15.039px] tracking-[-0.6016px] w-full" data-node-id="2007:1694">{`Fachwissen & Erfahrung`}</p>
+                        <p className="font-['Inter:Regular'] font-normal relative shrink-0 text-[13.159px] text-[rgba(3,3,3,0.8)] tracking-[-0.2632px] w-full" data-node-id="2007:1695">
+                          Vereint technisches Fachwissen mit praktischer Umsetzung.
+                        </p>
+                      </div>
+                    </div>
+                    <div className="content-stretch flex flex-[1_0_0] flex-col gap-[9.4px] items-start min-w-px relative" data-node-id="2007:1696">
+                      <div className="overflow-clip relative shrink-0 size-[30.079px]" data-node-id="2007:1697" data-name="fi_8138693">
+                        <div className="absolute inset-[5.21%_5.22%_5.21%_5.21%]" data-node-id="2007:1698" data-name="Layer 2">
+                          <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgLayer2} />
+                        </div>
+                      </div>
+                      <div className="[word-break:break-word] content-stretch flex flex-col gap-[1.88px] items-start leading-[1.4] not-italic relative shrink-0 w-full" data-node-id="2007:1701">
+                        <p className="font-['Inter:Semi_Bold'] font-semibold relative shrink-0 text-[#030303] text-[15.039px] tracking-[-0.6016px] w-full" data-node-id="2007:1702">
+                          Zuverlässige Ergebnisse
+                        </p>
+                        <p className="font-['Inter:Regular'] font-normal relative shrink-0 text-[13.159px] text-[rgba(3,3,3,0.8)] tracking-[-0.2632px] w-full" data-node-id="2007:1703">
+                          Bietet sichere und zuverlässige Elektroinstallationen.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="-translate-y-1/2 absolute bg-white border-[0.94px] border-[rgba(43,46,49,0.1)] border-solid content-stretch drop-shadow-[0px_14px_12px_rgba(0,0,0,0.05)] flex gap-[20.679px] items-start left-[80px] p-[11.279px] top-[calc(50%+69.52px)] w-[1200px]" data-node-id="2007:1704">
+              <div className="bg-[#eee] border-[0.94px] border-[rgba(0,0,0,0.1)] border-solid flex-[1_0_0] h-[526.376px] min-w-px overflow-clip relative" data-node-id="2007:1705">
+                <div className="absolute left-[-0.94px] size-[701.207px] top-[-103.34px]" data-node-id="2007:1706">
+                  <div className="absolute inset-0 overflow-hidden pointer-events-none">
+                    <img alt="" className="absolute h-[99.93%] left-0 max-w-none top-[0.04%] w-full" src={imgFrame61} />
+                  </div>
+                </div>
+              </div>
+              <div className="content-stretch flex flex-[1_0_0] flex-col items-start justify-between min-w-px p-[22.559px] relative self-stretch" data-node-id="2007:1707">
+                <div className="content-stretch flex items-start justify-between relative shrink-0 w-full" data-node-id="2007:1708">
+                  <p className="[word-break:break-word] font-['Space_Mono:Regular'] leading-[1.4] not-italic relative shrink-0 text-[15.039px] text-[rgba(3,3,3,0.4)] whitespace-nowrap" data-node-id="2007:1709">
+                    002/004
+                  </p>
+                  <div className="bg-[#48c7f4] content-stretch flex items-center overflow-clip p-[9.4px] relative rounded-[93.996px] shrink-0" data-node-id="2007:1710">
+                    <div className="overflow-clip relative shrink-0 size-[22.559px]" data-node-id="2007:1711" data-name="arrow-right">
+                      <div className="absolute inset-[20.83%]" data-node-id="2007:1712">
+                        <div className="absolute inset-[-5.36%_-5.35%_-5.36%_-5.36%]">
+                          <img alt="" className="block max-w-none size-full" src={imgGroup39502} />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="content-stretch flex flex-col gap-[37.598px] items-start relative shrink-0 w-full" data-node-id="2007:1715">
+                  <div className="[word-break:break-word] content-stretch flex flex-col font-['Inter:Regular'] font-normal gap-[11.279px] items-start not-italic relative shrink-0 w-full" data-node-id="2007:1716">
+                    <p className="leading-[1.1] relative shrink-0 text-[#030303] text-[46.998px] tracking-[-2.8199px] whitespace-nowrap" data-node-id="2007:1717">
+                      Wärmepumpen-Integration
+                    </p>
+                    <p className="leading-[1.5] min-w-full relative shrink-0 text-[15.039px] text-[rgba(3,3,3,0.8)] tracking-[-0.3008px] w-[min-content]" data-node-id="2007:1718">
+                      Nahtlose Integration moderner Wärmepumpensysteme in bestehende und neue Elektroinstallationen. Von der Anschlussplanung bis zur Inbetriebnahme gewährleisten wir effizienten Betrieb, zuverlässige Leistung und zukunftssichere Energieinfrastruktur.
+                    </p>
+                  </div>
+                  <div className="h-0 relative shrink-0 w-full" data-node-id="2007:1719">
+                    <div className="absolute inset-[-0.94px_0_0_0]">
+                      <img alt="" className="block max-w-none size-full" src={imgLine6} />
+                    </div>
+                  </div>
+                  <div className="content-stretch flex gap-[11.279px] items-start relative shrink-0 w-full" data-node-id="2007:1720">
+                    <div className="content-stretch flex flex-[1_0_0] flex-col gap-[9.4px] items-start min-w-px relative" data-node-id="2007:1721">
+                      <div className="overflow-clip relative shrink-0 size-[30.079px]" data-node-id="2007:1722" data-name="fi_5882230">
+                        <div className="absolute contents inset-[1.28%_1.68%]" data-node-id="2007:1723" data-name="Group">
+                          <div className="absolute inset-[3.13%_2.54%]" data-node-id="2007:1724" data-name="Group">
+                            <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgGroup} />
+                          </div>
+                          <div className="absolute inset-[1.28%_1.68%]" data-node-id="2007:1729" data-name="Group">
+                            <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgGroup1} />
+                          </div>
+                        </div>
+                      </div>
+                      <div className="[word-break:break-word] content-stretch flex flex-col gap-[1.88px] items-start leading-[1.4] not-italic relative shrink-0 w-full" data-node-id="2007:1736">
+                        <p className="font-['Inter:Semi_Bold'] font-semibold relative shrink-0 text-[#030303] text-[15.039px] tracking-[-0.3008px] w-full" data-node-id="2007:1737">
+                          Nahtlose Einrichtung
+                        </p>
+                        <p className="font-['Inter:Regular'] font-normal relative shrink-0 text-[13.159px] text-[rgba(3,3,3,0.8)] tracking-[-0.2632px] w-full" data-node-id="2007:1738">
+                          Integriert Wärmepumpen in elektrische Systeme.
+                        </p>
+                      </div>
+                    </div>
+                    <div className="content-stretch flex flex-[1_0_0] flex-col gap-[9.4px] items-start min-w-px relative" data-node-id="2007:1739">
+                      <div className="relative shrink-0 size-[30.079px]" data-node-id="2007:1740" data-name="fi_12638125">
+                        <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgFi12638125} />
+                      </div>
+                      <div className="[word-break:break-word] content-stretch flex flex-col gap-[1.88px] items-start leading-[1.4] not-italic relative shrink-0 w-full" data-node-id="2007:1742">
+                        <p className="font-['Inter:Semi_Bold'] font-semibold relative shrink-0 text-[#030303] text-[15.039px] tracking-[-0.3008px] w-full" data-node-id="2007:1743">
+                          Effiziente Betriebsweise
+                        </p>
+                        <p className="font-['Inter:Regular'] font-normal relative shrink-0 text-[13.159px] text-[rgba(3,3,3,0.8)] tracking-[-0.2632px] w-full" data-node-id="2007:1744">
+                          Sichert zuverlässige und optimierte Leistung.
+                        </p>
+                      </div>
+                    </div>
+                    <div className="content-stretch flex flex-[1_0_0] flex-col gap-[9.4px] items-start min-w-px relative" data-node-id="2007:1745">
+                      <div className="relative shrink-0 size-[30.079px]" data-node-id="2007:1746" data-name="fi_10351056">
+                        <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgFi10351056} />
+                      </div>
+                      <div className="[word-break:break-word] content-stretch flex flex-col gap-[1.88px] items-start leading-[1.4] not-italic relative shrink-0 w-full" data-node-id="2007:1758">
+                        <p className="font-['Inter:Semi_Bold'] font-semibold relative shrink-0 text-[#030303] text-[15.039px] tracking-[-0.3008px] w-full" data-node-id="2007:1759">
+                          Zukunftsfähige Energie
+                        </p>
+                        <p className="font-['Inter:Regular'] font-normal relative shrink-0 text-[13.159px] text-[rgba(3,3,3,0.8)] tracking-[-0.2632px] w-full" data-node-id="2007:1760">
+                          Unterstützt nachhaltige Energieinfrastruktur.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="-translate-y-1/2 absolute bg-white border-[0.94px] border-[rgba(43,46,49,0.1)] border-solid content-stretch drop-shadow-[0px_14px_12px_rgba(0,0,0,0.05)] flex gap-[20.679px] items-start left-[40px] p-[11.279px] top-[calc(50%+39.52px)] w-[1280px]" data-node-id="2007:1761">
+              <div className="bg-[#eee] border-[0.94px] border-[rgba(0,0,0,0.1)] border-solid flex-[1_0_0] h-[526.376px] min-w-px overflow-clip relative" data-node-id="2007:1762">
+                <div className="absolute h-[558.334px] left-[-0.94px] top-[-19.69px] w-[617.551px]" data-node-id="2007:1763">
+                  <div className="absolute inset-0 overflow-hidden pointer-events-none">
+                    <img alt="" className="absolute h-[99.95%] left-[-5.21%] max-w-none top-[0.01%] w-[105.21%]" src={imgFrame63} />
+                  </div>
+                </div>
+              </div>
+              <div className="content-stretch flex flex-[1_0_0] flex-col items-start justify-between min-w-px p-[22.559px] relative self-stretch" data-node-id="2007:1764">
+                <div className="content-stretch flex items-start justify-between relative shrink-0 w-full" data-node-id="2007:1765">
+                  <p className="[word-break:break-word] font-['Space_Mono:Regular'] leading-[1.4] not-italic relative shrink-0 text-[15.039px] text-[rgba(3,3,3,0.4)] whitespace-nowrap" data-node-id="2007:1766">
+                    002/004
+                  </p>
+                  <div className="bg-[#48c7f4] content-stretch flex items-center overflow-clip p-[9.4px] relative rounded-[93.996px] shrink-0" data-node-id="2007:1767">
+                    <div className="overflow-clip relative shrink-0 size-[22.559px]" data-node-id="2007:1768" data-name="arrow-right">
+                      <div className="absolute inset-[20.83%]" data-node-id="2007:1769">
+                        <div className="absolute inset-[-5.36%_-5.35%_-5.36%_-5.36%]">
+                          <img alt="" className="block max-w-none size-full" src={imgGroup39503} />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="content-stretch flex flex-col gap-[37.598px] items-start relative shrink-0 w-full" data-node-id="2007:1772">
+                  <div className="[word-break:break-word] content-stretch flex flex-col font-normal gap-[11.279px] items-start relative shrink-0 w-full" data-node-id="2007:1773">
+                    <p className="font-['Inter:Regular'] leading-[1.1] not-italic relative shrink-0 text-[#030303] text-[46.998px] tracking-[-2.8199px] whitespace-nowrap" data-node-id="2007:1774">
+                      Standard-installationen
+                    </p>
+                    <p className="font-['DM_Sans:Regular'] leading-[1.5] min-w-full relative shrink-0 text-[15.039px] text-[rgba(3,3,3,0.8)] tracking-[-0.3008px] w-[min-content]" data-node-id="2007:1775" style={{ fontVariationSettings: '"opsz" 14' }}>
+                      Professionelle Elektroinstallationen für Neubauten, Renovierungen und Modernisierungen. Wir bieten sichere, normgerechte Lösungen für Einfamilienhäuser, Zählerkästen, Verteilungssysteme und alltägliche Elektrobedürfnisse.
+                    </p>
+                  </div>
+                  <div className="h-0 relative shrink-0 w-full" data-node-id="2007:1776">
+                    <div className="absolute inset-[-0.94px_0_0_0]">
+                      <img alt="" className="block max-w-none size-full" src={imgLine7} />
+                    </div>
+                  </div>
+                  <div className="content-stretch flex gap-[11.279px] items-start relative shrink-0 w-full" data-node-id="2007:1777">
+                    <div className="content-stretch flex flex-[1_0_0] flex-col gap-[9.4px] items-start min-w-px relative" data-node-id="2007:1778">
+                      <div className="relative shrink-0 size-[30.079px]" data-node-id="2007:1779" data-name="fi_12327003">
+                        <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgFi12327003} />
+                      </div>
+                      <div className="[word-break:break-word] content-stretch flex flex-col gap-[1.88px] items-start leading-[1.4] not-italic relative shrink-0 w-full" data-node-id="2007:1781">
+                        <p className="font-['Inter:Semi_Bold'] font-semibold relative shrink-0 text-[#030303] text-[15.039px] tracking-[-0.3008px] w-full" data-node-id="2007:1782">
+                          Für alle Bauvorhaben
+                        </p>
+                        <p className="font-['Inter:Regular'] font-normal relative shrink-0 text-[13.159px] text-[rgba(3,3,3,0.8)] tracking-[-0.2632px] w-full" data-node-id="2007:1783">
+                          Neubauten, Aufrüstungen und Renovierungen.
+                        </p>
+                      </div>
+                    </div>
+                    <div className="content-stretch flex flex-[1_0_0] flex-col gap-[9.4px] items-start min-w-px relative" data-node-id="2007:1784">
+                      <div className="overflow-clip relative shrink-0 size-[30.079px]" data-node-id="2007:1785" data-name="fi_10348976">
+                        <div className="absolute inset-[5.99%_9.37%_5.8%_9.38%]" data-node-id="2007:1786" data-name="Layer 2">
+                          <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgLayer3} />
+                        </div>
+                      </div>
+                      <div className="[word-break:break-word] content-stretch flex flex-col gap-[1.88px] items-start leading-[1.4] not-italic relative shrink-0 w-full" data-node-id="2007:1789">
+                        <p className="font-['Inter:Semi_Bold'] font-semibold relative shrink-0 text-[#030303] text-[15.039px] tracking-[-0.3008px] w-full" data-node-id="2007:1790">{`Sicher & Konform`}</p>
+                        <p className="font-['Inter:Regular'] font-normal relative shrink-0 text-[13.159px] text-[rgba(3,3,3,0.8)] tracking-[-0.2632px] w-full" data-node-id="2007:1791">
+                          Lösungen entsprechen Vorschriften und Standards
+                        </p>
+                      </div>
+                    </div>
+                    <div className="content-stretch flex flex-[1_0_0] flex-col gap-[9.4px] items-start min-w-px relative" data-node-id="2007:1792">
+                      <div className="overflow-clip relative shrink-0 size-[30.079px]" data-node-id="2007:1793" data-name="fi_3185876">
+                        <div className="absolute inset-[3.12%_15.64%_3.11%_15.64%]" data-node-id="2007:1794" data-name="Layer 10">
+                          <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgLayer10} />
+                        </div>
+                      </div>
+                      <div className="[word-break:break-word] content-stretch flex flex-col gap-[1.88px] items-start leading-[1.4] not-italic relative shrink-0 w-full" data-node-id="2007:1796">
+                        <p className="font-['Inter:Semi_Bold'] font-semibold relative shrink-0 text-[#030303] text-[15.039px] tracking-[-0.3008px] w-full" data-node-id="2007:1797">
+                          Alltägliche Elektrobedürfnisse
+                        </p>
+                        <p className="font-['Inter:Regular'] font-normal relative shrink-0 text-[13.159px] text-[rgba(3,3,3,0.8)] tracking-[-0.2632px] w-full" data-node-id="2007:1798">
+                          Umfasst Wohnhäuser und Verteilungssysteme.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="bg-white border border-[rgba(43,46,49,0.1)] border-solid content-stretch drop-shadow-[0px_14px_12px_rgba(0,0,0,0.05)] flex gap-[22px] items-start p-[12px] relative shrink-0 w-[1360px]" data-node-id="2007:1799">
+              <div className="bg-[#eee] border border-[rgba(0,0,0,0.1)] border-solid flex-[1_0_0] h-[560px] min-w-px overflow-clip relative" data-node-id="2007:1800">
+                <div className="-translate-y-1/2 absolute h-[589px] right-[-25px] top-[calc(50%-12.5px)] w-[708px]" data-node-id="2007:1801">
+                  <div className="absolute inset-0 overflow-hidden pointer-events-none">
+                    <img alt="" className="absolute h-[99.93%] left-[99.99%] max-w-none top-[0.02%] w-[-109.83%]" src={imgFrame59} />
+                  </div>
+                </div>
+              </div>
+              <div className="content-stretch flex flex-[1_0_0] flex-col items-start justify-between min-w-px p-[24px] relative self-stretch" data-node-id="2007:1802">
+                <div className="content-stretch flex items-start justify-between relative shrink-0 w-full" data-node-id="2007:1803">
+                  <p className="[word-break:break-word] font-['Space_Mono:Regular'] leading-[1.4] not-italic relative shrink-0 text-[16px] text-[rgba(3,3,3,0.4)] whitespace-nowrap" data-node-id="2007:1804">
+                    001/004
+                  </p>
+                  <div className="bg-[#48c7f4] content-stretch flex items-center overflow-clip p-[14.545px] relative rounded-[145.455px] shrink-0" data-node-id="2007:1805">
+                    <div className="overflow-clip relative shrink-0 size-[34.909px]" data-node-id="2007:1806" data-name="arrow-right">
+                      <div className="absolute inset-[20.83%]" data-node-id="2007:1807">
+                        <div className="absolute inset-[-5.36%]">
+                          <img alt="" className="block max-w-none size-full" src={imgGroup39504} />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="content-stretch flex flex-col gap-[40px] items-start relative shrink-0 w-full" data-node-id="2007:1810">
+                  <div className="[word-break:break-word] content-stretch flex flex-col font-['Inter:Regular'] font-normal gap-[12px] items-start not-italic relative shrink-0 w-full" data-node-id="2007:1811">
+                    <p className="leading-[1.1] relative shrink-0 text-[#030303] text-[50px] tracking-[-3px] w-[340px]" data-node-id="2007:1812">
+                      Ladetechnik
+                    </p>
+                    <p className="leading-[1.5] min-w-full relative shrink-0 text-[16px] text-[rgba(3,3,3,0.8)] tracking-[-0.32px] w-[min-content]" data-node-id="2007:1813">
+                      Wir bieten moderne Ladelösungen für Wohn-, Gewerbe- und Industrieimmobilien. Unsere Systeme, von Wallboxen bis zu skalierbarer Ladeinfrastruktur, sind auf Sicherheit, Effizienz und Zuverlässigkeit ausgelegt.
+                    </p>
+                  </div>
+                  <div className="h-0 relative shrink-0 w-full" data-node-id="2007:1814">
+                    <div className="absolute inset-[-1px_0_0_0]">
+                      <img alt="" className="block max-w-none size-full" src={imgLine8} />
+                    </div>
+                  </div>
+                  <div className="content-stretch flex gap-[12px] items-start relative shrink-0 w-full" data-node-id="2007:1815">
+                    <div className="content-stretch flex flex-[1_0_0] flex-col gap-[10px] items-start min-w-px relative" data-node-id="2007:1816">
+                      <div className="relative shrink-0 size-[32px]" data-node-id="2007:1817" data-name="fi_12327003">
+                        <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgFi12327004} />
+                      </div>
+                      <div className="[word-break:break-word] content-stretch flex flex-col gap-[2px] items-start leading-[1.4] not-italic relative shrink-0 w-full" data-node-id="2007:1819">
+                        <p className="font-['Inter:Semi_Bold'] font-semibold relative shrink-0 text-[#030303] text-[16px] tracking-[-0.64px] w-full" data-node-id="2007:1820">
+                          Für alle Immobilien
+                        </p>
+                        <p className="font-['Inter:Regular'] font-normal relative shrink-0 text-[14px] text-[rgba(3,3,3,0.8)] tracking-[-0.28px] w-full" data-node-id="2007:1821">
+                          Wohn-, Gewerbe- und Industrieimmobilien.
+                        </p>
+                      </div>
+                    </div>
+                    <div className="content-stretch flex flex-[1_0_0] flex-col gap-[10px] items-start min-w-px relative" data-node-id="2007:1822">
+                      <div className="overflow-clip relative shrink-0 size-[32px]" data-node-id="2007:1823" data-name="fi_10348976">
+                        <div className="absolute inset-[5.99%_9.38%_5.8%_9.37%]" data-node-id="2007:1824" data-name="Layer 2">
+                          <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgLayer4} />
+                        </div>
+                      </div>
+                      <div className="[word-break:break-word] content-stretch flex flex-col gap-[2px] items-start leading-[1.4] not-italic relative shrink-0 w-full" data-node-id="2007:1827">
+                        <p className="font-['Inter:Semi_Bold'] font-semibold relative shrink-0 text-[#030303] text-[16px] tracking-[-0.64px] w-full" data-node-id="2007:1828">{`Sicher & Zuverlässig`}</p>
+                        <p className="font-['Inter:Regular'] font-normal relative shrink-0 text-[14px] text-[rgba(3,3,3,0.8)] tracking-[-0.28px] w-full" data-node-id="2007:1829">
+                          Effiziente Systeme, die lange halten.
+                        </p>
+                      </div>
+                    </div>
+                    <div className="content-stretch flex flex-[1_0_0] flex-col gap-[10px] items-start min-w-px relative" data-node-id="2007:1830">
+                      <div className="overflow-clip relative shrink-0 size-[32px]" data-node-id="2007:1831" data-name="fi_9915665">
+                        <div className="absolute inset-[12.67%_12.5%_12.33%_12.5%]" data-node-id="2007:1832" data-name="Group">
+                          <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgGroup2} />
+                        </div>
+                      </div>
+                      <div className="[word-break:break-word] content-stretch flex flex-col gap-[2px] items-start leading-[1.4] not-italic relative shrink-0 w-full" data-node-id="2007:1836">
+                        <p className="font-['Inter:Semi_Bold'] font-semibold relative shrink-0 text-[#030303] text-[16px] tracking-[-0.64px] w-full" data-node-id="2007:1837">
+                          Erweiterbar
+                        </p>
+                        <p className="font-['Inter:Regular'] font-normal relative shrink-0 text-[14px] text-[rgba(3,3,3,0.8)] tracking-[-0.28px] w-full" data-node-id="2007:1838">
+                          Bereit für zukünftiges Wachstum.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="content-stretch flex flex-col h-[800px] items-start justify-end overflow-clip p-[40px] relative shrink-0 w-full" data-node-id="2026:8510" data-name="CTA">
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          <img alt="" className="absolute h-[120%] left-full max-w-none top-[-10%] w-[-100%]" src={imgCta} />
+        </div>
+        <div className="bg-white content-stretch flex flex-col gap-[40px] items-start overflow-clip p-[60px] relative shrink-0 w-[670px]" data-node-id="2026:8511">
+          <p className="[word-break:break-word] font-['DM_Sans:Regular'] font-normal leading-[0] not-italic relative shrink-0 text-[#2b2e31] text-[0px] tracking-[-2.4px] w-full" data-node-id="2026:8512" style={{ fontVariationSettings: '"opsz" 14' }}>
+            <span className="font-['Inter:Medium'] font-medium leading-[1.1] text-[60px]">{`Bereit für Ihr `}</span>
+            <span className="font-['Inter:Medium'] font-medium leading-[1.1] text-[60px] text-[rgba(43,46,49,0.6)]">{`Projekt `}</span>
+          </p>
+          <div className="h-0 relative shrink-0 w-full" data-node-id="2026:8513">
+            <div className="absolute inset-[-1px_0_0_0]">
+              <img alt="" className="block max-w-none size-full" src={imgLine4} />
+            </div>
+          </div>
+          <div className="content-stretch flex flex-col gap-[32px] items-start relative shrink-0 w-full" data-node-id="2026:8514">
+            <p className="[word-break:break-word] font-['Inter:Medium'] font-medium leading-[1.5] not-italic relative shrink-0 text-[#2b2e31] text-[16px] tracking-[-0.32px] w-[470px]" data-node-id="2026:8515">
+              Ob Neuinstallation, Sanierung oder Ladeinfrastruktur – wir beraten Sie persönlich und finden die passende Lösung.
+            </p>
+            <div className="bg-[#48c7f4] content-stretch flex items-center px-[24px] py-[14px] relative shrink-0" data-node-id="2026:8516">
+              <p className="[word-break:break-word] font-['Inter:Semi_Bold'] font-semibold leading-[1.4] not-italic relative shrink-0 text-[16px] text-center text-white tracking-[-0.32px] whitespace-nowrap" data-node-id="2026:8517">
+                Jetzt Kontaktieren
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="bg-white content-stretch flex flex-col gap-[40px] items-start overflow-clip pb-[40px] pt-[80px] px-[40px] relative shrink-0 w-full" data-node-id="2026:8519">
+        <div className="content-stretch flex items-start justify-between relative shrink-0 w-[1360px]" data-node-id="2026:8520">
+          <div className="content-stretch flex flex-col gap-[32px] items-start relative shrink-0" data-node-id="2026:8521">
+            <div className="h-[40px] relative shrink-0 w-[143.278px]" data-node-id="2026:8522" data-name="ENEX Logo 1">
+              <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgEnexLogo1} />
+            </div>
+            <p className="[word-break:break-word] font-['Inter:Medium'] font-medium leading-[1.5] not-italic relative shrink-0 text-[#2b2e31] text-[16px] tracking-[-0.32px] w-[470px]" data-node-id="2026:8535">
+              Ob Elektroinstallation, Ladeinfrastruktur oder individuelle Lösungen – wir beraten Sie persönlich und finden die passende Lösung für Ihr Projekt.
+            </p>
+          </div>
+          <div className="[word-break:break-word] content-stretch flex font-['Inter:Medium'] font-medium items-start leading-[1.5] not-italic relative shrink-0 w-[502px]" data-node-id="2026:8536">
+            <div className="content-stretch flex flex-[1_0_0] flex-col gap-[24px] items-center justify-center min-w-px relative" data-node-id="2026:8537">
+              <p className="relative shrink-0 text-[14px] text-[rgba(43,46,49,0.6)] tracking-[-0.28px] w-full" data-node-id="2026:8538">
+                Navigation
+              </p>
+              <div className="content-stretch flex flex-col gap-[12px] items-start relative shrink-0 text-[#2b2e31] text-[16px] tracking-[-0.32px] w-full" data-node-id="2026:8539">
+                <p className="relative shrink-0 w-full" data-node-id="2026:8540">
+                  Home
+                </p>
+                <p className="relative shrink-0 w-full" data-node-id="2026:8541">
+                  Über uns
+                </p>
+                <p className="relative shrink-0 w-full" data-node-id="2026:8542">
+                  Leistungen
+                </p>
+                <p className="relative shrink-0 w-full" data-node-id="2026:8543">
+                  Referenzen
+                </p>
+                <p className="relative shrink-0 w-full" data-node-id="2026:8544">
+                  Kontakt
+                </p>
+              </div>
+            </div>
+            <div className="content-stretch flex flex-[1_0_0] flex-col gap-[24px] items-center justify-center min-w-px relative" data-node-id="2026:8545">
+              <p className="relative shrink-0 text-[14px] text-[rgba(43,46,49,0.6)] tracking-[-0.28px] w-full" data-node-id="2026:8546">
+                Legal
+              </p>
+              <div className="content-stretch flex flex-col gap-[12px] items-start relative shrink-0 text-[#2b2e31] text-[16px] tracking-[-0.32px] w-full" data-node-id="2026:8547">
+                <p className="relative shrink-0 w-full" data-node-id="2026:8548">
+                  Impressum
+                </p>
+                <p className="relative shrink-0 w-full" data-node-id="2026:8549">
+                  Datenschutz
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="h-0 relative shrink-0 w-full" data-node-id="2026:8550">
+          <div className="absolute inset-[-1px_0_0_0]">
+            <img alt="" className="block max-w-none size-full" src={imgLine9} />
+          </div>
+        </div>
+        <div className="[word-break:break-word] content-stretch flex font-['Inter:Medium'] font-medium gap-[40px] items-start leading-[1.5] not-italic relative shrink-0 text-[14px] text-[rgba(43,46,49,0.6)] tracking-[-0.28px] w-full" data-node-id="2026:8551">
+          <p className="flex-[1_0_0] min-w-px relative" data-node-id="2026:8552">
+            ©2026 ENEX Bonn. Alle Rechte vorbehalten.
+          </p>
+          <p className="flex-[1_0_0] min-w-px relative text-right" data-node-id="2026:8553">
+            Made by INSYNC
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+}
+SUPER CRITICAL: The generated React+Tailwind code MUST be converted to match the target project's technology stack and styling system.
+1. Analyze the target codebase to identify: technology stack, styling approach, component patterns, and design tokens
+2. Convert React syntax to the target framework/library
+3. Transform all Tailwind classes to the target styling system while preserving exact visual design
+4. Follow the project's existing patterns and conventions
+DO NOT install any Tailwind as a dependency unless the user instructs you to do so.
+
+Node ids have been added to the code as data attributes, e.g. `data-node-id="1:2"`.
+Image assets are stored on a localhost server. Clients can use these images directly in code as a way to view the image assets the same way they would other remote servers. Images and SVGs will be stored as constants, e.g. const image = 'http://localhost:3845/assets/10c13ac1a228a365cb98a0064b1d5afbc84887b2.png' These constants will be used in the code as the source for the image, e.g. <img src={image} /> This is true for both images and SVGs, so you can use the same approach for both types of assets.
+IMPORTANT: After you call this tool, you MUST call get_screenshot to get a screenshot of the node for context.

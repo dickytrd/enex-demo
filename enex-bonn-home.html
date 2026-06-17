@@ -1,0 +1,3017 @@
+
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ENEX Bonn – Die Energie Experten</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&family=Inter:wght@400;500;600&family=Space+Mono&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --accent: #48c7f4;
+      --dark: #030303;
+      --text: #2b2e31;
+      --text-muted: rgba(43, 46, 49, 0.6);
+      --white: #ffffff;
+      --white-80: rgba(255, 255, 255, 0.8);
+      --white-60: rgba(255, 255, 255, 0.6);
+      --tag-bg: #edeff4;
+      --border: rgba(0, 0, 0, 0.1);
+      --border-dark: rgba(48, 48, 48, 0.1);
+      --font-inter: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-dm: 'DM Sans', sans-serif;
+      --font-mono: 'Space Mono', monospace;
+    }
+
+    html {
+      overflow-x: hidden;
+    }
+
+    body {
+      font-family: var(--font-inter);
+      background: var(--white);
+      color: var(--text);
+      width: 100%;
+      max-width: 1920px;
+      margin: 0 auto;
+      overflow-x: hidden;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    /* Heading animation (solid shape reveal) */
+    .heading-line-wrapper {
+      position: relative;
+      display: block;
+      overflow: hidden;
+    }
+    .heading-reveal-bar {
+      will-change: transform;
+    }
+
+    .hero {
+      position: relative;
+      width: 100vw;
+      max-width: 100vw;
+      margin-left: 50%;
+      transform: translateX(-50%);
+      min-height: 100svh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-end;
+      padding: 20px max(40px, calc((100vw - 1840px) / 2));
+      overflow: hidden;
+    }
+
+    .hero__bg {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .hero__contact-btn {
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 54px;
+      height: 186px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 10;
+    }
+
+    .hero__contact-btn-inner {
+      transform: rotate(-90deg);
+      background: var(--accent);
+      padding: 16px 24px;
+      width: 186px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .hero__contact-btn-inner span {
+      font-family: var(--font-inter);
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 1.4;
+      color: var(--white);
+      letter-spacing: -0.32px;
+      white-space: nowrap;
+    }
+
+    .hero__nav {
+      position: absolute;
+      top: 25px;
+      left: 40px;
+      right: 40px;
+      display: flex;
+      align-items: center;
+      gap: 52px;
+      z-index: 10;
+    }
+
+    .hero__logo {
+      width: 172px;
+      height: 48px;
+      flex-shrink: 0;
+    }
+
+    .hero__logo img {
+      width: 100%;
+      height: 100%;
+    }
+
+    .hero__menu {
+      display: flex;
+      align-items: center;
+      gap: 40px;
+      padding: 12px 24px;
+      height: 49px;
+      border-radius: 4px;
+    }
+
+    .hero__menu a {
+      font-family: var(--font-inter);
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 1.4;
+      color: var(--white-80);
+      text-decoration: none;
+      letter-spacing: -0.56px;
+      white-space: nowrap;
+    }
+
+    .hero__content {
+      position: relative;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 214px;
+      align-items: flex-start;
+      z-index: 5;
+    }
+
+    .hero__text {
+      display: flex;
+      flex-direction: column;
+      gap: 28px;
+      max-width: 555px;
+      color: var(--white);
+    }
+
+    .hero__headline {
+      font-family: var(--font-inter);
+      font-weight: 600;
+      font-size: clamp(56px, 8vw, 110px);
+      line-height: 0.9;
+      letter-spacing: -6.6px;
+    }
+
+    .hero__headline .muted {
+      color: var(--white-60);
+    }
+
+    .hero__subhead {
+      font-family: var(--font-inter);
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 1.5;
+      letter-spacing: -0.32px;
+      max-width: 393px;
+    }
+
+    .hero__bottom-panel {
+      width: 100%;
+      transform: scaleY(-1);
+    }
+
+    .hero__frame {
+      background: var(--white);
+      display: flex;
+      align-items: center;
+      width: 100%;
+      overflow: hidden;
+      transform: scaleY(-1);
+    }
+
+    .hero__frame-arrows {
+      border-left: 1px solid rgba(3, 3, 3, 0.1);
+      display: flex;
+      flex-direction: column;
+      height: 310px;
+      flex-shrink: 0;
+    }
+
+    .hero__frame-arrow {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 40px;
+    }
+
+    .hero__frame-arrow img {
+      width: 24px;
+      height: 24px;
+    }
+
+    .hero__frame-arrow--up img {
+      transform: rotate(180deg) scaleY(-1);
+    }
+
+    .hero__frame-divider {
+      width: 100%;
+      height: 1px;
+      position: relative;
+    }
+
+    .hero__frame-divider img {
+      width: 100%;
+      height: 1px;
+    }
+
+    .hero__frame-info {
+      flex: 1;
+      height: 310px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      justify-content: space-between;
+      padding: 32px 40px;
+    }
+
+    .hero__frame-cta {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+    }
+
+    .hero__frame-cta-text {
+      font-family: var(--font-inter);
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 1.2;
+      color: var(--dark);
+      letter-spacing: -0.8px;
+    }
+
+    .hero__frame-cta-btn {
+      background: #0b313d;
+      border-radius: 22.5px;
+      padding: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .hero__frame-cta-btn img {
+      width: 12px;
+      height: 12px;
+    }
+
+    .hero__frame-title {
+      font-family: var(--font-dm);
+      font-weight: 500;
+      font-size: 35px;
+      line-height: 1.2;
+      color: var(--dark);
+      letter-spacing: -2.1px;
+      width: 100%;
+    }
+
+    .hero__frame-video {
+      flex: 1;
+      height: 310px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .hero__frame-video-inner {
+      flex: 1;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .hero__frame-phone {
+      width: 100%;
+      height: 100%;
+      background: #fafafa;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero__frame-phone img.phone-img {
+      position: absolute;
+      width: 752px;
+      height: 502px;
+      left: calc(50% + 8px);
+      bottom: -97px;
+      transform: translateX(-50%);
+      object-fit: cover;
+    }
+
+    .hero__frame-play {
+      position: absolute;
+      bottom: 20px;
+      left: 20px;
+      width: 64px;
+      height: 64px;
+      background: rgba(255, 255, 255, 0.4);
+      backdrop-filter: blur(5px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 72.5px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .hero__frame-play img {
+      width: 24px;
+      height: 24px;
+    }
+
+    .about {
+      background: var(--white);
+      padding: 120px 40px 40px;
+      display: flex;
+      flex-direction: column;
+      gap: 60px;
+      overflow: hidden;
+    }
+
+    .about__top {
+      display: flex;
+      align-items: stretch;
+      justify-content: space-between;
+      width: 100%;
+      gap: 40px;
+    }
+
+    .about__left {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      flex-shrink: 0;
+      width: 395px;
+    }
+
+    .about__left-inner {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100%;
+      width: 100%;
+    }
+
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      background: var(--tag-bg);
+      padding: 8px 16px 8px 12px;
+    }
+
+    .tag__icon {
+      width: 12px;
+      height: 12px;
+    }
+
+    .tag__icon img {
+      width: 100%;
+      height: 100%;
+    }
+
+    .tag__text {
+      font-family: var(--font-inter);
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 1.2;
+      color: var(--dark);
+      letter-spacing: -0.36px;
+      white-space: nowrap;
+    }
+
+    .tag--light {
+      background: rgba(255, 255, 255, 0.2);
+    }
+
+    .tag--light .tag__text {
+      color: var(--white);
+    }
+
+    .about__desc {
+      font-family: var(--font-inter);
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 1.5;
+      color: var(--text);
+      letter-spacing: -0.32px;
+    }
+
+    .about__right {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+      align-items: center;
+      justify-content: center;
+      flex: 1;
+      min-width: 0;
+    }
+
+    .about__headline {
+      font-family: var(--font-inter);
+      font-weight: 500;
+      font-size: clamp(28px, 4vw, 48px);
+      line-height: 1.2;
+      color: var(--text);
+      letter-spacing: -0.96px;
+      width: 100%;
+    }
+
+    .about__headline .muted {
+      color: var(--text-muted);
+    }
+
+    .about__image-block {
+      width: 100%;
+      height: 505px;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      justify-content: flex-end;
+      padding: 12px;
+    }
+
+    .about__image-block img.about-img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .about__counter-box {
+      background: var(--white);
+      display: flex;
+      gap: 16px;
+      align-items: flex-end;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .about__counter-arrows {
+      border-left: 1px solid var(--border-dark);
+      display: flex;
+      flex-direction: column;
+      height: 221px;
+      width: 78px;
+    }
+
+    .about__counter-arrow {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 40px;
+    }
+
+    .about__counter-arrow img {
+      width: 24px;
+      height: 24px;
+    }
+
+    .about__counter-arrow--up img {
+      transform: rotate(180deg) scaleY(-1);
+    }
+
+    .about__counter-divider {
+      width: 100%;
+      height: 1px;
+    }
+
+    .about__counter-divider img {
+      width: 100%;
+      height: 1px;
+    }
+
+    .about__counter-content {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100%;
+      width: 216px;
+      padding: 20px 20px 0 0;
+    }
+
+    .about__counter-label {
+      font-family: var(--font-inter);
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 1.5;
+      color: var(--text-muted);
+      letter-spacing: -0.24px;
+    }
+
+    .about__counter-number {
+      font-family: 'Helvetica Neue', sans-serif;
+      font-weight: 500;
+      font-size: 80px;
+      line-height: 1.3;
+      color: var(--text);
+      letter-spacing: -0.64px;
+      text-align: right;
+    }
+
+    .about__counter-number .muted {
+      color: rgba(43, 46, 49, 0.4);
+    }
+
+    .logos {
+      display: flex;
+      height: 170px;
+      width: 100%;
+      overflow: hidden;
+    }
+
+    .logos__row {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+    }
+
+    .logos__item {
+      background: var(--white);
+      border-right: 1px solid var(--border-dark);
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      height: 100%;
+      width: 226.667px;
+      padding: 73px 77px;
+      flex-shrink: 0;
+      overflow: hidden;
+    }
+
+    .logos__item img {
+      width: 73.15px;
+      height: 24px;
+    }
+
+    .services {
+      position: relative;
+      width: 100vw;
+      max-width: 100vw;
+      margin-left: 50%;
+      transform: translateX(-50%);
+      height: 900px;
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      padding-top: 200px;
+      padding-left: max(40px, calc((100vw - 1840px) / 2));
+      padding-right: max(40px, calc((100vw - 1840px) / 2));
+      overflow: hidden;
+    }
+
+    .services__bg {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .services__header {
+      position: relative;
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      padding: 0 40px;
+      z-index: 1;
+    }
+
+    .services__counter {
+      font-family: var(--font-mono);
+      font-size: 16px;
+      line-height: 1.4;
+      color: var(--white);
+      width: 670px;
+    }
+
+    .services__lines {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      z-index: 1;
+    }
+
+    .services__line-full {
+      width: 1440px;
+      height: 2px;
+    }
+
+    .services__line-full img {
+      width: 100%;
+      height: 100%;
+    }
+
+    .services__line-short {
+      width: 360px;
+      height: 2px;
+    }
+
+    .services__line-short img {
+      width: 100%;
+      height: 100%;
+    }
+
+    .services__content {
+      position: relative;
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      padding: 0 40px;
+      z-index: 1;
+    }
+
+    .services__subtitle {
+      font-family: var(--font-inter);
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 1.5;
+      color: var(--white-80);
+      letter-spacing: -0.32px;
+      width: 324px;
+    }
+
+    .services__main {
+      display: flex;
+      flex-direction: column;
+      gap: 60px;
+      width: 670px;
+    }
+
+    .services__text {
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+    }
+
+    .services__title {
+      font-family: var(--font-inter);
+      font-weight: 500;
+      font-size: clamp(48px, 6vw, 80px);
+      line-height: 1.1;
+      color: var(--white);
+      letter-spacing: -4.8px;
+    }
+
+    .services__desc {
+      font-family: var(--font-inter);
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 1.5;
+      color: var(--white-80);
+      letter-spacing: -0.32px;
+      width: 554px;
+    }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      background: var(--accent);
+      padding: 14px 24px;
+    }
+
+    .btn-primary span {
+      font-family: var(--font-inter);
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 1.4;
+      color: var(--white);
+      letter-spacing: -0.32px;
+      white-space: nowrap;
+    }
+
+    .services__card-wrapper {
+      position: relative;
+      padding: 0 40px;
+      z-index: 1;
+    }
+
+    .services__card {
+      background: var(--white);
+      display: flex;
+      flex-direction: column;
+      padding: 4px;
+      width: 285px;
+      overflow: hidden;
+    }
+
+    .services__card-image {
+      width: 100%;
+      height: 154px;
+      object-fit: cover;
+    }
+
+    .services__card-content {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      padding: 20px;
+    }
+
+    .services__card-title {
+      font-family: var(--font-inter);
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 1.5;
+      color: var(--text);
+      letter-spacing: -0.4px;
+    }
+
+    .services__card-location {
+      font-family: var(--font-inter);
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 1.5;
+      color: var(--text-muted);
+      letter-spacing: -0.28px;
+    }
+
+    .why {
+      background: var(--white);
+      padding: 120px 40px;
+      display: flex;
+      flex-direction: column;
+      gap: 60px;
+      overflow: hidden;
+    }
+
+    .why__header {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      width: 100%;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+
+    .why__headline {
+      font-family: var(--font-inter);
+      font-weight: 500;
+      font-size: clamp(40px, 6vw, 80px);
+      line-height: 1.1;
+      color: var(--text);
+      letter-spacing: -0.96px;
+      flex: 1;
+      max-width: 907px;
+    }
+
+    .why__headline .muted {
+      color: var(--text-muted);
+    }
+
+    .why__grid {
+      display: flex;
+      border: 1px solid var(--border);
+      overflow: hidden;
+      width: 100%;
+    }
+
+    .why__card {
+      flex: 1;
+      background: var(--white);
+      border-right: 1px solid var(--border-dark);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      height: 500px;
+      padding: 40px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .why__card:last-child {
+      border-right: none;
+    }
+
+    .why__card-top {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      width: 100%;
+    }
+
+    .why__card-icon {
+      width: 50px;
+      height: 50px;
+      background: var(--accent);
+      border-radius: 100px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .why__card-icon img {
+      width: 24px;
+      height: 24px;
+    }
+
+    .why__card-circle {
+      width: 180px;
+      height: 180px;
+      border: 1px solid var(--border);
+      border-radius: 100px;
+      background: var(--white);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .why__card-circle img {
+      width: 70px;
+      height: 70px;
+    }
+
+    .why__card-title-wrap {
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      height: 60px;
+      width: 100%;
+    }
+
+    .why__card-title {
+      font-family: var(--font-dm);
+      font-weight: 400;
+      font-size: 32px;
+      line-height: 1.1;
+      color: var(--text);
+      letter-spacing: -1.92px;
+    }
+
+    .why__card-title--medium {
+      font-family: var(--font-inter);
+      font-weight: 500;
+      letter-spacing: -1.28px;
+    }
+
+    .why__card-overlay {
+      position: absolute;
+      top: 50%;
+      left: calc(50% + 0.33px);
+      transform: translate(-50%, -50%);
+      width: 453px;
+      height: 500px;
+      background: rgba(255, 255, 255, 0.12);
+      backdrop-filter: blur(50px);
+      border-right: 1px solid var(--border-dark);
+      padding: 40px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .why__card-overlay-text {
+      font-family: var(--font-inter);
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 1.5;
+      color: var(--text);
+      letter-spacing: -0.32px;
+      width: 340px;
+    }
+
+    .reference {
+      background: var(--white);
+      height: 1078px;
+      display: flex;
+      flex-direction: column;
+      gap: 478px;
+      align-items: center;
+      padding: 120px 40px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .reference__fan {
+      position: absolute;
+      top: 483.37px;
+      left: -625.56px;
+      width: calc(100% + 1251.12px);
+      pointer-events: none;
+    }
+
+    .reference__card {
+      position: absolute;
+      border: 1px solid var(--border);
+      padding: 10px;
+      background: var(--white);
+    }
+
+    .reference__card-inner {
+      width: 302px;
+      height: 351px;
+      background: #d9d9d9;
+      position: relative;
+    }
+
+    .reference__card-inner img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .reference__card--center {
+      left: calc(33.33% + 78.62px);
+      top: 0;
+    }
+
+    .reference__card--r1 {
+      left: calc(58.33% + 75.4px);
+      top: 8.68px;
+      transform: rotate(10deg);
+    }
+
+    .reference__card--r2 {
+      left: calc(83.33% + 66.23px);
+      top: 90.36px;
+      transform: rotate(20deg);
+    }
+
+    .reference__card--r3 {
+      left: calc(100% + 160.44px);
+      top: 242.58px;
+      transform: rotate(30deg);
+    }
+
+    .reference__card--l1 {
+      left: 142.32px;
+      top: 8.68px;
+      transform: rotate(-10deg);
+    }
+
+    .reference__card--l2 {
+      left: -256.45px;
+      top: 90.36px;
+      transform: rotate(-20deg);
+    }
+
+    .reference__card--l3 {
+      left: -625.56px;
+      top: 242.58px;
+      transform: rotate(-30deg);
+    }
+
+    .reference__header {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      gap: 60px;
+      align-items: center;
+      z-index: 2;
+    }
+
+    .reference__header-inner {
+      display: flex;
+      flex-direction: column;
+      gap: 65px;
+      align-items: center;
+      width: 100%;
+    }
+
+    .reference__headline {
+      font-family: var(--font-inter);
+      font-weight: 500;
+      font-size: clamp(40px, 6vw, 80px);
+      line-height: 1.1;
+      color: var(--text);
+      letter-spacing: -0.96px;
+      text-align: center;
+      max-width: 852px;
+    }
+
+    .reference__headline .muted {
+      color: var(--text-muted);
+    }
+
+    .reference__link {
+      font-family: var(--font-inter);
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 1.5;
+      color: var(--text);
+      letter-spacing: -0.32px;
+      text-decoration: underline;
+      text-align: center;
+    }
+
+    .reference__gradient-left {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 213px;
+      height: 999px;
+      background: linear-gradient(to right, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0));
+      z-index: 3;
+    }
+
+    .reference__gradient-right {
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 213px;
+      height: 999px;
+      background: linear-gradient(to left, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0));
+      z-index: 3;
+    }
+
+    .reference__info {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      text-align: center;
+      z-index: 2;
+    }
+
+    .reference__info-title {
+      font-family: var(--font-inter);
+      font-weight: 600;
+      font-size: 24px;
+      line-height: 1.5;
+      color: var(--text);
+      letter-spacing: -0.96px;
+      width: 322px;
+    }
+
+    .reference__info-location {
+      font-family: var(--font-inter);
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 1.5;
+      color: var(--text-muted);
+      letter-spacing: -0.32px;
+      width: 322px;
+    }
+
+    .testimonials {
+      background: var(--white);
+      padding: 120px 40px;
+      display: flex;
+      flex-direction: column;
+      gap: 60px;
+      overflow: hidden;
+    }
+
+    .testimonials__header {
+      display: flex;
+      flex-direction: column;
+      gap: 65px;
+      width: 100%;
+    }
+
+    .testimonials__headline {
+      font-family: var(--font-inter);
+      font-weight: 500;
+      font-size: clamp(40px, 6vw, 80px);
+      line-height: 1.1;
+      color: var(--text);
+      letter-spacing: -0.96px;
+      max-width: 939px;
+    }
+
+    .testimonials__headline .muted {
+      color: var(--text-muted);
+    }
+
+    .testimonials__grid {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+      width: 100%;
+    }
+
+    .testimonials__card {
+      background: var(--text);
+      border: 1px solid var(--border);
+      display: flex;
+      padding: 10px;
+      overflow: hidden;
+      flex-shrink: 0;
+    }
+
+    .testimonials__card-image {
+      width: 193.333px;
+      height: 470px;
+      position: relative;
+      overflow: hidden;
+      flex-shrink: 0;
+    }
+
+    .testimonials__card-image img {
+      position: absolute;
+      width: 116.21%;
+      height: 110.47%;
+      top: -10.49%;
+      left: -8.1%;
+      object-fit: cover;
+    }
+
+    .testimonials__card-content {
+      width: 506px;
+      height: 470px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 32px;
+    }
+
+    .testimonials__card-quote {
+      font-family: var(--font-inter);
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 1.5;
+      color: var(--white);
+      letter-spacing: -0.4px;
+    }
+
+    .testimonials__card-author {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .testimonials__card-name {
+      font-family: var(--font-inter);
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 1.2;
+      color: var(--white);
+      letter-spacing: -0.32px;
+    }
+
+    .testimonials__card-location {
+      font-family: var(--font-inter);
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 1.5;
+      color: var(--white-80);
+      letter-spacing: -0.24px;
+    }
+
+    .testimonials__image {
+      flex: 1;
+      height: 490px;
+      border: 1px solid var(--border);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .testimonials__image img {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .testimonials__image--link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 215px 67px;
+    }
+
+    .testimonials__image--link img.bg {
+      position: absolute;
+      width: 191.62%;
+      height: 113.52%;
+      top: -3.17%;
+      left: -46.09%;
+    }
+
+    .testimonials__link-btn {
+      width: 60px;
+      height: 60px;
+      background: var(--accent);
+      border-radius: 100px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      z-index: 2;
+    }
+
+    .testimonials__link-btn img {
+      width: 24px;
+      height: 24px;
+      position: static;
+    }
+
+    .cta {
+      width: 100vw;
+      max-width: 100vw;
+      margin-left: 50%;
+      transform: translateX(-50%);
+      height: 800px;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-end;
+      padding: 40px max(40px, calc((100vw - 1840px) / 2));
+      overflow: hidden;
+    }
+
+    .cta__bg {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      pointer-events: none;
+    }
+
+    .cta__box {
+      background: var(--white);
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+      padding: 60px;
+      width: 100%;
+      max-width: 670px;
+      position: relative;
+      overflow: hidden;
+      z-index: 2;
+    }
+
+    .cta__headline {
+      font-family: var(--font-inter);
+      font-weight: 500;
+      font-size: clamp(32px, 5vw, 60px);
+      line-height: 1.1;
+      color: var(--text);
+      letter-spacing: -2.4px;
+    }
+
+    .cta__headline .muted {
+      color: var(--text-muted);
+    }
+
+    .cta__divider {
+      width: 100%;
+      height: 1px;
+    }
+
+    .cta__divider img {
+      width: 100%;
+      height: 100%;
+    }
+
+    .cta__content {
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+    }
+
+    .cta__desc {
+      font-family: var(--font-inter);
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 1.5;
+      color: var(--text);
+      letter-spacing: -0.32px;
+      max-width: 470px;
+    }
+
+    .footer {
+      background: var(--white);
+      padding: 80px 40px 40px;
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+      overflow: hidden;
+    }
+
+    .footer__top {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      width: 100%;
+    }
+
+    .footer__brand {
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+    }
+
+    .footer__logo {
+      width: 143.278px;
+      height: 40px;
+    }
+
+    .footer__logo img {
+      width: 100%;
+      height: 100%;
+    }
+
+    .footer__desc {
+      font-family: var(--font-inter);
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 1.5;
+      color: var(--text);
+      letter-spacing: -0.32px;
+      width: 470px;
+    }
+
+    .footer__links {
+      display: flex;
+      width: 502px;
+    }
+
+    .footer__column {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    .footer__column-title {
+      font-family: var(--font-inter);
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 1.5;
+      color: var(--text-muted);
+      letter-spacing: -0.28px;
+    }
+
+    .footer__column-links {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .footer__column-links a {
+      font-family: var(--font-inter);
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 1.5;
+      color: var(--text);
+      letter-spacing: -0.32px;
+      text-decoration: none;
+    }
+
+    .footer__divider {
+      width: 100%;
+      height: 1px;
+    }
+
+    .footer__divider img {
+      width: 100%;
+      height: 100%;
+    }
+
+    .footer__bottom {
+      display: flex;
+      gap: 40px;
+      width: 100%;
+    }
+
+    .footer__copyright {
+      flex: 1;
+      font-family: var(--font-inter);
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 1.5;
+      color: var(--text-muted);
+      letter-spacing: -0.28px;
+    }
+
+    .footer__credit {
+      flex: 1;
+      font-family: var(--font-inter);
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 1.5;
+      color: var(--text-muted);
+      letter-spacing: -0.28px;
+      text-align: right;
+    }
+
+    /* Mobile menu toggle button */
+    .hero__menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 0;
+      width: 24px;
+      height: 24px;
+      margin-left: auto;
+    }
+
+    /* Mobile logo visibility */
+    .hero__logo-mobile {
+      display: none;
+    }
+
+    /* Mobile menu drawer */
+    .mobile-menu {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 100;
+    }
+
+    .mobile-menu.is-open {
+      display: flex;
+    }
+
+    .mobile-menu__overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.5);
+    }
+
+    .mobile-menu__drawer {
+      position: absolute;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      width: 280px;
+      background: var(--white);
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+      transform: translateX(100%);
+      transition: transform 300ms ease-out;
+    }
+
+    .mobile-menu.is-open .mobile-menu__drawer {
+      transform: translateX(0);
+    }
+
+    .mobile-menu__close {
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 0;
+      width: 24px;
+      height: 24px;
+      align-self: flex-end;
+    }
+
+    .mobile-menu__nav {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .mobile-menu__nav a {
+      font-family: var(--font-inter);
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 1.4;
+      color: var(--text);
+      text-decoration: none;
+      letter-spacing: -0.36px;
+    }
+
+    .mobile-menu__contact {
+      margin-top: auto;
+      background: var(--accent);
+      color: var(--white);
+      font-family: var(--font-inter);
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 1.4;
+      letter-spacing: -0.28px;
+      text-decoration: none;
+      text-align: center;
+      padding: 12px 24px;
+    }
+
+    /* Tablet breakpoint */
+    @media (max-width: 1024px) {
+      .hero {
+        padding: 20px 24px;
+      }
+
+      .hero__nav {
+        left: 24px;
+        right: 24px;
+        gap: 32px;
+      }
+
+      .hero__content {
+        gap: 120px;
+      }
+
+      .hero__frame {
+        flex-wrap: wrap;
+      }
+
+      .hero__frame-info {
+        flex: 1;
+        min-width: 300px;
+      }
+
+      .hero__frame-video {
+        flex: 1;
+        min-width: 300px;
+      }
+
+      .about {
+        padding: 80px 24px 24px;
+      }
+
+      .about__top {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .about__left {
+        width: 100%;
+        max-width: 100%;
+      }
+
+      .about__left-inner {
+        width: 100%;
+        gap: 20px;
+      }
+
+      .about__right {
+        max-width: 100%;
+      }
+
+      .services {
+        padding-top: 120px;
+        padding-bottom: 40px;
+        padding-left: 24px;
+        padding-right: 24px;
+      }
+
+      .why {
+        padding: 80px 24px;
+      }
+
+      .why__grid {
+        flex-wrap: wrap;
+      }
+
+      .why__card {
+        flex: 1 1 calc(50% - 1px);
+        min-width: 300px;
+      }
+
+      .reference {
+        padding: 80px 24px;
+      }
+
+      .testimonials {
+        padding: 80px 24px;
+      }
+
+      .testimonials__grid {
+        flex-wrap: wrap;
+      }
+
+      .testimonials__card {
+        flex: 1 1 100%;
+      }
+
+      .testimonials__image {
+        min-width: 200px;
+      }
+
+      .cta {
+        padding: 24px 24px;
+      }
+
+      .cta__box {
+        padding: 40px;
+      }
+
+      .footer {
+        padding: 60px 24px 24px;
+      }
+    }
+
+    /* Mobile breakpoint — exact Figma values from node 2011:5945 (393px) */
+    @media (max-width: 767px) {
+      /* Navigation - Figma: logo 100×28, hamburger 24×24, padding 16px 20px */
+      .hero__nav {
+        top: 16px;
+        left: 20px;
+        right: 20px;
+        padding: 0;
+        justify-content: space-between;
+      }
+
+      .hero__logo {
+        width: 100px;
+        height: 28px;
+      }
+
+      .hero__logo-desktop {
+        display: none;
+      }
+
+      .hero__logo-mobile {
+        display: block;
+      }
+
+      .hero__menu {
+        display: none;
+      }
+
+      .hero__menu-toggle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .hero__contact-btn {
+        display: none;
+      }
+
+      /* Hero - Figma: 960px height, headline 56px/-3.36px, subhead 14px/-0.28px */
+      .hero {
+        min-height: 960px;
+        height: 960px;
+        padding: 20px;
+      }
+
+      .hero__content {
+        gap: 214px;
+      }
+
+      .hero__text {
+        max-width: 100%;
+      }
+
+      .hero__headline {
+        font-size: 56px;
+        letter-spacing: -3.36px;
+      }
+
+      .hero__subhead {
+        font-size: 14px;
+        letter-spacing: -0.28px;
+        max-width: 100%;
+      }
+
+      /* Hero Frame - Figma: vertical stacking (info → arrows → video) */
+      .hero__bottom-panel {
+        width: 100%;
+      }
+
+      .hero__frame {
+        flex-direction: column;
+      }
+
+      /* Info section first (order 1) */
+      .hero__frame-info {
+        flex: none;
+        height: auto;
+        width: 100%;
+        padding: 16px;
+        order: 1;
+        flex-direction: column-reverse;
+        gap: 36px;
+        align-items: flex-end;
+      }
+
+      .hero__frame-cta {
+        flex-direction: row;
+        gap: 12px;
+      }
+
+      .hero__frame-cta-text {
+        font-size: 12px;
+        letter-spacing: -0.48px;
+      }
+
+      .hero__frame-cta-btn {
+        padding: 6.857px;
+        border-radius: 19.286px;
+      }
+
+      .hero__frame-cta-btn img {
+        width: 10.286px;
+        height: 10.286px;
+      }
+
+      .hero__frame-title {
+        font-size: 20px;
+        letter-spacing: -1.2px;
+        text-align: left;
+        width: 100%;
+      }
+
+      /* Arrows in middle (order 2) */
+      .hero__frame-arrows {
+        flex-direction: row;
+        height: auto;
+        width: auto;
+        border-left: 1px solid rgba(3, 3, 3, 0.1);
+        border-top: none;
+        order: 2;
+        align-self: stretch;
+      }
+
+      .hero__frame-arrow {
+        padding: 20px;
+        flex: 1;
+      }
+
+      .hero__frame-divider {
+        width: 100%;
+        height: 1px;
+      }
+
+      .hero__frame-divider img {
+        width: 100%;
+        height: 1px;
+      }
+
+      /* Video section last (order 3) - Figma: aspect 588:270 */
+      .hero__frame-video {
+        flex: none;
+        height: auto;
+        width: 100%;
+        padding: 16px;
+        order: 3;
+      }
+
+      .hero__frame-phone {
+        aspect-ratio: 588 / 270;
+        height: auto;
+      }
+
+      .hero__frame-phone img.phone-img {
+        width: 339px;
+        height: 226px;
+        left: 50%;
+        bottom: auto;
+        top: calc(50% + 5.7px);
+        transform: translate(-50%, -50%);
+      }
+
+      .hero__frame-play {
+        width: 32px;
+        height: 32px;
+        bottom: 6.92px;
+        left: 9px;
+        padding: 6px;
+      }
+
+      /* About - Figma: 852px height, padding 32px 20px, headline 32px/-1.92px */
+      .about {
+        height: 852px;
+        padding: 32px 20px;
+        gap: 0;
+      }
+
+      .about__top {
+        flex-direction: column;
+        gap: 0;
+        height: 100%;
+        justify-content: space-between;
+      }
+
+      .about__left {
+        width: 100%;
+      }
+
+      .about__left-inner {
+        width: 100%;
+        gap: 24px;
+        flex-direction: column;
+        height: auto;
+      }
+
+      .tag__text {
+        font-size: 12px;
+        letter-spacing: -0.24px;
+      }
+
+      .tag__icon {
+        width: 10px;
+        height: 10px;
+      }
+
+      .about__headline {
+        font-size: 32px;
+        letter-spacing: -1.92px;
+      }
+
+      .about__right {
+        width: 100%;
+        max-width: 100%;
+        gap: 20px;
+      }
+
+      .about__image-block {
+        height: 240px;
+        width: 100%;
+      }
+
+      .about__counter-box {
+        width: 100%;
+        flex-direction: row;
+        gap: 0;
+      }
+
+      .about__counter-content {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        flex: 1;
+        padding: 0 12px;
+      }
+
+      .about__counter-label {
+        font-size: 10px;
+        letter-spacing: -0.2px;
+        text-align: right;
+        width: 111px;
+      }
+
+      .about__counter-number {
+        font-size: 28px;
+        letter-spacing: -1.12px;
+      }
+
+      .about__counter-arrows {
+        flex-direction: row;
+        height: 50px;
+      }
+
+      .about__counter-arrow {
+        width: 50px;
+        height: 50px;
+      }
+
+      .about__counter-arrow img {
+        width: 9.341px;
+        height: 9.341px;
+      }
+
+      .about__desc {
+        font-size: 14px;
+        letter-spacing: -0.28px;
+      }
+
+      .logos {
+        display: none;
+      }
+
+      /* Services - Figma: 900px height, padding 16px 20px, title 48px/-2.88px */
+      .services {
+        height: 900px;
+        min-height: 900px;
+        padding: 16px 20px;
+        justify-content: space-between;
+      }
+
+      .services__header {
+        margin-bottom: 0;
+      }
+
+      .services__counter {
+        font-size: 14px;
+      }
+
+      .services__subtitle {
+        font-size: 14px;
+        letter-spacing: -0.28px;
+        width: 100%;
+        max-width: 324px;
+      }
+
+      .services__title {
+        font-size: 48px;
+        letter-spacing: -2.88px;
+      }
+
+      .services__desc {
+        font-size: 14px;
+        letter-spacing: -0.28px;
+      }
+
+      .services__content {
+        padding: 0;
+        flex-direction: column;
+        gap: 24px;
+      }
+
+      .services__main {
+        flex-direction: column;
+        gap: 24px;
+      }
+
+      .services__text {
+        width: 100%;
+        gap: 16px;
+      }
+
+      .services__card-wrapper {
+        padding: 0;
+        width: 100%;
+      }
+
+      .services__card {
+        width: 100%;
+        max-width: 100%;
+      }
+
+      .services__card-image {
+        height: 160px;
+      }
+
+      .services__card-content {
+        padding: 10px 8px;
+      }
+
+      .services__card-title {
+        font-size: 18px;
+        letter-spacing: -0.36px;
+      }
+
+      .services__card-location {
+        font-size: 12px;
+        letter-spacing: -0.24px;
+      }
+
+      /* Why Enex - Figma: padding 32px 20px, headline 45px/-2.7px, cards 500px stacked */
+      .why {
+        padding: 32px 20px;
+        gap: 60px;
+      }
+
+      .why__header {
+        gap: 65px;
+        align-items: center;
+      }
+
+      .why__headline {
+        font-size: 45px;
+        letter-spacing: -2.7px;
+        text-align: center;
+        height: 146px;
+      }
+
+      .why__grid {
+        flex-direction: column;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+      }
+
+      .why__card {
+        flex: none;
+        width: 100%;
+        height: 500px;
+        border: none;
+        border-bottom: 1px solid var(--border-dark);
+      }
+
+      .why__card:last-child {
+        border-bottom: none;
+      }
+
+      .why__card-title {
+        font-size: 32px;
+        letter-spacing: -1.92px;
+      }
+
+      .why__card-title--medium {
+        font-size: 24px;
+        letter-spacing: -0.96px;
+      }
+
+      .why__card-overlay {
+        width: 100%;
+        height: 100%;
+        left: 0;
+        transform: none;
+      }
+
+      .why__card-overlay-text {
+        font-size: 14px;
+        letter-spacing: -0.28px;
+      }
+
+      /* Reference - Figma: padding 32px 20px, headline 48px/-2.88px, single card */
+      .reference {
+        height: auto;
+        padding: 32px 20px;
+        gap: 32px;
+      }
+
+      .reference__header {
+        gap: 24px;
+        align-items: center;
+      }
+
+      .reference__headline {
+        font-size: 48px;
+        letter-spacing: -2.88px;
+        text-align: center;
+      }
+
+      .reference__link {
+        font-size: 14px;
+        letter-spacing: -0.28px;
+      }
+
+      .reference__fan {
+        width: 100%;
+        height: 242px;
+        justify-content: center;
+      }
+
+      .reference__card {
+        position: relative !important;
+        transform: none !important;
+        left: auto !important;
+        top: auto !important;
+        width: 207.901px;
+        height: 239.538px;
+        padding: 6.457px;
+      }
+
+      .reference__card:nth-child(n+2) {
+        display: none;
+      }
+
+      .reference__card-image {
+        width: 194.988px;
+        height: 226.625px;
+      }
+
+      .reference__info {
+        gap: 4px;
+        text-align: center;
+      }
+
+      .reference__project-name {
+        font-size: 20px;
+        letter-spacing: -0.8px;
+      }
+
+      .reference__project-location {
+        font-size: 16px;
+        letter-spacing: -0.32px;
+      }
+
+      /* Testimonials - Figma: padding 40px 20px, headline 48px/-2.88px, carousel nav 40px */
+      .testimonials {
+        padding: 40px 20px;
+        gap: 32px;
+        position: relative;
+      }
+
+      .testimonials__header {
+        gap: 24px;
+        align-items: center;
+      }
+
+      .testimonials__headline {
+        font-size: 48px;
+        letter-spacing: -2.88px;
+        text-align: center;
+      }
+
+      .testimonials__grid {
+        flex-direction: column;
+        gap: 0;
+        width: 100%;
+      }
+
+      .testimonials__card {
+        flex-direction: column;
+        width: 100%;
+      }
+
+      .testimonials__card:nth-child(n+2) {
+        display: none;
+      }
+
+      .testimonials__card-image {
+        width: 100%;
+        height: 365px;
+      }
+
+      .testimonials__card-content {
+        width: 100%;
+        height: auto;
+        padding: 16px;
+        gap: 24px;
+      }
+
+      .testimonials__card-quote {
+        font-size: 16px;
+        letter-spacing: -0.32px;
+        text-align: center;
+      }
+
+      .testimonials__card-author {
+        gap: 4px;
+        align-items: center;
+        width: 100%;
+      }
+
+      .testimonials__card-author-name {
+        font-size: 16px;
+        letter-spacing: -0.32px;
+      }
+
+      .testimonials__card-author-location {
+        font-size: 12px;
+        letter-spacing: -0.24px;
+      }
+
+      /* Testimonials navigation arrows */
+      .testimonials::before,
+      .testimonials::after {
+        content: '';
+        position: absolute;
+        top: calc(50% + 87px);
+        transform: translateY(-50%);
+        width: 40px;
+        height: 40px;
+        background: var(--accent);
+        border-radius: 77.647px;
+        z-index: 10;
+      }
+
+      .testimonials::before {
+        left: 0;
+      }
+
+      .testimonials::after {
+        right: 10px;
+      }
+
+      /* CTA - Figma: 800px height, title 40px/-1.6px, card padding 24px */
+      .cta {
+        height: 800px;
+        min-height: 800px;
+        padding: 20px;
+        justify-content: flex-end;
+      }
+
+      .cta__box {
+        width: 100%;
+        max-width: 353px;
+        padding: 24px;
+        gap: 20px;
+      }
+
+      .cta__title {
+        font-size: 40px;
+        letter-spacing: -1.6px;
+      }
+
+      .cta__desc {
+        font-size: 14px;
+        letter-spacing: -0.28px;
+      }
+
+      .cta__content {
+        gap: 32px;
+      }
+
+      /* Footer - Figma: padding 20px, 2-column nav layout, logo 143×40 */
+      .footer {
+        padding: 20px;
+        gap: 60px;
+      }
+
+      .footer__top {
+        flex-direction: column;
+        gap: 40px;
+      }
+
+      .footer__brand {
+        gap: 20px;
+      }
+
+      .footer__logo {
+        width: 143.278px;
+        height: 40px;
+      }
+
+      .footer__desc {
+        font-size: 14px;
+        letter-spacing: -0.28px;
+      }
+
+      .footer__nav {
+        flex-direction: row;
+        gap: 0;
+        width: 100%;
+      }
+
+      .footer__nav-col {
+        flex: 1;
+        gap: 24px;
+      }
+
+      .footer__nav-title {
+        font-size: 14px;
+        letter-spacing: -0.28px;
+      }
+
+      .footer__nav-links {
+        gap: 12px;
+      }
+
+      .footer__nav-link {
+        font-size: 16px;
+        letter-spacing: -0.32px;
+      }
+
+      .footer__bottom {
+        flex-direction: column;
+        gap: 10px;
+        align-items: flex-start;
+      }
+
+      .footer__copyright {
+        font-size: 14px;
+        letter-spacing: -0.28px;
+      }
+
+      .footer__credits {
+        font-size: 14px;
+        letter-spacing: -0.28px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <section class="hero" data-od-id="hero">
+    <img class="hero__bg" src="figma-data/images/home-bg.png" alt="">
+    <div class="hero__contact-btn">
+      <div class="hero__contact-btn-inner">
+        <span>Jetzt kontaktieren</span>
+      </div>
+    </div>
+    <nav class="hero__nav" role="navigation" aria-label="Main navigation">
+      <div class="hero__logo">
+        <img src="figma-data/images/enex-logo-slogan.svg" alt="ENEX Bonn" class="hero__logo-desktop">
+        <img src="figma-data/images-mobile/enex-logo-slogan-mobile.svg" alt="ENEX Bonn" class="hero__logo-mobile">
+      </div>
+      <div class="hero__menu">
+        <a href="index.html">Home</a>
+        <a href="leistungen.html">Leistungen</a>
+        <a href="referenzen.html">Referenzen</a>
+        <a href="uber-uns.html">Über uns</a>
+      </div>
+      <button class="hero__menu-toggle" aria-expanded="false" aria-label="Toggle menu">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+          <line x1="3" y1="6" x2="21" y2="6" stroke="white" stroke-width="2" stroke-linecap="round"/>
+          <line x1="3" y1="12" x2="21" y2="12" stroke="white" stroke-width="2" stroke-linecap="round"/>
+          <line x1="3" y1="18" x2="21" y2="18" stroke="white" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </button>
+    </nav>
+    <div class="mobile-menu" aria-hidden="true">
+      <div class="mobile-menu__overlay"></div>
+      <div class="mobile-menu__drawer">
+        <button class="mobile-menu__close" aria-label="Close menu">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <line x1="6" y1="6" x2="18" y2="18" stroke="#2b2e31" stroke-width="2" stroke-linecap="round"/>
+            <line x1="18" y1="6" x2="6" y2="18" stroke="#2b2e31" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </button>
+        <nav class="mobile-menu__nav">
+          <a href="index.html">Home</a>
+          <a href="leistungen.html">Leistungen</a>
+          <a href="referenzen.html">Referenzen</a>
+          <a href="uber-uns.html">Über uns</a>
+        </nav>
+        <a href="kontakt.html" class="mobile-menu__contact">Jetzt Kontaktieren</a>
+      </div>
+    </div>
+    <div class="hero__content">
+      <div class="hero__text">
+        <h1 class="hero__headline">Die <span class="muted">Energie</span> Experten.</h1>
+        <p class="hero__subhead">Ihr Elektrofachbetrieb in Bonn für private, gewerbliche und industrielle Projekte.</p>
+      </div>
+      <div class="hero__bottom-panel">
+        <div class="hero__frame">
+          <div class="hero__frame-arrows">
+            <div class="hero__frame-arrow hero__frame-arrow--up">
+              <img src="figma-data/images/arrow-right.svg" alt="">
+            </div>
+            <div class="hero__frame-divider">
+              <img src="figma-data/images/vector5.svg" alt="">
+            </div>
+            <div class="hero__frame-arrow">
+              <img src="figma-data/images/arrow-right1.svg" alt="">
+            </div>
+          </div>
+          <div class="hero__frame-info">
+            <div class="hero__frame-cta">
+              <span class="hero__frame-cta-text">Jetzt entdecken</span>
+              <div class="hero__frame-cta-btn">
+                <img src="figma-data/images/arrow-right2.svg" alt="">
+              </div>
+            </div>
+            <p class="hero__frame-title">So läuft die Energie Optimierung<br>Ihres Hauses ab.</p>
+          </div>
+          <div class="hero__frame-video">
+            <div class="hero__frame-video-inner">
+              <div class="hero__frame-phone">
+                <img class="phone-img" src="figma-data/images/markus-spiske.png" alt="">
+                <div class="hero__frame-play">
+                  <img src="figma-data/images/play.svg" alt="">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="about" data-od-id="about">
+    <div class="about__top">
+      <div class="about__left">
+        <div class="about__left-inner">
+          <div class="tag">
+            <div class="tag__icon">
+              <img src="figma-data/images/group39499.svg" alt="">
+            </div>
+            <span class="tag__text">Über Enex Bonn</span>
+          </div>
+          <p class="about__desc">Über 100 abgeschlossene Projekte in der Region Bonn. Privat, gewerblich und industriell.<br>Wir streben stets nach individuellen und passenden Lösungen für jeden Kunden.</p>
+        </div>
+      </div>
+      <div class="about__right">
+        <p class="about__headline">Wir begleiten private, gewerbliche und industrielle Projekte mit<span class="muted"> technischem Know-how</span> und <span class="muted">handwerklicher Sorgfalt</span>. Von der Planung bis zur Fertigstellung.</p>
+        <div class="about__image-block">
+          <img class="about-img" src="figma-data/images/frame54.png" alt="">
+          <div class="about__counter-box">
+            <div class="about__counter-arrows">
+              <div class="about__counter-arrow about__counter-arrow--up">
+                <img src="figma-data/images/arrow-right3.svg" alt="">
+              </div>
+              <div class="about__counter-divider">
+                <img src="figma-data/images/vector6.svg" alt="">
+              </div>
+              <div class="about__counter-arrow">
+                <img src="figma-data/images/arrow-right4.svg" alt="">
+              </div>
+            </div>
+            <div class="about__counter-content">
+              <p class="about__counter-label">Abgeschlossene Energie-Projekte</p>
+              <p class="about__counter-number">100<span class="muted">+</span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="logos">
+      <div class="logos__row">
+        <div class="logos__item"><img src="figma-data/images/logos-google.svg" alt="Google"></div>
+        <div class="logos__item"><img src="figma-data/images/logos-google.svg" alt="Google"></div>
+        <div class="logos__item"><img src="figma-data/images/logos-google.svg" alt="Google"></div>
+      </div>
+      <div class="logos__row">
+        <div class="logos__item"><img src="figma-data/images/logos-google.svg" alt="Google"></div>
+        <div class="logos__item"><img src="figma-data/images/logos-google.svg" alt="Google"></div>
+        <div class="logos__item"><img src="figma-data/images/logos-google.svg" alt="Google"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="services" data-od-id="services">
+    <img class="services__bg" src="figma-data/images/frame47.png" alt="">
+    <div class="services__header">
+      <div class="tag tag--light">
+        <div class="tag__icon">
+          <img src="figma-data/images/group39500.svg" alt="">
+        </div>
+        <span class="tag__text">Services</span>
+      </div>
+      <p class="services__counter">001/004</p>
+    </div>
+    <div class="services__lines">
+      <div class="services__line-full"><img src="figma-data/images/line2.svg" alt=""></div>
+      <div class="services__line-short"><img src="figma-data/images/line3.svg" alt=""></div>
+    </div>
+    <div class="services__content">
+      <p class="services__subtitle">Zukunftssichere Mobilität</p>
+      <div class="services__main">
+        <div class="services__text">
+          <h2 class="services__title">Ladetechnik</h2>
+          <p class="services__desc">Von der einzelnen Wallbox bis zur skalierbaren Ladeinfrastruktur planen und installieren wir Ladelösungen, die zu Ihrem Bedarf passen.</p>
+        </div>
+        <div class="btn-primary">
+          <span>Jetzt Kontaktieren</span>
+        </div>
+      </div>
+    </div>
+    <div class="services__card-wrapper">
+      <div class="services__card">
+        <img class="services__card-image" src="figma-data/images/markus-spiske.png" alt="">
+        <div class="services__card-content">
+          <p class="services__card-title">Projektname</p>
+          <p class="services__card-location">Frankfurt, Germany</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="why" data-od-id="why">
+    <div class="why__header">
+      <div class="tag">
+        <div class="tag__icon">
+          <img src="figma-data/images/group39499.svg" alt="">
+        </div>
+        <span class="tag__text">Warum Enex Bonn</span>
+      </div>
+      <h2 class="why__headline">Qualität und <span class="muted">Zuverlässigkeit</span></h2>
+    </div>
+    <div class="why__grid">
+      <div class="why__card">
+        <div class="why__card-top">
+          <div class="why__card-icon">
+            <img src="figma-data/images/material-add.svg" alt="">
+          </div>
+        </div>
+        <div class="why__card-circle"></div>
+        <div class="why__card-title-wrap">
+          <h3 class="why__card-title">Ein Ansprechpartner von Anfang bis Ende</h3>
+        </div>
+        <div class="why__card-overlay">
+          <p class="why__card-overlay-text">Von der ersten Beratung über die Planung bis zur finalen Umsetzung begleiten wir Ihr Projekt persönlich. Direkte Kommunikation, kurze Entscheidungswege und ein fester Ansprechpartner sorgen für Transparenz, Verlässlichkeit und eine reibungslose Zusammenarbeit während jeder Projektphase.</p>
+        </div>
+      </div>
+      <div class="why__card">
+        <div class="why__card-top">
+          <div class="why__card-icon">
+            <img src="figma-data/images/material-add.svg" alt="">
+          </div>
+        </div>
+        <div class="why__card-circle">
+          <img src="figma-data/images/sketch-logo.svg" alt="">
+        </div>
+        <div class="why__card-title-wrap">
+          <h3 class="why__card-title why__card-title--medium">Qualität bis ins Detail</h3>
+        </div>
+      </div>
+      <div class="why__card">
+        <div class="why__card-top">
+          <div class="why__card-icon">
+            <img src="figma-data/images/material-add.svg" alt="">
+          </div>
+        </div>
+        <div class="why__card-circle">
+          <img src="figma-data/images/rocket.svg" alt="">
+        </div>
+        <div class="why__card-title-wrap">
+          <h3 class="why__card-title why__card-title--medium">Lösungen mit Zukunft</h3>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="reference" data-od-id="reference">
+    <div class="reference__gradient-left"></div>
+    <div class="reference__gradient-right"></div>
+    <div class="reference__fan">
+      <div class="reference__card reference__card--center">
+        <div class="reference__card-inner">
+          <img src="figma-data/images/rectangle4.png" alt="">
+        </div>
+      </div>
+      <div class="reference__card reference__card--r1">
+        <div class="reference__card-inner">
+          <img src="figma-data/images/rectangle4.png" alt="">
+        </div>
+      </div>
+      <div class="reference__card reference__card--r2">
+        <div class="reference__card-inner">
+          <img src="figma-data/images/rectangle4.png" alt="">
+        </div>
+      </div>
+      <div class="reference__card reference__card--r3">
+        <div class="reference__card-inner">
+          <img src="figma-data/images/rectangle4.png" alt="">
+        </div>
+      </div>
+      <div class="reference__card reference__card--l1">
+        <div class="reference__card-inner">
+          <img src="figma-data/images/rectangle4.png" alt="">
+        </div>
+      </div>
+      <div class="reference__card reference__card--l2">
+        <div class="reference__card-inner">
+          <img src="figma-data/images/rectangle4.png" alt="">
+        </div>
+      </div>
+      <div class="reference__card reference__card--l3">
+        <div class="reference__card-inner">
+          <img src="figma-data/images/rectangle4.png" alt="">
+        </div>
+      </div>
+    </div>
+    <div class="reference__header">
+      <div class="reference__header-inner">
+        <div class="tag">
+          <div class="tag__icon">
+            <img src="figma-data/images/group39499.svg" alt="">
+          </div>
+          <span class="tag__text">Referenzen</span>
+        </div>
+        <h2 class="reference__headline">Ausgewählte <span class="muted">Referenzprojekte</span></h2>
+      </div>
+      <a href="referenzen.html" class="reference__link">Alle Projekte ansehen</a>
+    </div>
+    <div class="reference__info">
+      <p class="reference__info-title">Name of the project here</p>
+      <p class="reference__info-location">Frankfurt, Germany</p>
+    </div>
+  </section>
+
+  <section class="testimonials" data-od-id="testimonials">
+    <div class="testimonials__header">
+      <div class="tag" style="width: 159px;">
+        <div class="tag__icon">
+          <img src="figma-data/images/group39499.svg" alt="">
+        </div>
+        <span class="tag__text">Testimonials</span>
+      </div>
+      <h2 class="testimonials__headline">Unsere <span class="muted">Kundenstimmen</span></h2>
+    </div>
+    <div class="testimonials__grid">
+      <div class="testimonials__card">
+        <div class="testimonials__card-image">
+          <img src="figma-data/images/frame79.png" alt="">
+        </div>
+        <div class="testimonials__card-content">
+          <p class="testimonials__card-quote">Wir sind seit Jahren Bestandskunde bei Enex Bonn und können die Truppe von ganzem Herzen weiterempfehlen!</p>
+          <div class="testimonials__card-author">
+            <p class="testimonials__card-name">Michael Jordan</p>
+            <p class="testimonials__card-location">Frankfurt, Germany</p>
+          </div>
+        </div>
+      </div>
+      <div class="testimonials__image testimonials__image--link">
+        <img class="bg" src="figma-data/images/frame81.png" alt="">
+        <div class="testimonials__link-btn">
+          <img src="figma-data/images/arrow-up-right.svg" alt="">
+        </div>
+      </div>
+      <div class="testimonials__image">
+        <img src="figma-data/images/frame78.png" alt="">
+      </div>
+      <div class="testimonials__image">
+        <img src="figma-data/images/frame80.png" alt="">
+      </div>
+    </div>
+  </section>
+
+  <section class="cta" data-od-id="cta">
+    <img class="cta__bg" src="figma-data/images/cta-bg.png" alt="">
+    <div class="cta__box">
+      <h2 class="cta__headline">Bereit für Ihr <span class="muted">Projekt </span></h2>
+      <div class="cta__divider">
+        <img src="figma-data/images/line4.svg" alt="">
+      </div>
+      <div class="cta__content">
+        <p class="cta__desc">Ob Neuinstallation, Sanierung oder Ladeinfrastruktur – wir beraten Sie persönlich und finden die passende Lösung.</p>
+        <div class="btn-primary">
+          <span>Jetzt Kontaktieren</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer" data-od-id="footer">
+    <div class="footer__top">
+      <div class="footer__brand">
+        <div class="footer__logo">
+          <img src="figma-data/images/enex-logo.svg" alt="ENEX">
+        </div>
+        <p class="footer__desc">Ob Elektroinstallation, Ladeinfrastruktur oder individuelle Lösungen – wir beraten Sie persönlich und finden die passende Lösung für Ihr Projekt.</p>
+      </div>
+      <div class="footer__links">
+        <div class="footer__column">
+          <p class="footer__column-title">Navigation</p>
+          <div class="footer__column-links">
+            <a href="index.html">Home</a>
+            <a href="uber-uns.html">Über uns</a>
+            <a href="leistungen.html">Leistungen</a>
+            <a href="referenzen.html">Referenzen</a>
+            <a href="kontakt.html">Kontakt</a>
+          </div>
+        </div>
+        <div class="footer__column">
+          <p class="footer__column-title">Legal</p>
+          <div class="footer__column-links">
+            <a href="impressum.html">Impressum</a>
+            <a href="#">Datenschutz</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer__divider">
+      <img src="figma-data/images/line5.svg" alt="">
+    </div>
+    <div class="footer__bottom">
+      <p class="footer__copyright">©2026 ENEX Bonn. Alle Rechte vorbehalten.</p>
+      <p class="footer__credit">Made by INSYNC</p>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script>
+    // Mobile menu toggle
+    const menuToggle = document.querySelector('.hero__menu-toggle');
+    const mobileMenu = document.querySelector('.mobile-menu');
+    const closeBtn = document.querySelector('.mobile-menu__close');
+    const overlay = document.querySelector('.mobile-menu__overlay');
+
+    function openMenu() {
+      mobileMenu.classList.add('is-open');
+      menuToggle.setAttribute('aria-expanded', 'true');
+      mobileMenu.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeMenu() {
+      mobileMenu.classList.remove('is-open');
+      menuToggle.setAttribute('aria-expanded', 'false');
+      mobileMenu.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = '';
+    }
+
+    menuToggle.addEventListener('click', openMenu);
+    closeBtn.addEventListener('click', closeMenu);
+    overlay.addEventListener('click', closeMenu);
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && mobileMenu.classList.contains('is-open')) {
+        closeMenu();
+      }
+    });
+
+    // Heading Animation - Solid Shape Reveal with Line Stagger
+    function initHeadingAnimations() {
+      if (typeof gsap === 'undefined' || typeof ScrollTrigger === 'undefined') return;
+
+      gsap.registerPlugin(ScrollTrigger);
+
+      const headingSelectors = [
+        '.hero__headline',
+        '.why__headline',
+        '.reference__headline',
+        '.testimonials__headline',
+        '.cta__headline',
+        '.services__title'
+      ];
+
+      const headings = document.querySelectorAll(headingSelectors.join(', '));
+      const accentColor = getComputedStyle(document.documentElement).getPropertyValue('--accent').trim() || '#48c7f4';
+
+      headings.forEach((heading) => {
+        // Skip if already animated
+        if (heading.dataset.animated) return;
+        heading.dataset.animated = 'true';
+
+        initLineReveal(heading, accentColor);
+      });
+    }
+
+    // Detect visual lines using Range API - returns line boundaries
+    function detectVisualLines(element) {
+      function getTextNodes(node) {
+        const textNodes = [];
+        const walker = document.createTreeWalker(node, NodeFilter.SHOW_TEXT, null, false);
+        let n;
+        while (n = walker.nextNode()) {
+          if (n.textContent.trim()) textNodes.push(n);
+        }
+        return textNodes;
+      }
+
+      const textNodes = getTextNodes(element);
+      if (textNodes.length === 0) return [];
+
+      const charRects = [];
+      const range = document.createRange();
+
+      textNodes.forEach(textNode => {
+        for (let i = 0; i < textNode.length; i++) {
+          const char = textNode.textContent[i];
+          if (char === ' ' || char === '\n' || char === '\t') continue;
+
+          range.setStart(textNode, i);
+          range.setEnd(textNode, i + 1);
+          const rect = range.getBoundingClientRect();
+
+          if (rect.width > 0 && rect.height > 0) {
+            charRects.push({
+              top: rect.top,
+              left: rect.left,
+              right: rect.right,
+              height: rect.height
+            });
+          }
+        }
+      });
+
+      if (charRects.length === 0) return [];
+
+      charRects.sort((a, b) => a.top - b.top || a.left - b.left);
+
+      const lines = [];
+      let currentLine = [charRects[0]];
+      let currentTop = charRects[0].top;
+
+      for (let i = 1; i < charRects.length; i++) {
+        const rect = charRects[i];
+        if (Math.abs(rect.top - currentTop) <= 5) {
+          currentLine.push(rect);
+        } else {
+          lines.push(currentLine);
+          currentLine = [rect];
+          currentTop = rect.top;
+        }
+      }
+      if (currentLine.length > 0) {
+        lines.push(currentLine);
+      }
+
+      return lines.map(lineChars => ({
+        top: Math.min(...lineChars.map(c => c.top)),
+        left: Math.min(...lineChars.map(c => c.left)),
+        right: Math.max(...lineChars.map(c => c.right)),
+        height: Math.max(...lineChars.map(c => c.height))
+      }));
+    }
+
+    // Line-by-line solid shape reveal
+    function initLineReveal(heading, accentColor) {
+      const originalHTML = heading.innerHTML;
+      const lines = detectVisualLines(heading);
+
+      if (lines.length <= 1) {
+        initSingleBarReveal(heading, accentColor, originalHTML);
+        return;
+      }
+
+      const headingRect = heading.getBoundingClientRect();
+      const primaryBars = [];
+      const secondaryBars = [];
+
+      // Store original styles for cleanup
+      const originalPosition = heading.style.position;
+      const originalOverflow = heading.style.overflow;
+      const originalZIndex = heading.style.zIndex;
+
+      // Add position relative and ensure overflow is visible
+      heading.style.position = 'relative';
+      heading.style.overflow = 'visible';
+      heading.style.zIndex = '10';
+
+      lines.forEach((line, index) => {
+        const topOffset = line.top - headingRect.top;
+        const leftOffset = line.left - headingRect.left;
+        const lineWidth = line.right - line.left;
+        const barHeight = line.height + 4;
+
+        // Secondary bar (lighter color, behind)
+        const secondaryBar = document.createElement('div');
+        secondaryBar.className = 'heading-reveal-bar heading-reveal-bar--secondary';
+        secondaryBar.style.cssText = `
+          position: absolute;
+          top: ${topOffset - 2}px;
+          left: ${leftOffset}px;
+          width: ${lineWidth}px;
+          height: ${barHeight}px;
+          background: color-mix(in oklch, ${accentColor}, white 50%);
+          transform-origin: right center;
+          z-index: 1;
+          pointer-events: none;
+        `;
+        heading.appendChild(secondaryBar);
+        secondaryBars.push(secondaryBar);
+
+        // Primary bar (main color, front)
+        const primaryBar = document.createElement('div');
+        primaryBar.className = 'heading-reveal-bar heading-reveal-bar--primary';
+        primaryBar.style.cssText = `
+          position: absolute;
+          top: ${topOffset - 2}px;
+          left: ${leftOffset}px;
+          width: ${lineWidth}px;
+          height: ${barHeight}px;
+          background: ${accentColor};
+          transform-origin: right center;
+          z-index: 2;
+          pointer-events: none;
+        `;
+        heading.appendChild(primaryBar);
+        primaryBars.push(primaryBar);
+      });
+
+      // Animation function
+      function animateBars() {
+        gsap.to(primaryBars, {
+          scaleX: 0,
+          duration: 0.9,
+          stagger: 0.15,
+          ease: 'power2.inOut'
+        });
+        gsap.to(secondaryBars, {
+          scaleX: 0,
+          duration: 0.9,
+          stagger: 0.15,
+          delay: 0.12,
+          ease: 'power2.inOut',
+          onComplete: () => {
+            primaryBars.forEach(bar => bar.remove());
+            secondaryBars.forEach(bar => bar.remove());
+            heading.style.position = originalPosition || '';
+            heading.style.overflow = originalOverflow || '';
+            heading.style.zIndex = originalZIndex || '';
+          }
+        });
+      }
+
+      // Check if heading is already in viewport
+      const headingTop = heading.getBoundingClientRect().top;
+      const windowHeight = window.innerHeight;
+      const isInView = headingTop < windowHeight * 0.9;
+
+      if (isInView) {
+        setTimeout(animateBars, 100);
+      } else {
+        ScrollTrigger.create({
+          trigger: heading,
+          start: 'top 90%',
+          once: true,
+          onEnter: animateBars
+        });
+      }
+    }
+
+    // Single bar reveal for single-line headings
+    function initSingleBarReveal(heading, accentColor, originalHTML) {
+      const headingRect = heading.getBoundingClientRect();
+      const range = document.createRange();
+      range.selectNodeContents(heading);
+      const textRect = range.getBoundingClientRect();
+
+      const textWidth = textRect.width;
+      const textLeft = textRect.left - headingRect.left;
+      const textTop = textRect.top - headingRect.top;
+      const textHeight = textRect.height;
+
+      // Store original styles for cleanup
+      const originalPosition = heading.style.position;
+      const originalOverflow = heading.style.overflow;
+      const originalZIndex = heading.style.zIndex;
+
+      // Add position relative and ensure overflow is visible
+      heading.style.position = 'relative';
+      heading.style.overflow = 'visible';
+      heading.style.zIndex = '10';
+
+      // Secondary bar (lighter color, behind)
+      const secondaryBar = document.createElement('div');
+      secondaryBar.className = 'heading-reveal-bar heading-reveal-bar--secondary';
+      secondaryBar.style.cssText = `
+        position: absolute;
+        top: ${textTop}px;
+        left: ${textLeft}px;
+        width: ${textWidth}px;
+        height: ${textHeight + 4}px;
+        background: color-mix(in oklch, ${accentColor}, white 50%);
+        transform-origin: right center;
+        z-index: 1;
+        pointer-events: none;
+      `;
+      heading.appendChild(secondaryBar);
+
+      // Primary bar (main color, front)
+      const primaryBar = document.createElement('div');
+      primaryBar.className = 'heading-reveal-bar heading-reveal-bar--primary';
+      primaryBar.style.cssText = `
+        position: absolute;
+        top: ${textTop}px;
+        left: ${textLeft}px;
+        width: ${textWidth}px;
+        height: ${textHeight + 4}px;
+        background: ${accentColor};
+        transform-origin: right center;
+        z-index: 2;
+        pointer-events: none;
+      `;
+      heading.appendChild(primaryBar);
+
+      // Animation function
+      function animateBars() {
+        gsap.to(primaryBar, {
+          scaleX: 0,
+          duration: 1.0,
+          ease: 'power2.inOut'
+        });
+        gsap.to(secondaryBar, {
+          scaleX: 0,
+          duration: 1.0,
+          delay: 0.12,
+          ease: 'power2.inOut',
+          onComplete: () => {
+            primaryBar.remove();
+            secondaryBar.remove();
+            heading.style.position = originalPosition || '';
+            heading.style.overflow = originalOverflow || '';
+            heading.style.zIndex = originalZIndex || '';
+          }
+        });
+      }
+
+      // Check if heading is already in viewport
+      const headingTop = heading.getBoundingClientRect().top;
+      const windowHeight = window.innerHeight;
+      const isInView = headingTop < windowHeight * 0.9;
+
+      if (isInView) {
+        setTimeout(animateBars, 100);
+      } else {
+        ScrollTrigger.create({
+          trigger: heading,
+          start: 'top 90%',
+          once: true,
+          onEnter: animateBars
+        });
+      }
+    }
+
+    // Initialize heading animations after fonts and layout are ready
+    function tryInitHeadingAnimations() {
+      if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
+        initHeadingAnimations();
+      }
+    }
+
+    setTimeout(tryInitHeadingAnimations, 100);
+
+    if (document.fonts && document.fonts.ready) {
+      document.fonts.ready.then(() => {
+        setTimeout(tryInitHeadingAnimations, 50);
+      });
+    }
+
+    window.addEventListener('load', () => {
+      setTimeout(tryInitHeadingAnimations, 100);
+    });
+  </script>
+</body>
+</html>

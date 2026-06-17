@@ -1,0 +1,958 @@
+const imgHome = "http://localhost:3845/assets/ba64a69729ba9ab967dfcac24bd297f9b365cfa4.png";
+const imgMarkusSpiskeLHodAyBReUnsplash1 = "http://localhost:3845/assets/2b904afe87df87e4265903afa155a7629243b376.png";
+const imgFrame55 = "http://localhost:3845/assets/db2f7b85a85d8be04643c149eee19d5590dfa182.png";
+const imgFrame56 = "http://localhost:3845/assets/95fed64047c7e1213fb169b9f0968a47c8cd84c6.png";
+const imgFrame47 = "http://localhost:3845/assets/7777bd47ba723fb9440e0dc8d1c30ada451f01b6.png";
+const imgFrame79 = "http://localhost:3845/assets/0d25957117e8c6a873f779eefb1ca4343dda841b.png";
+const imgCta = "http://localhost:3845/assets/3aaeaa54f01334f70b47d902d3e5790edd65dae0.png";
+const imgEnexLogoSlogan1 = "http://localhost:3845/assets/e49902a251a42537ef12800111f173e8420f8159.svg";
+const imgMenu = "http://localhost:3845/assets/b1301f6268df9a1b451a10522c756b85eb3be3e0.svg";
+const imgArrowRight = "http://localhost:3845/assets/84ae5c8872a559c46b487ac50f22eade715ca171.svg";
+const imgArrowRight1 = "http://localhost:3845/assets/f62a2ebf6ac579a88d46792c306bcd4ef84d7a2e.svg";
+const imgVector5 = "http://localhost:3845/assets/1878a4f3e421e329d4db45772596cc9e30aa4f1b.svg";
+const imgArrowRight2 = "http://localhost:3845/assets/47ce2d2734682b3321ae86163762114aa02b6d1e.svg";
+const imgPlay = "http://localhost:3845/assets/3622502d60e9ea9891f047cda54eee374b34a8ee.svg";
+const imgGroup39499 = "http://localhost:3845/assets/e1cad8b9cfa5e5d586dbdd173867f336e3e07b12.svg";
+const imgArrowRight3 = "http://localhost:3845/assets/c0a2aea5e0b977c4611fedace8151b5e5ac74b27.svg";
+const imgArrowRight4 = "http://localhost:3845/assets/71903fb69d0830294cd73b9e9928535ca6e68684.svg";
+const imgGroup39500 = "http://localhost:3845/assets/434e6f44c7b3ae700b823c1b1a0461494778b657.svg";
+const imgGroup39501 = "http://localhost:3845/assets/fefff773dcf740db3935cf7e618578e90a5858c0.svg";
+const imgGroup39502 = "http://localhost:3845/assets/db0dae7c35f644edc5dd866619058b7030b58fbb.svg";
+const imgMaterialSymbolsAddRounded = "http://localhost:3845/assets/700a7d425ba721245ad5c3393cc0ba06063f452e.svg";
+const imgSketchLogo = "http://localhost:3845/assets/1782d305f1167ca778fed0b6a7dff3b810ed72df.svg";
+const imgRocket = "http://localhost:3845/assets/63ff766bc57c53824f3624965d8296b03171c50c.svg";
+const imgArrowRight5 = "http://localhost:3845/assets/5b0d08e836d57d6576c1836706f8ee934826232a.svg";
+const imgLine4 = "http://localhost:3845/assets/9868830628f21f9cd29bd5f80c455fc7f60000db.svg";
+const imgEnexLogo1 = "http://localhost:3845/assets/439713009a3bed54f25aafc9347e798a7f60b8db.svg";
+const imgLine5 = "http://localhost:3845/assets/b81c6475d486dfce0db7ed2ab33883c34afd8423.svg";
+
+export default function Home() {
+  return (
+    <div className="content-stretch flex flex-col items-start relative size-full" data-node-id="2011:5945" data-name="Home">
+      <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgHome} />
+      <div className="content-stretch flex flex-col gap-[10px] h-[960px] items-center justify-end overflow-clip p-[20px] relative shrink-0 w-full" data-node-id="2011:5946" data-name="Hero">
+        <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgHome} />
+        <div className="-translate-x-1/2 absolute content-stretch flex items-center justify-between left-1/2 px-[20px] py-[16px] top-0 w-[393px]" data-node-id="2011:6294">
+          <div className="h-[28px] relative shrink-0 w-[100px]" data-node-id="2011:6295" data-name="ENEX Logo Slogan 1">
+            <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgEnexLogoSlogan1} />
+          </div>
+          <div className="relative shrink-0 size-[24px]" data-node-id="2011:6327" data-name="menu">
+            <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgMenu} />
+          </div>
+        </div>
+        <div className="content-stretch flex flex-col gap-[214px] items-start relative shrink-0 w-full" data-node-id="2011:5987">
+          <div className="[word-break:break-word] content-stretch flex flex-col gap-[28px] items-start not-italic relative shrink-0 text-white w-full" data-node-id="2011:5988">
+            <p className="font-['DM_Sans:SemiBold'] font-semibold leading-[0] relative shrink-0 text-[0px] tracking-[-3.36px] w-full" data-node-id="2011:5989" style={{ fontVariationSettings: '"opsz" 14' }}>
+              <span className="font-['Inter:Semi_Bold'] leading-[0.9] text-[56px]">{`Die `}</span>
+              <span className="font-['Inter:Semi_Bold'] leading-[0.9] text-[56px] text-[rgba(255,255,255,0.6)]">Energie</span>
+              <span className="font-['Inter:Semi_Bold'] leading-[0.9] text-[56px]">{` Experten.`}</span>
+            </p>
+            <p className="font-['Inter:Medium'] font-medium leading-[1.5] relative shrink-0 text-[14px] tracking-[-0.28px] w-full" data-node-id="2011:5990">
+              Ihr Elektrofachbetrieb in Bonn für private, gewerbliche und industrielle Projekte.
+            </p>
+          </div>
+          <div className="flex items-center justify-center relative shrink-0 w-full">
+            <div className="-scale-y-100 flex-none w-full">
+              <div className="bg-white content-stretch flex flex-col items-start justify-center overflow-clip relative w-full" data-node-id="2011:5991" data-name="frame">
+                <div className="content-stretch flex items-start relative shrink-0 w-full" data-node-id="2011:6267">
+                  <div className="flex flex-[1_0_0] items-center justify-center min-w-px relative">
+                    <div className="flex-none rotate-180 w-full">
+                      <div className="content-stretch flex flex-col items-end p-[16px] relative w-full" data-node-id="2011:6277">
+                        <div className="content-stretch flex flex-col gap-[36px] items-end relative shrink-0 w-full" data-node-id="2011:6278">
+                          <div className="flex items-center justify-center min-w-full relative shrink-0 w-[min-content]">
+                            <div className="-scale-y-100 flex-none rotate-180 w-full">
+                              <p className="[word-break:break-word] font-['DM_Sans:Medium'] font-medium leading-[1.2] relative text-[#030303] text-[20px] tracking-[-1.2px] w-full" data-node-id="2011:6279" style={{ fontVariationSettings: '"opsz" 14' }}>
+                                So läuft die Energie Optimierung Ihres Hauses ab.
+                              </p>
+                            </div>
+                          </div>
+                          <div className="content-stretch flex gap-[12px] items-center relative shrink-0" data-node-id="2011:6280">
+                            <div className="flex items-center justify-center relative shrink-0">
+                              <div className="-scale-y-100 flex-none rotate-180">
+                                <div className="bg-[#0b313d] content-stretch flex items-center justify-center p-[6.857px] relative rounded-[19.286px]" data-node-id="2011:6281">
+                                  <div className="relative shrink-0 size-[10.286px]" data-node-id="2011:6282" data-name="arrow-right">
+                                    <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgArrowRight} />
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div className="flex items-center justify-center relative shrink-0">
+                              <div className="-scale-y-100 flex-none rotate-180">
+                                <p className="[word-break:break-word] font-['Inter:Semi_Bold'] font-semibold leading-[1.2] not-italic relative text-[#030303] text-[12px] tracking-[-0.48px] whitespace-nowrap" data-node-id="2011:6285">
+                                  Jetzt entdecken
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="border-[rgba(3,3,3,0.1)] border-l border-solid content-stretch flex flex-col items-start relative self-stretch shrink-0" data-node-id="2011:5992">
+                    <div className="content-stretch flex flex-[1_0_0] items-center min-h-px p-[20px] relative" data-node-id="2011:5993">
+                      <div className="flex items-center justify-center relative shrink-0">
+                        <div className="-scale-y-100 flex-none rotate-180">
+                          <div className="relative size-[24px]" data-node-id="2011:5994" data-name="arrow-right">
+                            <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgArrowRight1} />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="flex flex-[1_0_0] items-center justify-center min-h-px relative w-full">
+                      <div className="-scale-y-100 flex-none rotate-180 size-full">
+                        <div className="relative size-full" data-node-id="2011:5997">
+                          <div className="absolute inset-[-0.5px_0]">
+                            <img alt="" className="block max-w-none size-full" src={imgVector5} />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="content-stretch flex flex-[1_0_0] items-center min-h-px p-[20px] relative" data-node-id="2011:5998">
+                      <div className="relative shrink-0 size-[24px]" data-node-id="2011:5999" data-name="arrow-right">
+                        <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgArrowRight2} />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="content-stretch flex flex-col items-end p-[16px] relative shrink-0 w-full" data-node-id="2011:6287">
+                  <div className="flex items-center justify-center relative shrink-0 w-full">
+                    <div className="-scale-y-100 flex-none w-full">
+                      <div className="aspect-[588/270] bg-[#fafafa] overflow-clip relative size-full" data-node-id="2011:6288" data-name="phone">
+                        <div className="-translate-x-1/2 -translate-y-1/2 absolute h-[226px] left-1/2 top-[calc(50%+5.7px)] w-[339px]" data-node-id="2011:6289" data-name="markus-spiske-_LHodAyB_RE-unsplash 1">
+                          <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgMarkusSpiskeLHodAyBReUnsplash1} />
+                        </div>
+                        <div className="absolute backdrop-blur-[5px] bg-[rgba(255,255,255,0.4)] border border-[rgba(255,255,255,0.2)] border-solid bottom-[6.92px] content-stretch flex items-center justify-center left-[9px] p-[20px] rounded-[72.5px] size-[32px]" data-node-id="2011:6290">
+                          <div className="relative shrink-0 size-[24px]" data-node-id="2011:6291" data-name="play">
+                            <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgPlay} />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="bg-white content-stretch flex flex-col h-[852px] items-start overflow-clip px-[20px] py-[32px] relative shrink-0 w-full" data-node-id="2011:6332" data-name="Uber Enex Bonn Intro">
+        <div className="content-stretch flex flex-[1_0_0] flex-col items-start justify-between min-h-px relative w-full" data-node-id="2011:6333">
+          <div className="content-stretch flex flex-col gap-[24px] items-start relative shrink-0 w-full" data-node-id="2011:6334">
+            <div className="bg-[#edeff4] content-stretch flex gap-[10px] items-center pl-[10px] pr-[14px] py-[8px] relative shrink-0" data-node-id="2011:6335">
+              <div className="relative shrink-0 size-[10px]" data-node-id="2011:6336">
+                <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgGroup39499} />
+              </div>
+              <p className="[word-break:break-word] font-['Inter:Semi_Bold'] font-semibold leading-[1.2] not-italic relative shrink-0 text-[#030303] text-[12px] tracking-[-0.24px] whitespace-nowrap" data-node-id="2011:6341">
+                Über Enex Bonn
+              </p>
+            </div>
+            <div className="[text-box-edge:cap_alphabetic] [text-box-trim:trim-both] [word-break:break-word] font-['DM_Sans:Medium'] font-medium leading-[0] min-w-full not-italic relative shrink-0 text-[#2b2e31] text-[0px] tracking-[-1.92px] w-[min-content] whitespace-pre-wrap" data-node-id="2011:6342" style={{ fontVariationSettings: '"opsz" 14' }}>
+              <p className="font-['Inter:Medium'] leading-[1.2] mb-0 text-[32px]">{`Wir begleiten `}</p>
+              <p className="font-['Inter:Medium'] mb-0 text-[32px]">
+                <span className="leading-[1.2]">private, gewerbliche und industrielle Projekte mit</span>
+                <span className="leading-[1.2] text-[rgba(43,46,49,0.6)]">{` technischem `}</span>
+              </p>
+              <p className="font-['Inter:Medium'] text-[32px]">
+                <span className="leading-[1.2] text-[rgba(43,46,49,0.6)]">Know-how</span>
+                <span className="leading-[1.2]">{` und `}</span>
+                <span className="leading-[1.2] text-[rgba(43,46,49,0.6)]">handwerklicher Sorgfalt</span>
+                <span className="leading-[1.2]">. Von der Planung bis zur Fertigstellung.</span>
+              </p>
+            </div>
+          </div>
+          <div className="content-stretch flex flex-col gap-[20px] items-start relative shrink-0 w-full" data-node-id="2011:6343">
+            <div className="content-stretch flex flex-col h-[240px] items-end justify-end p-[8px] relative shrink-0 w-[353px]" data-node-id="2011:6344">
+              <div aria-hidden className="absolute inset-0 pointer-events-none">
+                <img alt="" className="absolute max-w-none object-cover size-full" src={imgFrame55} />
+                <div className="absolute inset-0 overflow-hidden">
+                  <img alt="" className="absolute h-[108.71%] left-[99.86%] max-w-none top-[-4.36%] w-[-99.72%]" src={imgFrame56} />
+                </div>
+              </div>
+              <div className="bg-white content-stretch flex items-center justify-between overflow-clip relative shrink-0 w-full" data-node-id="2011:6345">
+                <div className="flex flex-[1_0_0] flex-row items-center self-stretch">
+                  <div className="[word-break:break-word] content-stretch flex flex-[1_0_0] font-medium h-full items-center justify-between min-w-px not-italic px-[12px] relative" data-node-id="2011:6346">
+                    <p className="font-['DM_Sans:Medium'] leading-[0] relative shrink-0 text-[#2b2e31] text-[0px] tracking-[-1.12px] whitespace-nowrap" data-node-id="2011:6347" style={{ fontVariationSettings: '"opsz" 14' }}>
+                      <span className="font-['Helvetica_Neue:Medium'] leading-none text-[28px]">100</span>
+                      <span className="font-['Helvetica_Neue:Medium'] leading-none text-[28px] text-[rgba(43,46,49,0.4)]">+</span>
+                    </p>
+                    <p className="font-['Inter:Medium'] leading-[1.2] relative shrink-0 text-[10px] text-[rgba(43,46,49,0.6)] text-right tracking-[-0.2px] w-[111px]" data-node-id="2011:6348">
+                      Abgeschlossene Energie-Projekte
+                    </p>
+                  </div>
+                </div>
+                <div className="flex items-center justify-center relative shrink-0">
+                  <div className="-scale-y-100 flex-none rotate-180">
+                    <div className="content-stretch flex items-start relative" data-node-id="2011:6349">
+                      <div className="border-[rgba(0,0,0,0.1)] border-l-[0.5px] border-r-[0.5px] border-solid content-stretch flex items-center justify-center relative shrink-0 size-[50px]" data-node-id="2011:6350">
+                        <div className="flex items-center justify-center relative shrink-0">
+                          <div className="-scale-y-100 flex-none rotate-180">
+                            <div className="relative size-[9.341px]" data-node-id="2011:6351" data-name="arrow-right">
+                              <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgArrowRight3} />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="border-[rgba(0,0,0,0.1)] border-r-[0.5px] border-solid content-stretch flex items-center justify-center overflow-clip relative shrink-0 size-[50px]" data-node-id="2011:6354">
+                        <div className="relative shrink-0 size-[9.341px]" data-node-id="2011:6355" data-name="arrow-right">
+                          <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgArrowRight4} />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <p className="[word-break:break-word] font-['Inter:Medium'] font-medium leading-[1.5] min-w-full not-italic relative shrink-0 text-[#2b2e31] text-[14px] tracking-[-0.28px] w-[min-content]" data-node-id="2011:6358">
+              Über 100 abgeschlossene Projekte in der Region Bonn. Privat, gewerblich und industriell.Wir streben stets nach individuellen und passenden Lösungen für jeden Kunden.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div className="content-stretch flex flex-col items-start relative shrink-0 w-full" data-node-id="2011:6095" data-name="Services 4 step scroll">
+        <div className="content-stretch flex flex-col h-[900px] items-start justify-between overflow-clip px-[20px] py-[16px] relative shrink-0 w-full" data-node-id="2011:6096">
+          <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgFrame47} />
+          <div className="content-stretch flex flex-col gap-[24px] items-start relative shrink-0 w-full" data-node-id="2011:6387">
+            <div className="content-stretch flex items-center justify-between relative shrink-0 w-full" data-node-id="2011:6388">
+              <div className="bg-[rgba(255,255,255,0.2)] content-stretch flex gap-[10px] items-center pl-[10px] pr-[14px] py-[8px] relative shrink-0" data-node-id="2011:6389">
+                <div className="relative shrink-0 size-[10px]" data-node-id="2011:6390">
+                  <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgGroup39500} />
+                </div>
+                <p className="[word-break:break-word] font-['Inter:Semi_Bold'] font-semibold leading-[1.2] not-italic relative shrink-0 text-[12px] text-white tracking-[-0.24px] whitespace-nowrap" data-node-id="2011:6395">
+                  Services
+                </p>
+              </div>
+              <p className="[word-break:break-word] font-['Space_Mono:Regular'] leading-[1.4] not-italic relative shrink-0 text-[14px] text-white whitespace-nowrap" data-node-id="2011:6396">
+                001/004
+              </p>
+            </div>
+            <div className="h-0 relative shrink-0 w-full" data-node-id="2011:6397">
+              <div className="absolute inset-[-1px_0_0_0]">
+                <img alt="" className="block max-w-none size-full" src={imgGroup39501} />
+              </div>
+            </div>
+            <p className="[word-break:break-word] font-['Inter:Medium'] font-medium leading-[1.5] not-italic relative shrink-0 text-[14px] text-[rgba(255,255,255,0.8)] tracking-[-0.28px] w-[324px]" data-node-id="2011:6400">
+              Zukunftssichere Mobilität
+            </p>
+          </div>
+          <div className="content-stretch flex flex-col gap-[24px] items-start relative shrink-0 w-full" data-node-id="2011:6374">
+            <div className="content-stretch flex flex-col gap-[24px] items-start relative shrink-0 w-full" data-node-id="2011:6375">
+              <div className="[word-break:break-word] content-stretch flex flex-col font-['Inter:Medium'] font-medium gap-[16px] items-start not-italic relative shrink-0 w-full" data-node-id="2011:6376">
+                <p className="leading-[1.1] relative shrink-0 text-[48px] text-white tracking-[-2.88px] w-full" data-node-id="2011:6377">
+                  Ladetechnik
+                </p>
+                <p className="leading-[1.5] relative shrink-0 text-[14px] text-[rgba(255,255,255,0.8)] tracking-[-0.28px] w-full" data-node-id="2011:6378">
+                  Von der einzelnen Wallbox bis zur skalierbaren Ladeinfrastruktur planen und installieren wir Ladelösungen, die zu Ihrem Bedarf passen.
+                </p>
+              </div>
+              <div className="bg-[#48c7f4] content-stretch flex items-center px-[24px] py-[12px] relative shrink-0" data-node-id="2011:6379">
+                <p className="[word-break:break-word] font-['Inter:Semi_Bold'] font-semibold leading-[1.4] not-italic relative shrink-0 text-[14px] text-center text-white tracking-[-0.28px] whitespace-nowrap" data-node-id="2011:6380">
+                  Jetzt Kontaktieren
+                </p>
+              </div>
+            </div>
+            <div className="bg-white content-stretch flex flex-col items-start overflow-clip p-[12px] relative shrink-0 w-full" data-node-id="2011:6381">
+              <div className="h-[160px] relative shrink-0 w-full" data-node-id="2011:6382" data-name="phone">
+                <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgMarkusSpiskeLHodAyBReUnsplash1} />
+              </div>
+              <div className="[word-break:break-word] content-stretch flex flex-col gap-[4px] items-start not-italic px-[8px] py-[10px] relative shrink-0 w-full" data-node-id="2011:6383">
+                <p className="font-['Inter:Semi_Bold'] font-semibold leading-[1.4] relative shrink-0 text-[#2b2e31] text-[18px] tracking-[-0.36px] w-full" data-node-id="2011:6384">
+                  Projektname
+                </p>
+                <p className="font-['Inter:Medium'] font-medium leading-[1.5] relative shrink-0 text-[12px] text-[rgba(43,46,49,0.6)] tracking-[-0.24px] w-full" data-node-id="2011:6385">
+                  Frankfurt, Germany
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="bg-white content-stretch flex flex-col gap-[60px] items-start overflow-clip px-[20px] py-[32px] relative shrink-0 w-full" data-node-id="2011:6123" data-name="Warum Enex">
+        <div className="content-stretch flex flex-col gap-[65px] items-center relative shrink-0 w-full" data-node-id="2011:6124">
+          <div className="bg-[#edeff4] content-stretch flex gap-[12px] items-center pl-[12px] pr-[16px] py-[8px] relative shrink-0" data-node-id="2011:6125">
+            <div className="relative shrink-0 size-[12px]" data-node-id="2011:6126">
+              <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgGroup39502} />
+            </div>
+            <p className="[word-break:break-word] font-['Inter:Semi_Bold'] font-semibold leading-[1.2] not-italic relative shrink-0 text-[#030303] text-[18px] tracking-[-0.36px] whitespace-nowrap" data-node-id="2011:6131">
+              Warum Enex Bonn
+            </p>
+          </div>
+          <p className="[text-box-edge:cap_alphabetic] [text-box-trim:trim-both] [word-break:break-word] font-['DM_Sans:Regular'] font-normal h-[146px] leading-[0] min-w-full not-italic relative shrink-0 text-[#2b2e31] text-[0px] text-center tracking-[-2.7px] w-[min-content]" data-node-id="2011:6132" style={{ fontVariationSettings: '"opsz" 14' }}>
+            <span className="font-['Inter:Medium'] font-medium leading-[1.1] text-[45px]">{`Qualität und `}</span>
+            <span className="font-['Inter:Medium'] font-medium leading-[1.1] text-[45px] text-[rgba(43,46,49,0.6)]">Zuverlässigkeit</span>
+          </p>
+        </div>
+        <div className="border border-[rgba(0,0,0,0.1)] border-solid content-stretch flex flex-col items-start justify-center overflow-clip relative shrink-0 w-full" data-node-id="2011:6133">
+          <div className="bg-white border-[rgba(48,48,48,0.1)] border-r border-solid content-stretch flex flex-col h-[500px] items-center justify-between overflow-clip p-[40px] relative shrink-0 w-full" data-node-id="2011:6134">
+            <div className="content-stretch flex items-center justify-end relative shrink-0 w-full" data-node-id="2011:6135">
+              <div className="bg-[#48c7f4] overflow-clip relative rounded-[100px] shrink-0 size-[50px]" data-node-id="2011:6136">
+                <div className="-translate-x-1/2 -translate-y-1/2 absolute left-1/2 size-[24px] top-1/2" data-node-id="2011:6137" data-name="material-symbols:add-rounded">
+                  <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgMaterialSymbolsAddRounded} />
+                </div>
+              </div>
+            </div>
+            <div className="content-stretch flex items-center justify-center relative shrink-0 w-full" data-node-id="2011:6139">
+              <div className="bg-white border border-[rgba(0,0,0,0.1)] border-solid relative rounded-[100px] shrink-0 size-[180px]" data-node-id="2011:6140" />
+            </div>
+            <div className="content-stretch flex h-[60px] items-end justify-center relative shrink-0 w-full" data-node-id="2011:6141">
+              <p className="[text-box-edge:cap_alphabetic] [text-box-trim:trim-both] [word-break:break-word] flex-[1_0_0] font-['DM_Sans:Regular'] font-normal leading-[1.1] min-w-px relative text-[#2b2e31] text-[32px] tracking-[-1.92px]" data-node-id="2011:6142" style={{ fontVariationSettings: '"opsz" 14' }}>
+                Ein Ansprechpartner von Anfang bis Ende
+              </p>
+            </div>
+            <div className="-translate-x-1/2 -translate-y-1/2 absolute backdrop-blur-[50px] bg-[rgba(255,255,255,0.12)] border-[rgba(48,48,48,0.1)] border-r border-solid content-stretch flex flex-col h-[500px] items-start left-1/2 overflow-clip p-[40px] top-1/2 w-[352px]" data-node-id="2011:6143">
+              <p className="[word-break:break-word] font-['Inter:Medium'] font-medium leading-[1.5] not-italic relative shrink-0 text-[#2b2e31] text-[14px] tracking-[-0.28px] w-full" data-node-id="2011:6144">
+                Von der ersten Beratung über die Planung bis zur finalen Umsetzung begleiten wir Ihr Projekt persönlich. Direkte Kommunikation, kurze Entscheidungswege und ein fester Ansprechpartner sorgen für Transparenz, Verlässlichkeit und eine reibungslose Zusammenarbeit während jeder Projektphase.
+              </p>
+            </div>
+          </div>
+          <div className="bg-white border-[rgba(48,48,48,0.1)] border-r border-solid content-stretch flex flex-col h-[500px] items-center justify-between overflow-clip p-[40px] relative shrink-0 w-full" data-node-id="2011:6145">
+            <div className="content-stretch flex items-center justify-end relative shrink-0 w-full" data-node-id="2011:6146">
+              <div className="bg-[#48c7f4] overflow-clip relative rounded-[100px] shrink-0 size-[50px]" data-node-id="2011:6147">
+                <div className="-translate-x-1/2 -translate-y-1/2 absolute left-1/2 size-[24px] top-1/2" data-node-id="2011:6148" data-name="material-symbols:add-rounded">
+                  <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgMaterialSymbolsAddRounded} />
+                </div>
+              </div>
+            </div>
+            <div className="content-stretch flex flex-[1_0_0] items-center justify-center min-h-px relative w-full" data-node-id="2011:6150">
+              <div className="bg-white border border-[rgba(0,0,0,0.1)] border-solid overflow-clip relative rounded-[100px] shrink-0 size-[180px]" data-node-id="2011:6151">
+                <div className="-translate-x-1/2 -translate-y-1/2 absolute left-1/2 size-[70px] top-1/2" data-node-id="2011:6152" data-name="SketchLogo">
+                  <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgSketchLogo} />
+                </div>
+              </div>
+            </div>
+            <div className="content-stretch flex h-[60px] items-end justify-center relative shrink-0 w-full" data-node-id="2011:6154">
+              <p className="[text-box-edge:cap_alphabetic] [text-box-trim:trim-both] [word-break:break-word] flex-[1_0_0] font-['Inter:Medium'] font-medium leading-[1.1] min-w-px not-italic relative text-[#2b2e31] text-[24px] tracking-[-0.96px]" data-node-id="2011:6155">
+                Qualität bis ins Detail
+              </p>
+            </div>
+          </div>
+          <div className="bg-white border-[rgba(48,48,48,0.1)] border-r border-solid content-stretch flex flex-col h-[500px] items-center justify-between overflow-clip p-[40px] relative shrink-0 w-full" data-node-id="2011:6156">
+            <div className="content-stretch flex items-center justify-end relative shrink-0 w-full" data-node-id="2011:6157">
+              <div className="bg-[#48c7f4] overflow-clip relative rounded-[100px] shrink-0 size-[50px]" data-node-id="2011:6158">
+                <div className="-translate-x-1/2 -translate-y-1/2 absolute left-1/2 size-[24px] top-1/2" data-node-id="2011:6159" data-name="material-symbols:add-rounded">
+                  <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgMaterialSymbolsAddRounded} />
+                </div>
+              </div>
+            </div>
+            <div className="content-stretch flex flex-[1_0_0] items-center justify-center min-h-px relative w-full" data-node-id="2011:6161">
+              <div className="bg-white border border-[rgba(0,0,0,0.1)] border-solid overflow-clip relative rounded-[100px] shrink-0 size-[180px]" data-node-id="2011:6162">
+                <div className="-translate-x-1/2 -translate-y-1/2 absolute left-1/2 size-[70px] top-1/2" data-node-id="2011:6163" data-name="Rocket">
+                  <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgRocket} />
+                </div>
+              </div>
+            </div>
+            <div className="content-stretch flex h-[60px] items-end justify-center relative shrink-0 w-full" data-node-id="2011:6165">
+              <p className="[text-box-edge:cap_alphabetic] [text-box-trim:trim-both] [word-break:break-word] flex-[1_0_0] font-['Inter:Medium'] font-medium leading-[1.1] min-w-px not-italic relative text-[#2b2e31] text-[24px] tracking-[-0.96px]" data-node-id="2011:6166">
+                Lösungen mit Zukunft
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="bg-white content-stretch flex flex-col items-center overflow-clip px-[20px] py-[32px] relative shrink-0 w-full" data-node-id="2011:6402" data-name="Reference">
+        <div className="content-stretch flex flex-col gap-[32px] items-center relative shrink-0 w-full" data-node-id="2011:6403">
+          <div className="content-stretch flex flex-col gap-[24px] items-center relative shrink-0 w-full" data-node-id="2011:6404">
+            <div className="bg-[#edeff4] content-stretch flex gap-[10px] items-center pl-[10px] pr-[14px] py-[8px] relative shrink-0" data-node-id="2011:6405">
+              <div className="relative shrink-0 size-[10px]" data-node-id="2011:6406">
+                <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgGroup39499} />
+              </div>
+              <p className="[word-break:break-word] font-['Inter:Semi_Bold'] font-semibold leading-[1.2] not-italic relative shrink-0 text-[#030303] text-[12px] tracking-[-0.24px] whitespace-nowrap" data-node-id="2011:6411">
+                Referenzen
+              </p>
+            </div>
+            <p className="[text-box-edge:cap_alphabetic] [text-box-trim:trim-both] [word-break:break-word] font-['DM_Sans:Regular'] font-normal leading-[0] min-w-full not-italic relative shrink-0 text-[#2b2e31] text-[0px] text-center tracking-[-2.88px] w-[min-content]" data-node-id="2011:6412" style={{ fontVariationSettings: '"opsz" 14' }}>
+              <span className="font-['Inter:Medium'] font-medium leading-[1.1] text-[48px]">{`Ausgewählte `}</span>
+              <span className="font-['Inter:Medium'] font-medium leading-[1.1] text-[48px] text-[rgba(43,46,49,0.6)]">Referenzprojekte</span>
+            </p>
+          </div>
+          <p className="[text-underline-position:from-font] [word-break:break-word] decoration-from-font decoration-solid font-['Inter:Semi_Bold'] font-semibold leading-[1.5] not-italic relative shrink-0 text-[#2b2e31] text-[14px] text-center tracking-[-0.28px] underline whitespace-nowrap" data-node-id="2011:6413">
+            Alle Projekte ansehen
+          </p>
+          <div className="h-[242px] relative shrink-0 w-[352px]" data-node-id="2011:6414">
+            <div className="absolute contents left-[-1381px] top-0" data-node-id="2011:6415" data-name="Repeat group 1">
+              <div className="absolute border-[0.646px] border-[rgba(0,0,0,0.1)] border-solid content-stretch flex h-[239.538px] items-center left-[72.05px] p-[6.457px] top-0 w-[207.901px]" data-node-id="2011:6416">
+                <div className="h-[226.625px] relative shrink-0 w-[194.988px]" data-node-id="2011:6417">
+                  <div aria-hidden className="absolute inset-0 pointer-events-none">
+                    <div className="absolute bg-[#d9d9d9] inset-0" />
+                    <img alt="" className="absolute max-w-none object-cover size-full" src={imgFrame55} />
+                  </div>
+                </div>
+              </div>
+              <div className="absolute flex h-[272.001px] items-center justify-center left-[302.4px] top-[5.6px] w-[246.338px]">
+                <div className="flex-none rotate-10">
+                  <div className="border-[0.646px] border-[rgba(0,0,0,0.1)] border-solid content-stretch flex h-[239.538px] items-center p-[6.457px] relative w-[207.901px]" data-node-id="2011:6418">
+                    <div className="h-[226.625px] relative shrink-0 w-[194.988px]" data-node-id="2011:6419">
+                      <div aria-hidden className="absolute inset-0 pointer-events-none">
+                        <div className="absolute bg-[#d9d9d9] inset-0" />
+                        <img alt="" className="absolute max-w-none object-cover size-full" src={imgFrame55} />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="absolute flex h-[296.199px] items-center justify-center left-[528.92px] top-[58.35px] w-[277.29px]">
+                <div className="flex-none rotate-20">
+                  <div className="border-[0.646px] border-[rgba(0,0,0,0.1)] border-solid content-stretch flex h-[239.538px] items-center p-[6.457px] relative w-[207.901px]" data-node-id="2011:6420">
+                    <div className="h-[226.625px] relative shrink-0 w-[194.988px]" data-node-id="2011:6421">
+                      <div aria-hidden className="absolute inset-0 pointer-events-none">
+                        <div className="absolute bg-[#d9d9d9] inset-0" />
+                        <img alt="" className="absolute max-w-none object-cover size-full" src={imgFrame55} />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="absolute flex h-[311.397px] items-center justify-center left-[744.71px] top-[156.62px] w-[299.817px]">
+                <div className="flex-none rotate-30">
+                  <div className="border-[0.646px] border-[rgba(0,0,0,0.1)] border-solid content-stretch flex h-[239.538px] items-center p-[6.457px] relative w-[207.901px]" data-node-id="2011:6422">
+                    <div className="h-[226.625px] relative shrink-0 w-[194.988px]" data-node-id="2011:6423">
+                      <div aria-hidden className="absolute inset-0 pointer-events-none">
+                        <div className="absolute bg-[#d9d9d9] inset-0" />
+                        <img alt="" className="absolute max-w-none object-cover size-full" src={imgFrame55} />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="absolute flex h-[317.133px] items-center justify-center left-[943.22px] top-[297.45px] w-[313.234px]">
+                <div className="flex-none rotate-40">
+                  <div className="border-[0.646px] border-[rgba(0,0,0,0.1)] border-solid content-stretch flex h-[239.538px] items-center p-[6.457px] relative w-[207.901px]" data-node-id="2011:6424">
+                    <div className="h-[226.625px] relative shrink-0 w-[194.988px]" data-node-id="2011:6425">
+                      <div aria-hidden className="absolute inset-0 pointer-events-none">
+                        <div className="absolute bg-[#d9d9d9] inset-0" />
+                        <img alt="" className="absolute max-w-none object-cover size-full" src={imgFrame55} />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="absolute flex h-[313.234px] items-center justify-center left-[1118.42px] top-[476.55px] w-[317.133px]">
+                <div className="flex-none rotate-50">
+                  <div className="border-[0.646px] border-[rgba(0,0,0,0.1)] border-solid content-stretch flex h-[239.538px] items-center p-[6.457px] relative w-[207.901px]" data-node-id="2011:6426">
+                    <div className="h-[226.625px] relative shrink-0 w-[194.988px]" data-node-id="2011:6427">
+                      <div aria-hidden className="absolute inset-0 pointer-events-none">
+                        <div className="absolute bg-[#d9d9d9] inset-0" />
+                        <img alt="" className="absolute max-w-none object-cover size-full" src={imgFrame55} />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="absolute flex h-[299.817px] items-center justify-center left-[1264.98px] top-[688.48px] w-[311.397px]">
+                <div className="flex-none rotate-60">
+                  <div className="border-[0.646px] border-[rgba(0,0,0,0.1)] border-solid content-stretch flex h-[239.538px] items-center p-[6.457px] relative w-[207.901px]" data-node-id="2011:6428">
+                    <div className="h-[226.625px] relative shrink-0 w-[194.988px]" data-node-id="2011:6429">
+                      <div aria-hidden className="absolute inset-0 pointer-events-none">
+                        <div className="absolute bg-[#d9d9d9] inset-0" />
+                        <img alt="" className="absolute max-w-none object-cover size-full" src={imgFrame55} />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="absolute flex h-[277.29px] items-center justify-center left-[1378.46px] top-[926.79px] w-[296.199px]">
+                <div className="flex-none rotate-70">
+                  <div className="border-[0.646px] border-[rgba(0,0,0,0.1)] border-solid content-stretch flex h-[239.538px] items-center p-[6.457px] relative w-[207.901px]" data-node-id="2011:6430">
+                    <div className="h-[226.625px] relative shrink-0 w-[194.988px]" data-node-id="2011:6431">
+                      <div aria-hidden className="absolute inset-0 pointer-events-none">
+                        <div className="absolute bg-[#d9d9d9] inset-0" />
+                        <img alt="" className="absolute max-w-none object-cover size-full" src={imgFrame55} />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="absolute flex h-[246.338px] items-center justify-center left-[1455.39px] top-[1184.26px] w-[272.001px]">
+                <div className="flex-none rotate-80">
+                  <div className="border-[0.646px] border-[rgba(0,0,0,0.1)] border-solid content-stretch flex h-[239.538px] items-center p-[6.457px] relative w-[207.901px]" data-node-id="2011:6432">
+                    <div className="h-[226.625px] relative shrink-0 w-[194.988px]" data-node-id="2011:6433">
+                      <div aria-hidden className="absolute inset-0 pointer-events-none">
+                        <div className="absolute bg-[#d9d9d9] inset-0" />
+                        <img alt="" className="absolute max-w-none object-cover size-full" src={imgFrame55} />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="absolute flex h-[207.901px] items-center justify-center left-[1493.46px] top-[1453.05px] w-[239.538px]">
+                <div className="flex-none rotate-90">
+                  <div className="border-[0.646px] border-[rgba(0,0,0,0.1)] border-solid content-stretch flex h-[239.538px] items-center p-[6.457px] relative w-[207.901px]" data-node-id="2011:6434">
+                    <div className="h-[226.625px] relative shrink-0 w-[194.988px]" data-node-id="2011:6435">
+                      <div aria-hidden className="absolute inset-0 pointer-events-none">
+                        <div className="absolute bg-[#d9d9d9] inset-0" />
+                        <img alt="" className="absolute max-w-none object-cover size-full" src={imgFrame55} />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="absolute flex h-[246.338px] items-center justify-center left-[1455.4px] top-[1683.4px] w-[272.001px]">
+                <div className="flex-none rotate-100">
+                  <div className="border-[0.646px] border-[rgba(0,0,0,0.1)] border-solid content-stretch flex h-[239.538px] items-center p-[6.457px] relative w-[207.901px]" data-node-id="2011:6436">
+                    <div className="h-[226.625px] relative shrink-0 w-[194.988px]" data-node-id="2011:6437">
+                      <div aria-hidden className="absolute inset-0 pointer-events-none">
+                        <div className="absolute bg-[#d9d9d9] inset-0" />
+                        <img alt="" className="absolute max-w-none object-cover size-full" src={imgFrame55} />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="absolute flex h-[277.29px] items-center justify-center left-[1378.46px] top-[1909.92px] w-[296.199px]">
+                <div className="flex-none rotate-110">
+                  <div className="border-[0.646px] border-[rgba(0,0,0,0.1)] border-solid content-stretch flex h-[239.538px] items-center p-[6.457px] relative w-[207.901px]" data-node-id="2011:6438">
+                    <div className="h-[226.625px] relative shrink-0 w-[194.988px]" data-node-id="2011:6439">
+                      <div aria-hidden className="absolute inset-0 pointer-events-none">
+                        <div className="absolute bg-[#d9d9d9] inset-0" />
+                        <img alt="" className="absolute max-w-none object-cover size-full" src={imgFrame55} />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="absolute flex h-[299.817px] items-center justify-center left-[1264.98px] top-[2125.71px] w-[311.397px]">
+                <div className="flex-none rotate-120">
+                  <div className="border-[0.646px] border-[rgba(0,0,0,0.1)] border-solid content-stretch flex h-[239.538px] items-center p-[6.457px] relative w-[207.901px]" data-node-id="2011:6440">
+                    <div className="h-[226.625px] relative shrink-0 w-[194.988px]" data-node-id="2011:6441">
+                      <div aria-hidden className="absolute inset-0 pointer-events-none">
+                        <div className="absolute bg-[#d9d9d9] inset-0" />
+                        <img alt="" className="absolute max-w-none object-cover size-full" src={imgFrame55} />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="absolute flex h-[313.234px] items-center justify-center left-[1118.42px] top-[2324.22px] w-[317.133px]">
+                <div className="flex-none rotate-130">
+                  <div className="border-[0.646px] border-[rgba(0,0,0,0.1)] border-solid content-stretch flex h-[239.538px] items-center p-[6.457px] relative w-[207.901px]" data-node-id="2011:6442">
+                    <div className="h-[226.625px] relative shrink-0 w-[194.988px]" data-node-id="2011:6443">
+                      <div aria-hidden className="absolute inset-0 pointer-events-none">
+                        <div className="absolute bg-[#d9d9d9] inset-0" />
+                        <img alt="" className="absolute max-w-none object-cover size-full" src={imgFrame55} />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="absolute flex h-[317.133px] items-center justify-center left-[943.22px] top-[2499.42px] w-[313.234px]">
+                <div className="flex-none rotate-140">
+                  <div className="border-[0.646px] border-[rgba(0,0,0,0.1)] border-solid content-stretch flex h-[239.538px] items-center p-[6.457px] relative w-[207.901px]" data-node-id="2011:6444">
+                    <div className="h-[226.625px] relative shrink-0 w-[194.988px]" data-node-id="2011:6445">
+                      <div aria-hidden className="absolute inset-0 pointer-events-none">
+                        <div className="absolute bg-[#d9d9d9] inset-0" />
+                        <img alt="" className="absolute max-w-none object-cover size-full" src={imgFrame55} />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="absolute flex h-[311.397px] items-center justify-center left-[744.71px] top-[2645.98px] w-[299.817px]">
+                <div className="flex-none rotate-150">
+                  <div className="border-[0.646px] border-[rgba(0,0,0,0.1)] border-solid content-stretch flex h-[239.538px] items-center p-[6.457px] relative w-[207.901px]" data-node-id="2011:6446">
+                    <div className="h-[226.625px] relative shrink-0 w-[194.988px]" data-node-id="2011:6447">
+                      <div aria-hidden className="absolute inset-0 pointer-events-none">
+                        <div className="absolute bg-[#d9d9d9] inset-0" />
+                        <img alt="" className="absolute max-w-none object-cover size-full" src={imgFrame55} />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="absolute flex h-[296.199px] items-center justify-center left-[528.92px] top-[2759.46px] w-[277.29px]">
+                <div className="flex-none rotate-160">
+                  <div className="border-[0.646px] border-[rgba(0,0,0,0.1)] border-solid content-stretch flex h-[239.538px] items-center p-[6.457px] relative w-[207.901px]" data-node-id="2011:6448">
+                    <div className="h-[226.625px] relative shrink-0 w-[194.988px]" data-node-id="2011:6449">
+                      <div aria-hidden className="absolute inset-0 pointer-events-none">
+                        <div className="absolute bg-[#d9d9d9] inset-0" />
+                        <img alt="" className="absolute max-w-none object-cover size-full" src={imgFrame55} />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="absolute flex h-[272.001px] items-center justify-center left-[302.4px] top-[2836.39px] w-[246.338px]">
+                <div className="flex-none rotate-170">
+                  <div className="border-[0.646px] border-[rgba(0,0,0,0.1)] border-solid content-stretch flex h-[239.538px] items-center p-[6.457px] relative w-[207.901px]" data-node-id="2011:6450">
+                    <div className="h-[226.625px] relative shrink-0 w-[194.988px]" data-node-id="2011:6451">
+                      <div aria-hidden className="absolute inset-0 pointer-events-none">
+                        <div className="absolute bg-[#d9d9d9] inset-0" />
+                        <img alt="" className="absolute max-w-none object-cover size-full" src={imgFrame55} />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="absolute flex h-[239.538px] items-center justify-center left-[72.05px] top-[2874.46px] w-[207.901px]">
+                <div className="flex-none rotate-180">
+                  <div className="border-[0.646px] border-[rgba(0,0,0,0.1)] border-solid content-stretch flex h-[239.538px] items-center p-[6.457px] relative w-[207.901px]" data-node-id="2011:6452">
+                    <div className="h-[226.625px] relative shrink-0 w-[194.988px]" data-node-id="2011:6453">
+                      <div aria-hidden className="absolute inset-0 pointer-events-none">
+                        <div className="absolute bg-[#d9d9d9] inset-0" />
+                        <img alt="" className="absolute max-w-none object-cover size-full" src={imgFrame55} />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="absolute flex h-[272.001px] items-center justify-center left-[-196.74px] top-[2836.4px] w-[246.338px]">
+                <div className="-rotate-170 flex-none">
+                  <div className="border-[0.646px] border-[rgba(0,0,0,0.1)] border-solid content-stretch flex h-[239.538px] items-center p-[6.457px] relative w-[207.901px]" data-node-id="2011:6454">
+                    <div className="h-[226.625px] relative shrink-0 w-[194.988px]" data-node-id="2011:6455">
+                      <div aria-hidden className="absolute inset-0 pointer-events-none">
+                        <div className="absolute bg-[#d9d9d9] inset-0" />
+                        <img alt="" className="absolute max-w-none object-cover size-full" src={imgFrame55} />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="absolute flex h-[296.199px] items-center justify-center left-[-454.21px] top-[2759.46px] w-[277.29px]">
+                <div className="-rotate-160 flex-none">
+                  <div className="border-[0.646px] border-[rgba(0,0,0,0.1)] border-solid content-stretch flex h-[239.538px] items-center p-[6.457px] relative w-[207.901px]" data-node-id="2011:6456">
+                    <div className="h-[226.625px] relative shrink-0 w-[194.988px]" data-node-id="2011:6457">
+                      <div aria-hidden className="absolute inset-0 pointer-events-none">
+                        <div className="absolute bg-[#d9d9d9] inset-0" />
+                        <img alt="" className="absolute max-w-none object-cover size-full" src={imgFrame55} />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="absolute flex h-[311.397px] items-center justify-center left-[-692.52px] top-[2645.98px] w-[299.817px]">
+                <div className="-rotate-150 flex-none">
+                  <div className="border-[0.646px] border-[rgba(0,0,0,0.1)] border-solid content-stretch flex h-[239.538px] items-center p-[6.457px] relative w-[207.901px]" data-node-id="2011:6458">
+                    <div className="h-[226.625px] relative shrink-0 w-[194.988px]" data-node-id="2011:6459">
+                      <div aria-hidden className="absolute inset-0 pointer-events-none">
+                        <div className="absolute bg-[#d9d9d9] inset-0" />
+                        <img alt="" className="absolute max-w-none object-cover size-full" src={imgFrame55} />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="absolute flex h-[317.133px] items-center justify-center left-[-904.45px] top-[2499.42px] w-[313.234px]">
+                <div className="-rotate-140 flex-none">
+                  <div className="border-[0.646px] border-[rgba(0,0,0,0.1)] border-solid content-stretch flex h-[239.538px] items-center p-[6.457px] relative w-[207.901px]" data-node-id="2011:6460">
+                    <div className="h-[226.625px] relative shrink-0 w-[194.988px]" data-node-id="2011:6461">
+                      <div aria-hidden className="absolute inset-0 pointer-events-none">
+                        <div className="absolute bg-[#d9d9d9] inset-0" />
+                        <img alt="" className="absolute max-w-none object-cover size-full" src={imgFrame55} />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="absolute flex h-[313.234px] items-center justify-center left-[-1083.55px] top-[2324.22px] w-[317.133px]">
+                <div className="-rotate-130 flex-none">
+                  <div className="border-[0.646px] border-[rgba(0,0,0,0.1)] border-solid content-stretch flex h-[239.538px] items-center p-[6.457px] relative w-[207.901px]" data-node-id="2011:6462">
+                    <div className="h-[226.625px] relative shrink-0 w-[194.988px]" data-node-id="2011:6463">
+                      <div aria-hidden className="absolute inset-0 pointer-events-none">
+                        <div className="absolute bg-[#d9d9d9] inset-0" />
+                        <img alt="" className="absolute max-w-none object-cover size-full" src={imgFrame55} />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="absolute flex h-[299.817px] items-center justify-center left-[-1224.38px] top-[2125.71px] w-[311.397px]">
+                <div className="-rotate-120 flex-none">
+                  <div className="border-[0.646px] border-[rgba(0,0,0,0.1)] border-solid content-stretch flex h-[239.538px] items-center p-[6.457px] relative w-[207.901px]" data-node-id="2011:6464">
+                    <div className="h-[226.625px] relative shrink-0 w-[194.988px]" data-node-id="2011:6465">
+                      <div aria-hidden className="absolute inset-0 pointer-events-none">
+                        <div className="absolute bg-[#d9d9d9] inset-0" />
+                        <img alt="" className="absolute max-w-none object-cover size-full" src={imgFrame55} />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="absolute flex h-[277.29px] items-center justify-center left-[-1322.65px] top-[1909.92px] w-[296.199px]">
+                <div className="-rotate-110 flex-none">
+                  <div className="border-[0.646px] border-[rgba(0,0,0,0.1)] border-solid content-stretch flex h-[239.538px] items-center p-[6.457px] relative w-[207.901px]" data-node-id="2011:6466">
+                    <div className="h-[226.625px] relative shrink-0 w-[194.988px]" data-node-id="2011:6467">
+                      <div aria-hidden className="absolute inset-0 pointer-events-none">
+                        <div className="absolute bg-[#d9d9d9] inset-0" />
+                        <img alt="" className="absolute max-w-none object-cover size-full" src={imgFrame55} />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="absolute flex h-[246.338px] items-center justify-center left-[-1375.4px] top-[1683.4px] w-[272.001px]">
+                <div className="-rotate-100 flex-none">
+                  <div className="border-[0.646px] border-[rgba(0,0,0,0.1)] border-solid content-stretch flex h-[239.538px] items-center p-[6.457px] relative w-[207.901px]" data-node-id="2011:6468">
+                    <div className="h-[226.625px] relative shrink-0 w-[194.988px]" data-node-id="2011:6469">
+                      <div aria-hidden className="absolute inset-0 pointer-events-none">
+                        <div className="absolute bg-[#d9d9d9] inset-0" />
+                        <img alt="" className="absolute max-w-none object-cover size-full" src={imgFrame55} />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="absolute flex h-[207.901px] items-center justify-center left-[-1381px] top-[1453.05px] w-[239.538px]">
+                <div className="-rotate-90 flex-none">
+                  <div className="border-[0.646px] border-[rgba(0,0,0,0.1)] border-solid content-stretch flex h-[239.538px] items-center p-[6.457px] relative w-[207.901px]" data-node-id="2011:6470">
+                    <div className="h-[226.625px] relative shrink-0 w-[194.988px]" data-node-id="2011:6471">
+                      <div aria-hidden className="absolute inset-0 pointer-events-none">
+                        <div className="absolute bg-[#d9d9d9] inset-0" />
+                        <img alt="" className="absolute max-w-none object-cover size-full" src={imgFrame55} />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="absolute flex h-[246.338px] items-center justify-center left-[-1375.4px] top-[1184.26px] w-[272.001px]">
+                <div className="-rotate-80 flex-none">
+                  <div className="border-[0.646px] border-[rgba(0,0,0,0.1)] border-solid content-stretch flex h-[239.538px] items-center p-[6.457px] relative w-[207.901px]" data-node-id="2011:6472">
+                    <div className="h-[226.625px] relative shrink-0 w-[194.988px]" data-node-id="2011:6473">
+                      <div aria-hidden className="absolute inset-0 pointer-events-none">
+                        <div className="absolute bg-[#d9d9d9] inset-0" />
+                        <img alt="" className="absolute max-w-none object-cover size-full" src={imgFrame55} />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="absolute flex h-[277.29px] items-center justify-center left-[-1322.65px] top-[926.79px] w-[296.199px]">
+                <div className="-rotate-70 flex-none">
+                  <div className="border-[0.646px] border-[rgba(0,0,0,0.1)] border-solid content-stretch flex h-[239.538px] items-center p-[6.457px] relative w-[207.901px]" data-node-id="2011:6474">
+                    <div className="h-[226.625px] relative shrink-0 w-[194.988px]" data-node-id="2011:6475">
+                      <div aria-hidden className="absolute inset-0 pointer-events-none">
+                        <div className="absolute bg-[#d9d9d9] inset-0" />
+                        <img alt="" className="absolute max-w-none object-cover size-full" src={imgFrame55} />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="absolute flex h-[299.817px] items-center justify-center left-[-1224.38px] top-[688.48px] w-[311.397px]">
+                <div className="-rotate-60 flex-none">
+                  <div className="border-[0.646px] border-[rgba(0,0,0,0.1)] border-solid content-stretch flex h-[239.538px] items-center p-[6.457px] relative w-[207.901px]" data-node-id="2011:6476">
+                    <div className="h-[226.625px] relative shrink-0 w-[194.988px]" data-node-id="2011:6477">
+                      <div aria-hidden className="absolute inset-0 pointer-events-none">
+                        <div className="absolute bg-[#d9d9d9] inset-0" />
+                        <img alt="" className="absolute max-w-none object-cover size-full" src={imgFrame55} />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="absolute flex h-[313.234px] items-center justify-center left-[-1083.55px] top-[476.55px] w-[317.133px]">
+                <div className="-rotate-50 flex-none">
+                  <div className="border-[0.646px] border-[rgba(0,0,0,0.1)] border-solid content-stretch flex h-[239.538px] items-center p-[6.457px] relative w-[207.901px]" data-node-id="2011:6478">
+                    <div className="h-[226.625px] relative shrink-0 w-[194.988px]" data-node-id="2011:6479">
+                      <div aria-hidden className="absolute inset-0 pointer-events-none">
+                        <div className="absolute bg-[#d9d9d9] inset-0" />
+                        <img alt="" className="absolute max-w-none object-cover size-full" src={imgFrame55} />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="absolute flex h-[317.133px] items-center justify-center left-[-904.45px] top-[297.45px] w-[313.234px]">
+                <div className="-rotate-40 flex-none">
+                  <div className="border-[0.646px] border-[rgba(0,0,0,0.1)] border-solid content-stretch flex h-[239.538px] items-center p-[6.457px] relative w-[207.901px]" data-node-id="2011:6480">
+                    <div className="h-[226.625px] relative shrink-0 w-[194.988px]" data-node-id="2011:6481">
+                      <div aria-hidden className="absolute inset-0 pointer-events-none">
+                        <div className="absolute bg-[#d9d9d9] inset-0" />
+                        <img alt="" className="absolute max-w-none object-cover size-full" src={imgFrame55} />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="absolute flex h-[311.397px] items-center justify-center left-[-692.52px] top-[156.62px] w-[299.817px]">
+                <div className="-rotate-30 flex-none">
+                  <div className="border-[0.646px] border-[rgba(0,0,0,0.1)] border-solid content-stretch flex h-[239.538px] items-center p-[6.457px] relative w-[207.901px]" data-node-id="2011:6482">
+                    <div className="h-[226.625px] relative shrink-0 w-[194.988px]" data-node-id="2011:6483">
+                      <div aria-hidden className="absolute inset-0 pointer-events-none">
+                        <div className="absolute bg-[#d9d9d9] inset-0" />
+                        <img alt="" className="absolute max-w-none object-cover size-full" src={imgFrame55} />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="absolute flex h-[296.199px] items-center justify-center left-[-454.21px] top-[58.35px] w-[277.29px]">
+                <div className="-rotate-20 flex-none">
+                  <div className="border-[0.646px] border-[rgba(0,0,0,0.1)] border-solid content-stretch flex h-[239.538px] items-center p-[6.457px] relative w-[207.901px]" data-node-id="2011:6484">
+                    <div className="h-[226.625px] relative shrink-0 w-[194.988px]" data-node-id="2011:6485">
+                      <div aria-hidden className="absolute inset-0 pointer-events-none">
+                        <div className="absolute bg-[#d9d9d9] inset-0" />
+                        <img alt="" className="absolute max-w-none object-cover size-full" src={imgFrame55} />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="absolute flex h-[272.001px] items-center justify-center left-[-196.74px] top-[5.6px] w-[246.338px]">
+                <div className="-rotate-10 flex-none">
+                  <div className="border-[0.646px] border-[rgba(0,0,0,0.1)] border-solid content-stretch flex h-[239.538px] items-center p-[6.457px] relative w-[207.901px]" data-node-id="2011:6486">
+                    <div className="h-[226.625px] relative shrink-0 w-[194.988px]" data-node-id="2011:6487">
+                      <div aria-hidden className="absolute inset-0 pointer-events-none">
+                        <div className="absolute bg-[#d9d9d9] inset-0" />
+                        <img alt="" className="absolute max-w-none object-cover size-full" src={imgFrame55} />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="[word-break:break-word] content-stretch flex flex-col gap-[4px] items-start leading-[1.5] not-italic relative shrink-0 text-center" data-node-id="2011:6490">
+            <p className="font-['Inter:Semi_Bold'] font-semibold relative shrink-0 text-[#2b2e31] text-[20px] tracking-[-0.8px] w-[322px]" data-node-id="2011:6491">
+              Name of the project here
+            </p>
+            <p className="font-['Inter:Medium'] font-medium relative shrink-0 text-[16px] text-[rgba(43,46,49,0.6)] tracking-[-0.32px] w-[322px]" data-node-id="2011:6492">
+              Frankfurt, Germany
+            </p>
+          </div>
+        </div>
+      </div>
+      <div className="bg-white content-stretch flex flex-col gap-[10px] items-center overflow-clip px-[20px] py-[40px] relative shrink-0 w-full" data-node-id="2011:6494" data-name="Testimonials">
+        <div className="content-stretch flex flex-col gap-[32px] items-center relative shrink-0 w-full" data-node-id="2011:6495">
+          <div className="content-stretch flex flex-col gap-[24px] items-center relative shrink-0 w-full" data-node-id="2011:6496">
+            <div className="bg-[#edeff4] content-stretch flex gap-[10px] items-center pl-[10px] pr-[14px] py-[8px] relative shrink-0" data-node-id="2011:6497">
+              <div className="relative shrink-0 size-[10px]" data-node-id="2011:6498">
+                <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgGroup39499} />
+              </div>
+              <p className="[word-break:break-word] font-['Inter:Semi_Bold'] font-semibold leading-[1.2] not-italic relative shrink-0 text-[#030303] text-[12px] tracking-[-0.24px] whitespace-nowrap" data-node-id="2011:6503">
+                Testimonials
+              </p>
+            </div>
+            <p className="[text-box-edge:cap_alphabetic] [text-box-trim:trim-both] [word-break:break-word] font-['DM_Sans:Regular'] font-normal leading-[0] min-w-full not-italic relative shrink-0 text-[#2b2e31] text-[0px] text-center tracking-[-2.88px] w-[min-content]" data-node-id="2011:6504" style={{ fontVariationSettings: '"opsz" 14' }}>
+              <span className="font-['Inter:Medium'] font-medium leading-[1.1] text-[48px]">{`Unsere `}</span>
+              <span className="font-['Inter:Medium'] font-medium leading-[1.1] text-[48px] text-[rgba(43,46,49,0.6)]">Kundenstimmen</span>
+            </p>
+          </div>
+          <div className="bg-[#2b2e31] border border-[rgba(0,0,0,0.1)] border-solid content-stretch flex flex-col items-start justify-center overflow-clip p-[10px] relative shrink-0 w-full" data-node-id="2011:6505">
+            <div className="h-[365px] overflow-clip relative shrink-0 w-full" data-node-id="2011:6506">
+              <div className="absolute h-[440px] left-[-14px] top-[-40px] w-[364px]" data-node-id="2011:6507">
+                <div className="absolute inset-0 overflow-hidden pointer-events-none">
+                  <img alt="" className="absolute h-[155.31%] left-[0.02%] max-w-none top-[-14.74%] w-[99.94%]" src={imgFrame79} />
+                </div>
+              </div>
+            </div>
+            <div className="[word-break:break-word] content-stretch flex flex-col gap-[24px] items-start not-italic p-[16px] relative shrink-0 w-full" data-node-id="2011:6508">
+              <p className="font-['Inter:Medium'] font-medium leading-[1.5] relative shrink-0 text-[16px] text-center text-white tracking-[-0.32px] w-full" data-node-id="2011:6509">
+                Wir sind seit Jahren Bestandskunde bei Enex Bonn und können die Truppe von ganzem Herzen weiterempfehlen!
+              </p>
+              <div className="content-stretch flex flex-col gap-[4px] items-center relative shrink-0 w-full whitespace-nowrap" data-node-id="2011:6510">
+                <p className="font-['Inter:Semi_Bold'] font-semibold leading-[1.2] relative shrink-0 text-[16px] text-white tracking-[-0.32px]" data-node-id="2011:6511">
+                  Michael Jordan
+                </p>
+                <p className="font-['Inter:Medium'] font-medium leading-[1.5] relative shrink-0 text-[12px] text-[rgba(255,255,255,0.8)] tracking-[-0.24px]" data-node-id="2011:6512">
+                  Frankfurt, Germany
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="-translate-y-1/2 absolute bg-[#48c7f4] overflow-clip right-[10px] rounded-[77.647px] size-[40px] top-[calc(50%+87px)]" data-node-id="2011:6513">
+          <div className="-translate-x-1/2 -translate-y-1/2 absolute left-1/2 size-[20px] top-1/2" data-node-id="2011:6514" data-name="arrow-right">
+            <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgArrowRight5} />
+          </div>
+        </div>
+        <div className="-translate-y-1/2 absolute flex items-center justify-center left-0 size-[40px] top-[calc(50%+87px)]">
+          <div className="-scale-y-100 flex-none rotate-180">
+            <div className="bg-[#48c7f4] overflow-clip relative rounded-[77.647px] size-[40px]" data-node-id="2011:6517">
+              <div className="-translate-x-1/2 -translate-y-1/2 absolute left-1/2 size-[20px] top-1/2" data-node-id="2011:6518" data-name="arrow-right">
+                <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgArrowRight5} />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="content-stretch flex flex-col h-[800px] items-start justify-end overflow-clip p-[20px] relative shrink-0 w-full" data-node-id="2011:6224" data-name="CTA">
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          <img alt="" className="absolute h-[120%] left-full max-w-none top-[-10%] w-[-100%]" src={imgCta} />
+        </div>
+        <div className="bg-white content-stretch flex flex-col gap-[20px] items-start overflow-clip p-[24px] relative shrink-0 w-[353px]" data-node-id="2011:6522">
+          <p className="[word-break:break-word] font-['DM_Sans:Regular'] font-normal leading-[0] not-italic relative shrink-0 text-[#2b2e31] text-[0px] tracking-[-1.6px] w-full" data-node-id="2011:6523" style={{ fontVariationSettings: '"opsz" 14' }}>
+            <span className="font-['Inter:Medium'] font-medium leading-[1.1] text-[40px]">{`Bereit für Ihr `}</span>
+            <span className="font-['Inter:Medium'] font-medium leading-[1.1] text-[40px] text-[rgba(43,46,49,0.6)]">{`Projekt `}</span>
+          </p>
+          <div className="h-0 relative shrink-0 w-full" data-node-id="2011:6524">
+            <div className="absolute inset-[-1px_0_0_0]">
+              <img alt="" className="block max-w-none size-full" src={imgLine4} />
+            </div>
+          </div>
+          <div className="content-stretch flex flex-col gap-[32px] items-start relative shrink-0 w-full" data-node-id="2011:6525">
+            <p className="[word-break:break-word] font-['Inter:Medium'] font-medium leading-[1.5] min-w-full not-italic relative shrink-0 text-[#2b2e31] text-[14px] tracking-[-0.28px] w-[min-content]" data-node-id="2011:6526">
+              Ob Neuinstallation, Sanierung oder Ladeinfrastruktur – wir beraten Sie persönlich und finden die passende Lösung.
+            </p>
+            <div className="bg-[#48c7f4] content-stretch flex items-center px-[24px] py-[12px] relative shrink-0" data-node-id="2011:6527">
+              <p className="[word-break:break-word] font-['Inter:Semi_Bold'] font-semibold leading-[1.4] not-italic relative shrink-0 text-[14px] text-center text-white tracking-[-0.28px] whitespace-nowrap" data-node-id="2011:6528">
+                Jetzt Kontaktieren
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="bg-white content-stretch flex flex-col items-center overflow-clip p-[20px] relative shrink-0 w-full" data-node-id="2011:6530" data-name="FOOTER">
+        <div className="content-stretch flex flex-col gap-[60px] items-start relative shrink-0 w-full" data-node-id="2011:6531">
+          <div className="content-stretch flex flex-col gap-[40px] items-start relative shrink-0 w-full" data-node-id="2011:6532">
+            <div className="content-stretch flex flex-col gap-[20px] items-start relative shrink-0 w-full" data-node-id="2011:6533">
+              <div className="h-[40px] relative shrink-0 w-[143.278px]" data-node-id="2011:6534" data-name="ENEX Logo 1">
+                <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgEnexLogo1} />
+              </div>
+              <p className="[word-break:break-word] font-['Inter:Medium'] font-medium leading-[1.5] min-w-full not-italic relative shrink-0 text-[#2b2e31] text-[14px] tracking-[-0.28px] w-[min-content]" data-node-id="2011:6547">
+                Ob Elektroinstallation, Ladeinfrastruktur oder individuelle Lösungen – wir beraten Sie persönlich und finden die passende Lösung für Ihr Projekt.
+              </p>
+            </div>
+            <div className="[word-break:break-word] content-stretch flex font-['Inter:Medium'] font-medium items-start leading-[1.5] not-italic relative shrink-0 w-full" data-node-id="2011:6548">
+              <div className="content-stretch flex flex-[1_0_0] flex-col gap-[24px] items-center justify-center min-w-px relative" data-node-id="2011:6549">
+                <p className="relative shrink-0 text-[14px] text-[rgba(43,46,49,0.6)] tracking-[-0.28px] w-full" data-node-id="2011:6550">
+                  Navigation
+                </p>
+                <div className="content-stretch flex flex-col gap-[12px] items-start relative shrink-0 text-[#2b2e31] text-[16px] tracking-[-0.32px] w-full" data-node-id="2011:6551">
+                  <p className="relative shrink-0 w-full" data-node-id="2011:6552">
+                    Home
+                  </p>
+                  <p className="relative shrink-0 w-full" data-node-id="2011:6553">
+                    Über uns
+                  </p>
+                  <p className="relative shrink-0 w-full" data-node-id="2011:6554">
+                    Leistungen
+                  </p>
+                  <p className="relative shrink-0 w-full" data-node-id="2011:6555">
+                    Referenzen
+                  </p>
+                  <p className="relative shrink-0 w-full" data-node-id="2011:6556">
+                    Kontakt
+                  </p>
+                </div>
+              </div>
+              <div className="content-stretch flex flex-[1_0_0] flex-col gap-[24px] items-center justify-center min-w-px relative" data-node-id="2011:6557">
+                <p className="relative shrink-0 text-[14px] text-[rgba(43,46,49,0.6)] tracking-[-0.28px] w-full" data-node-id="2011:6558">
+                  Legal
+                </p>
+                <div className="content-stretch flex flex-col gap-[12px] items-start relative shrink-0 text-[#2b2e31] text-[16px] tracking-[-0.32px] w-full" data-node-id="2011:6559">
+                  <p className="relative shrink-0 w-full" data-node-id="2011:6560">
+                    Impressum
+                  </p>
+                  <p className="relative shrink-0 w-full" data-node-id="2011:6561">
+                    Datenschutz
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="content-stretch flex flex-col gap-[10px] items-start justify-center relative shrink-0 w-full" data-node-id="2011:6562">
+            <div className="h-0 relative shrink-0 w-full" data-node-id="2011:6563">
+              <div className="absolute inset-[-1px_0_0_0]">
+                <img alt="" className="block max-w-none size-full" src={imgLine5} />
+              </div>
+            </div>
+            <p className="[word-break:break-word] font-['Inter:Medium'] font-medium leading-[1.5] not-italic relative shrink-0 text-[14px] text-[rgba(43,46,49,0.6)] tracking-[-0.28px] w-full" data-node-id="2011:6564">
+              ©2026 ENEX Bonn. Alle Rechte vorbehalten.
+            </p>
+            <p className="[word-break:break-word] font-['Inter:Medium'] font-medium h-[21px] leading-[1.5] not-italic relative shrink-0 text-[14px] text-[rgba(43,46,49,0.6)] tracking-[-0.28px] w-full" data-node-id="2011:6565">
+              Made by INSYNC
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}

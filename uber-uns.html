@@ -1,0 +1,926 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Über uns – ENEX Bonn</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&family=Inter:wght@400;500;600&family=Space+Mono&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    /* ==========================================================================
+       Über Uns Page Specific Styles
+       ========================================================================== */
+
+    /* --------------------------------------------------------------------------
+       Hero Section (Über Uns variant)
+       -------------------------------------------------------------------------- */
+    .uber-hero {
+      position: relative;
+      width: 100vw;
+      max-width: none;
+      margin-left: calc(-50vw + 50%);
+      height: 960px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 177px 40px 20px;
+      overflow: hidden;
+    }
+
+    .uber-hero__bg {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .uber-hero__overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to bottom, rgba(0,0,0,0.5) 36.652%, rgba(0,0,0,0) 100%);
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    .uber-hero__content {
+      position: relative;
+      width: 100%;
+      max-width: 1360px;
+      z-index: 5;
+    }
+
+    .uber-hero__text {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      max-width: 900px;
+      color: var(--white);
+    }
+
+    .uber-hero__headline {
+      font-family: var(--font-inter);
+      font-weight: 600;
+      font-size: 110px;
+      line-height: 0.9;
+      letter-spacing: -6.6px;
+    }
+
+    .uber-hero__headline .muted {
+      color: var(--white-60);
+    }
+
+    .uber-hero__subhead {
+      font-family: var(--font-inter);
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 1.5;
+      letter-spacing: -0.32px;
+      max-width: 504px;
+    }
+
+    /* --------------------------------------------------------------------------
+       About Section (Über Uns variant - 2 column with 3 cards)
+       -------------------------------------------------------------------------- */
+    .uber-about {
+      background: var(--white);
+      padding: 120px 40px;
+      display: flex;
+      flex-direction: column;
+      gap: 60px;
+      max-width: 1440px;
+      margin: 0 auto;
+    }
+
+    .uber-about__inner {
+      display: flex;
+      gap: 80px;
+      align-items: flex-start;
+      width: 100%;
+    }
+
+    .uber-about__headline {
+      font-family: var(--font-inter);
+      font-weight: 500;
+      font-size: 50px;
+      line-height: 1.2;
+      letter-spacing: -3px;
+      color: var(--text);
+      max-width: 715px;
+      flex-shrink: 0;
+    }
+
+    .uber-about__cards {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      width: 565px;
+      flex-shrink: 0;
+    }
+
+    .uber-about__card {
+      position: relative;
+      width: 100%;
+      height: 335px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-end;
+      overflow: hidden;
+    }
+
+    .uber-about__card-img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      pointer-events: none;
+    }
+
+    .uber-about__card-blur {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 161px;
+      background: rgba(217, 217, 217, 0.04);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+    }
+
+    .uber-about__card-content {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      padding: 40px 20px;
+      width: 100%;
+      color: var(--white);
+    }
+
+    .uber-about__card-title {
+      font-family: var(--font-inter);
+      font-weight: 500;
+      font-size: 32px;
+      line-height: 1;
+      letter-spacing: -1.92px;
+    }
+
+    .uber-about__card-desc {
+      font-family: var(--font-inter);
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 1.5;
+      letter-spacing: -0.32px;
+    }
+
+    /* --------------------------------------------------------------------------
+       Image Showcase (Full-width)
+       -------------------------------------------------------------------------- */
+    .uber-showcase {
+      width: 100vw;
+      max-width: none;
+      margin-left: calc(-50vw + 50%);
+      height: 929px;
+      position: relative;
+    }
+
+    .uber-showcase__img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* --------------------------------------------------------------------------
+       Team Member Section
+       -------------------------------------------------------------------------- */
+    .uber-team {
+      background: var(--white);
+      position: relative;
+      height: 1078px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 120px 40px;
+      overflow: hidden;
+    }
+
+    .uber-team__header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 65px;
+      width: 100%;
+      max-width: 1360px;
+    }
+
+    .uber-team__title {
+      font-family: var(--font-inter);
+      font-weight: 500;
+      font-size: 80px;
+      line-height: 1.1;
+      letter-spacing: -0.96px;
+      color: var(--text);
+      text-align: center;
+      max-width: 906px;
+    }
+
+    .uber-team__title .muted {
+      color: var(--text-muted);
+    }
+
+    .uber-team__photos {
+      position: absolute;
+      top: 483px;
+      left: 0;
+      right: 0;
+      display: flex;
+      justify-content: center;
+      pointer-events: none;
+    }
+
+    .uber-team__photo {
+      border: 1px solid var(--border);
+      padding: 10px;
+      background: var(--white);
+      position: absolute;
+    }
+
+    .uber-team__photo-inner {
+      width: 302px;
+      height: 351px;
+      overflow: hidden;
+    }
+
+    .uber-team__photo-inner img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .uber-team__photo--center {
+      left: 50%;
+      transform: translateX(-50%);
+      top: 0;
+    }
+
+    .uber-team__photo--right-1 {
+      left: calc(50% + 170px);
+      transform: rotate(10deg);
+      top: 9px;
+    }
+
+    .uber-team__photo--right-2 {
+      left: calc(50% + 400px);
+      transform: rotate(20deg);
+      top: 91px;
+    }
+
+    .uber-team__photo--left-1 {
+      right: calc(50% + 170px);
+      transform: rotate(-10deg);
+      top: 9px;
+    }
+
+    .uber-team__photo--left-2 {
+      right: calc(50% + 400px);
+      transform: rotate(-20deg);
+      top: 91px;
+    }
+
+    .uber-team__fade-left,
+    .uber-team__fade-right {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 213px;
+      pointer-events: none;
+    }
+
+    .uber-team__fade-left {
+      left: 0;
+      background: linear-gradient(to right, rgba(255,255,255,0.3) 0%, rgba(255,255,255,0) 100%);
+    }
+
+    .uber-team__fade-right {
+      right: 0;
+      background: linear-gradient(to left, rgba(255,255,255,0.3) 0%, rgba(255,255,255,0) 100%);
+    }
+
+    .uber-team__person {
+      position: absolute;
+      bottom: 120px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      text-align: center;
+      z-index: 10;
+    }
+
+    .uber-team__person-name {
+      font-family: var(--font-inter);
+      font-weight: 600;
+      font-size: 24px;
+      line-height: 1.5;
+      letter-spacing: -0.96px;
+      color: var(--text);
+    }
+
+    .uber-team__person-role {
+      font-family: var(--font-inter);
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 1.5;
+      letter-spacing: -0.32px;
+      color: var(--text-muted);
+    }
+
+    /* --------------------------------------------------------------------------
+       Certificates Section
+       -------------------------------------------------------------------------- */
+    .uber-certs {
+      background: var(--white);
+      padding: 80px 40px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 60px;
+      overflow: hidden;
+    }
+
+    .uber-certs__inner {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 60px;
+      width: 100%;
+      max-width: 1360px;
+    }
+
+    .uber-certs__header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 60px;
+    }
+
+    .uber-certs__title {
+      font-family: var(--font-inter);
+      font-weight: 500;
+      font-size: 80px;
+      line-height: 1.1;
+      letter-spacing: -0.96px;
+      color: var(--text);
+      text-align: center;
+      max-width: 1200px;
+    }
+
+    .uber-certs__title .muted {
+      color: var(--text-muted);
+    }
+
+    .uber-certs__grid {
+      display: flex;
+      gap: 40px;
+      width: 100%;
+    }
+
+    .uber-certs__card {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      align-items: center;
+    }
+
+    .uber-certs__card-img-wrap {
+      padding: 45px 66px;
+      overflow: hidden;
+    }
+
+    .uber-certs__card-img-wrap--wide {
+      padding: 45px 60px;
+    }
+
+    .uber-certs__card-img {
+      width: 294px;
+      height: 230px;
+      object-fit: cover;
+      box-shadow: 0 34px 54px -20px rgba(0, 0, 0, 0.1);
+    }
+
+    .uber-certs__card-img--wide {
+      width: 306px;
+    }
+
+    .uber-certs__card-content {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      align-items: center;
+      width: 100%;
+    }
+
+    .uber-certs__card-title {
+      font-family: var(--font-inter);
+      font-weight: 500;
+      font-size: 24px;
+      line-height: 1.1;
+      letter-spacing: -0.96px;
+      color: var(--text);
+    }
+
+    .uber-certs__card-divider {
+      width: 100%;
+      height: 1px;
+    }
+
+    .uber-certs__card-divider img {
+      width: 100%;
+      height: 100%;
+    }
+
+    .uber-certs__card-desc {
+      font-family: var(--font-inter);
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 1.5;
+      letter-spacing: -0.32px;
+      color: var(--text);
+      text-align: center;
+    }
+
+    /* Partner logos row */
+    .uber-partners {
+      display: flex;
+      width: 100%;
+      max-width: 1360px;
+      height: 170px;
+      overflow: hidden;
+    }
+
+    .uber-partners__row {
+      display: flex;
+      flex: 1;
+    }
+
+    .uber-partners__item {
+      width: 226.667px;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 73px 77px;
+      border-right: 1px solid var(--border-dark);
+      background: var(--white);
+    }
+
+    .uber-partners__item:last-child {
+      border-right: none;
+    }
+
+    .uber-partners__item img {
+      width: 73.15px;
+      height: 24px;
+      object-fit: contain;
+    }
+
+    /* --------------------------------------------------------------------------
+       Responsive Styles
+       -------------------------------------------------------------------------- */
+    @media (max-width: 1200px) {
+      .uber-hero__headline {
+        font-size: 80px;
+      }
+
+      .uber-about__inner {
+        flex-direction: column;
+        gap: 40px;
+      }
+
+      .uber-about__headline {
+        font-size: 36px;
+        max-width: 100%;
+      }
+
+      .uber-about__cards {
+        width: 100%;
+      }
+
+      .uber-team__title {
+        font-size: 50px;
+      }
+
+      .uber-certs__title {
+        font-size: 50px;
+      }
+
+      .uber-certs__grid {
+        flex-direction: column;
+        gap: 60px;
+      }
+    }
+
+    @media (max-width: 767px) {
+      .uber-hero {
+        height: auto;
+        min-height: 600px;
+        padding: 120px 20px 40px;
+      }
+
+      .uber-hero__headline {
+        font-size: 48px;
+        letter-spacing: -2px;
+      }
+
+      .uber-hero__subhead {
+        font-size: 14px;
+      }
+
+      .uber-about {
+        padding: 60px 20px;
+      }
+
+      .uber-about__headline {
+        font-size: 28px;
+        letter-spacing: -1px;
+      }
+
+      .uber-about__card {
+        height: 280px;
+      }
+
+      .uber-about__card-title {
+        font-size: 24px;
+      }
+
+      .uber-showcase {
+        height: 400px;
+      }
+
+      .uber-team {
+        height: auto;
+        min-height: 600px;
+        padding: 60px 20px;
+      }
+
+      .uber-team__title {
+        font-size: 32px;
+      }
+
+      .uber-team__photos {
+        display: none;
+      }
+
+      .uber-team__person {
+        position: relative;
+        bottom: auto;
+        left: auto;
+        transform: none;
+        margin-top: 40px;
+      }
+
+      .uber-certs {
+        padding: 60px 20px;
+      }
+
+      .uber-certs__title {
+        font-size: 32px;
+      }
+
+      .uber-certs__card-img-wrap {
+        padding: 20px;
+      }
+
+      .uber-certs__card-img {
+        width: 100%;
+        height: auto;
+      }
+
+      .uber-partners {
+        flex-direction: column;
+        height: auto;
+      }
+
+      .uber-partners__row {
+        flex-wrap: wrap;
+      }
+
+      .uber-partners__item {
+        width: 50%;
+        padding: 40px 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ========================================================================
+       Navbar Component (Floating Fixed)
+       ======================================================================== -->
+  <!-- Floating Contact Button -->
+  <a href="kontakt.html" class="floating-contact">
+    <div class="floating-contact__inner">
+      <span>Jetzt kontaktieren</span>
+    </div>
+  </a>
+
+  <!-- Main Navigation -->
+  <nav class="site-nav" role="navigation" aria-label="Main navigation">
+    <a href="index.html" class="site-nav__logo">
+      <img src="figma-data/images/enex-logo-slogan.svg" alt="ENEX Bonn" class="site-nav__logo-desktop">
+      <img src="figma-data/images-mobile/enex-logo-slogan-mobile.svg" alt="ENEX Bonn" class="site-nav__logo-mobile">
+    </a>
+    <div class="site-nav__menu">
+      <a href="index.html">Home</a>
+      <a href="leistungen.html">Leistungen</a>
+      <a href="referenzen.html">Referenzen</a>
+      <a href="uber-uns.html" class="is-active">Über uns</a>
+    </div>
+    <button class="site-nav__toggle" aria-expanded="false" aria-label="Menü öffnen">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+        <line x1="3" y1="6" x2="21" y2="6" stroke="white" stroke-width="2" stroke-linecap="round"/>
+        <line x1="3" y1="12" x2="21" y2="12" stroke="white" stroke-width="2" stroke-linecap="round"/>
+        <line x1="3" y1="18" x2="21" y2="18" stroke="white" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+    </button>
+  </nav>
+
+  <!-- Mobile Menu Drawer -->
+  <div class="mobile-menu" aria-hidden="true">
+    <div class="mobile-menu__overlay"></div>
+    <div class="mobile-menu__drawer">
+      <button class="mobile-menu__close" aria-label="Menü schließen">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+          <line x1="6" y1="6" x2="18" y2="18" stroke="#2b2e31" stroke-width="2" stroke-linecap="round"/>
+          <line x1="18" y1="6" x2="6" y2="18" stroke="#2b2e31" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </button>
+      <nav class="mobile-menu__nav">
+        <a href="index.html">Home</a>
+        <a href="leistungen.html">Leistungen</a>
+        <a href="referenzen.html">Referenzen</a>
+        <a href="uber-uns.html">Über uns</a>
+      </nav>
+      <a href="kontakt.html" class="mobile-menu__contact">Jetzt Kontaktieren</a>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       Hero Section (Über Uns)
+       ======================================================================== -->
+  <section class="uber-hero" data-od-id="uber-hero">
+    <img class="uber-hero__bg" src="figma-data/images/uber-uns-hero.png" alt="">
+    <div class="uber-hero__overlay"></div>
+    <div class="uber-hero__content">
+      <div class="uber-hero__text">
+        <h1 class="uber-hero__headline"><span class="muted">Ihr</span> <span class="muted">Elektriker</span> in Bonn für Zuhause und Industrie</h1>
+        <p class="uber-hero__subhead">Modernes Elektroinstallationsunternehmen mit Sitz in Bonn – vereint technische Expertise, handwerkliches Geschick und ein Engagement für Exzellenz.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       About Section (2-Column with Cards)
+       ======================================================================== -->
+  <section class="uber-about" data-od-id="uber-about">
+    <div class="tag">
+      <div class="tag__icon">
+        <img src="figma-data/images/group39499.svg" alt="">
+      </div>
+      <span class="tag__text">Über Enex Bonn</span>
+    </div>
+    <div class="uber-about__inner">
+      <p class="uber-about__headline">Bei Enex Bonn stehen Sorgfalt und Verlässlichkeit hinter jeder Installation. Wir arbeiten präzise, damit elektrische Anlagen sicher funktionieren und lange halten.</p>
+      <div class="uber-about__cards">
+        <!-- Card 1 -->
+        <div class="uber-about__card">
+          <img class="uber-about__card-img" src="figma-data/images/frame39579.png" alt="">
+          <div class="uber-about__card-blur"></div>
+          <div class="uber-about__card-content">
+            <h3 class="uber-about__card-title">Ein Ansprechpartner</h3>
+            <p class="uber-about__card-desc">Von der ersten Beratung bis zur Fertigstellung haben Sie einen festen Ansprechpartner. Kein Weitergeben, keine Missverständnisse.</p>
+          </div>
+        </div>
+        <!-- Card 2 -->
+        <div class="uber-about__card">
+          <img class="uber-about__card-img" src="figma-data/images/frame39582.png" alt="">
+          <div class="uber-about__card-blur"></div>
+          <div class="uber-about__card-content">
+            <h3 class="uber-about__card-title">Regional verwurzelt</h3>
+            <p class="uber-about__card-desc">Wir kennen die Region, arbeiten mit lokalen Partnern und sind schnell vor Ort wenn Sie uns brauchen.</p>
+          </div>
+        </div>
+        <!-- Card 3 -->
+        <div class="uber-about__card">
+          <img class="uber-about__card-img" src="figma-data/images/frame39583.png" alt="">
+          <div class="uber-about__card-blur"></div>
+          <div class="uber-about__card-content">
+            <h3 class="uber-about__card-title">Fairness und Transparenz</h3>
+            <p class="uber-about__card-desc">Kein Kleingedrucktes, keine versteckten Kosten. Sie bekommen ein klares Angebot und wissen vorher, was auf Sie zukommt.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       Image Showcase
+       ======================================================================== -->
+  <section class="uber-showcase" data-od-id="uber-showcase">
+    <img class="uber-showcase__img" src="figma-data/images/image-showcase.png" alt="ENEX Bonn Team">
+  </section>
+
+  <!-- ========================================================================
+       Team Member Section
+       ======================================================================== -->
+  <section class="uber-team" data-od-id="uber-team">
+    <div class="uber-team__fade-left"></div>
+    <div class="uber-team__fade-right"></div>
+    <div class="uber-team__header">
+      <div class="tag">
+        <div class="tag__icon">
+          <img src="figma-data/images/group39499.svg" alt="">
+        </div>
+        <span class="tag__text">Über Enex Bonn</span>
+      </div>
+      <h2 class="uber-team__title">Unsere <span class="muted">Fachleute</span><br>hinter Ihrem Projekt</h2>
+    </div>
+    <!-- Photo cards -->
+    <div class="uber-team__photos">
+      <div class="uber-team__photo uber-team__photo--left-2">
+        <div class="uber-team__photo-inner">
+          <img src="figma-data/images/image4.png" alt="">
+        </div>
+      </div>
+      <div class="uber-team__photo uber-team__photo--left-1">
+        <div class="uber-team__photo-inner">
+          <img src="figma-data/images/image4.png" alt="">
+        </div>
+      </div>
+      <div class="uber-team__photo uber-team__photo--center">
+        <div class="uber-team__photo-inner">
+          <img src="figma-data/images/image4.png" alt="">
+        </div>
+      </div>
+      <div class="uber-team__photo uber-team__photo--right-1">
+        <div class="uber-team__photo-inner">
+          <img src="figma-data/images/image4.png" alt="">
+        </div>
+      </div>
+      <div class="uber-team__photo uber-team__photo--right-2">
+        <div class="uber-team__photo-inner">
+          <img src="figma-data/images/image4.png" alt="">
+        </div>
+      </div>
+    </div>
+    <!-- Person info -->
+    <div class="uber-team__person">
+      <p class="uber-team__person-name">Philipp Leidl</p>
+      <p class="uber-team__person-role">Managing Director &amp; Electrical Specialist</p>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       Certificates Section
+       ======================================================================== -->
+  <section class="uber-certs" data-od-id="uber-certs">
+    <div class="uber-certs__inner">
+      <div class="uber-certs__header">
+        <div class="tag">
+          <div class="tag__icon">
+            <img src="figma-data/images/group39499.svg" alt="">
+          </div>
+          <span class="tag__text">Zertifikate &amp; Partner</span>
+        </div>
+        <h2 class="uber-certs__title">Zertifizierte Expertise<br><span class="muted">Vertraute Partnerschaften</span></h2>
+      </div>
+      <div class="uber-certs__grid">
+        <!-- Cert 1 -->
+        <div class="uber-certs__card">
+          <div class="uber-certs__card-img-wrap">
+            <img class="uber-certs__card-img" src="figma-data/images/image23.png" alt="TÜV Rheinland">
+          </div>
+          <div class="uber-certs__card-content">
+            <h3 class="uber-certs__card-title">TÜV Rheinland</h3>
+            <div class="uber-certs__card-divider">
+              <img src="figma-data/images/uber-line4.svg" alt="">
+            </div>
+            <p class="uber-certs__card-desc">Unser Qualitätsmanagementsystem ist nach ISO 9001:2015 durch TÜV Rheinland zertifiziert.</p>
+          </div>
+        </div>
+        <!-- Cert 2 -->
+        <div class="uber-certs__card">
+          <div class="uber-certs__card-img-wrap">
+            <img class="uber-certs__card-img" src="figma-data/images/image22.png" alt="E-CHECK">
+          </div>
+          <div class="uber-certs__card-content">
+            <h3 class="uber-certs__card-title">E-CHECK – Fachbetrieb</h3>
+            <div class="uber-certs__card-divider">
+              <img src="figma-data/images/uber-line5.svg" alt="">
+            </div>
+            <p class="uber-certs__card-desc">Als zertifizierter E-CHECK-Fachbetrieb prüfen und dokumentieren wir elektrische Anlagen nach anerkanntem Sicherheitsstandard.</p>
+          </div>
+        </div>
+        <!-- Cert 3 -->
+        <div class="uber-certs__card">
+          <div class="uber-certs__card-img-wrap uber-certs__card-img-wrap--wide">
+            <img class="uber-certs__card-img uber-certs__card-img--wide" src="figma-data/images/image24.png" alt="IHK">
+          </div>
+          <div class="uber-certs__card-content">
+            <h3 class="uber-certs__card-title">IHK Ausbildungsbetrieb</h3>
+            <div class="uber-certs__card-divider">
+              <img src="figma-data/images/uber-line5.svg" alt="">
+            </div>
+            <p class="uber-certs__card-desc">Wir bilden aus. Als eingetragener IHK-Ausbildungsbetrieb investieren wir in den Nachwuchs der Elektrotechnik.</p>
+          </div>
+        </div>
+      </div>
+      <!-- Partner logos -->
+      <div class="uber-partners">
+        <div class="uber-partners__row">
+          <div class="uber-partners__item"><img src="figma-data/images/logos-google.svg" alt="Partner"></div>
+          <div class="uber-partners__item"><img src="figma-data/images/logos-google.svg" alt="Partner"></div>
+          <div class="uber-partners__item"><img src="figma-data/images/logos-google.svg" alt="Partner"></div>
+        </div>
+        <div class="uber-partners__row">
+          <div class="uber-partners__item"><img src="figma-data/images/logos-google.svg" alt="Partner"></div>
+          <div class="uber-partners__item"><img src="figma-data/images/logos-google.svg" alt="Partner"></div>
+          <div class="uber-partners__item"><img src="figma-data/images/logos-google.svg" alt="Partner"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       CTA Section
+       ======================================================================== -->
+  <section class="cta" id="contact" data-od-id="uber-cta">
+    <img class="cta__bg" src="figma-data/images/uber-uns-cta.png" alt="">
+    <div class="cta__box">
+      <h2 class="cta__headline">Bereit für Ihr <span class="muted">Projekt</span></h2>
+      <div class="cta__divider">
+        <img src="figma-data/images/uber-line6.svg" alt="">
+      </div>
+      <div class="cta__content">
+        <p class="cta__desc">Ob Neuinstallation, Sanierung oder Ladeinfrastruktur – wir beraten Sie persönlich und finden die passende Lösung.</p>
+        <a href="kontakt.html" class="btn-primary">
+          <span>Jetzt Kontaktieren</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       Footer Section
+       ======================================================================== -->
+  <footer class="footer" data-od-id="footer">
+    <div class="footer__top">
+      <div class="footer__brand">
+        <a href="index.html" class="footer__logo">
+          <img src="figma-data/images/enex-logo-footer.svg" alt="ENEX Bonn">
+        </a>
+        <p class="footer__desc">Ob Elektroinstallation, Ladeinfrastruktur oder individuelle Lösungen – wir beraten Sie persönlich und finden die passende Lösung für Ihr Projekt.</p>
+      </div>
+      <div class="footer__links">
+        <div class="footer__column">
+          <p class="footer__column-title">Navigation</p>
+          <div class="footer__column-links">
+            <a href="index.html">Home</a>
+            <a href="uber-uns.html">Über uns</a>
+            <a href="leistungen.html">Leistungen</a>
+            <a href="referenzen.html">Referenzen</a>
+            <a href="kontakt.html">Kontakt</a>
+          </div>
+        </div>
+        <div class="footer__column">
+          <p class="footer__column-title">Legal</p>
+          <div class="footer__column-links">
+            <a href="impressum.html">Impressum</a>
+            <a href="#">Datenschutz</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer__divider">
+      <img src="figma-data/images/uber-line7.svg" alt="">
+    </div>
+    <div class="footer__bottom">
+      <p class="footer__copyright">©2026 ENEX Bonn. Alle Rechte vorbehalten.</p>
+      <p class="footer__credit">Made by INSYNC</p>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

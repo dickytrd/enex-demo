@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ENEX Bonn – Die Energie Experten</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&family=Inter:wght@400;500;600&family=Space+Mono&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- ========================================================================
+       Navbar Component (Floating Fixed)
+       ======================================================================== -->
+  <!-- Floating Contact Button -->
+  <a href="kontakt.html" class="floating-contact">
+    <div class="floating-contact__inner">
+      <span>Jetzt kontaktieren</span>
+    </div>
+  </a>
+
+  <!-- Main Navigation -->
+  <nav class="site-nav" role="navigation" aria-label="Main navigation">
+    <a href="index.html" class="site-nav__logo">
+      <img src="figma-data/images/enex-logo-slogan.svg" alt="ENEX Bonn" class="site-nav__logo-desktop">
+      <img src="figma-data/images-mobile/enex-logo-slogan-mobile.svg" alt="ENEX Bonn" class="site-nav__logo-mobile">
+    </a>
+    <div class="site-nav__menu">
+      <a href="index.html">Home</a>
+      <a href="leistungen.html">Leistungen</a>
+      <a href="referenzen.html">Referenzen</a>
+      <a href="uber-uns.html">Über uns</a>
+    </div>
+    <button class="site-nav__toggle" aria-expanded="false" aria-label="Menü öffnen">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+        <line x1="3" y1="6" x2="21" y2="6" stroke="white" stroke-width="2" stroke-linecap="round"/>
+        <line x1="3" y1="12" x2="21" y2="12" stroke="white" stroke-width="2" stroke-linecap="round"/>
+        <line x1="3" y1="18" x2="21" y2="18" stroke="white" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+    </button>
+  </nav>
+
+  <!-- Mobile Menu Drawer -->
+  <div class="mobile-menu" aria-hidden="true">
+    <div class="mobile-menu__overlay"></div>
+    <div class="mobile-menu__drawer">
+      <button class="mobile-menu__close" aria-label="Menü schließen">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+          <line x1="6" y1="6" x2="18" y2="18" stroke="#2b2e31" stroke-width="2" stroke-linecap="round"/>
+          <line x1="18" y1="6" x2="6" y2="18" stroke="#2b2e31" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </button>
+      <nav class="mobile-menu__nav">
+        <a href="index.html">Home</a>
+        <a href="leistungen.html">Leistungen</a>
+        <a href="referenzen.html">Referenzen</a>
+        <a href="uber-uns.html">Über uns</a>
+      </nav>
+      <a href="kontakt.html" class="mobile-menu__contact">Jetzt Kontaktieren</a>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       Hero Section (Swiper - 3 Slides)
+       ======================================================================== -->
+  <section class="hero" data-od-id="hero">
+    <!-- Background slides -->
+    <div class="hero__bg-container">
+      <img class="hero__bg hero__bg--1 is-active" src="figma-data/images-hero-swiper/hero-bg-1.png" alt="" data-slide="1">
+      <img class="hero__bg hero__bg--2" src="figma-data/images-hero-swiper/hero-bg-2.png" alt="" data-slide="2">
+      <img class="hero__bg hero__bg--3" src="figma-data/images-hero-swiper/hero-bg-3.png" alt="" data-slide="3">
+    </div>
+    <div class="hero__content">
+      <div class="hero__text">
+        <h1 class="hero__headline">Die <span class="muted">Energie</span> Experten.</h1>
+        <p class="hero__subhead">Ihr Elektrofachbetrieb in Bonn für private, gewerbliche und industrielle Projekte.</p>
+      </div>
+      <div class="hero__bottom-panel">
+        <div class="hero__frame">
+          <div class="hero__frame-arrows">
+            <button class="hero__frame-arrow hero__frame-arrow--prev" aria-label="Previous slide">
+              <img src="figma-data/images/arrow-right.svg" alt="">
+            </button>
+            <div class="hero__frame-divider">
+              <img src="figma-data/images/vector5.svg" alt="">
+            </div>
+            <button class="hero__frame-arrow hero__frame-arrow--next" aria-label="Next slide">
+              <img src="figma-data/images/arrow-right1.svg" alt="">
+            </button>
+          </div>
+          <div class="hero__frame-info">
+            <!-- Slide 1 Content (initial active) -->
+            <div class="hero__frame-slide is-active" data-slide="1">
+              <p class="hero__frame-title"><span class="hero__frame-title-text">So läuft die Energie Optimierung<br>Ihres Hauses ab.</span></p>
+            </div>
+            <!-- Slide 2 Content -->
+            <div class="hero__frame-slide" data-slide="2">
+              <p class="hero__frame-title"><span class="hero__frame-title-text">Wie wir unsere Fahrten mit Technologie antreiben – eine Transformation</span></p>
+            </div>
+            <!-- Slide 3 Content -->
+            <div class="hero__frame-slide" data-slide="3">
+              <p class="hero__frame-title"><span class="hero__frame-title-text">Erfahrene Techniker sorgen für hochwertige Ergebnisse</span></p>
+            </div>
+            <div class="hero__frame-cta">
+              <span class="hero__frame-cta-text">Jetzt entdecken</span>
+              <div class="hero__frame-cta-btn">
+                <img src="figma-data/images/arrow-right2.svg" alt="">
+              </div>
+            </div>
+          </div>
+          <div class="hero__frame-video">
+            <div class="hero__frame-video-inner">
+              <div class="hero__frame-phone">
+                <!-- Phone images for each slide -->
+                <img class="phone-img phone-img--1 is-active" src="figma-data/images-hero-swiper/phone-1.png" alt="" data-slide="1">
+                <img class="phone-img phone-img--2" src="figma-data/images-hero-swiper/phone-2.png" alt="" data-slide="2">
+                <img class="phone-img phone-img--3" src="figma-data/images-hero-swiper/phone-3.png" alt="" data-slide="3">
+                <div class="hero__frame-play">
+                  <img src="figma-data/images/play.svg" alt="">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       About Section
+       ======================================================================== -->
+  <section class="about" id="about" data-od-id="about">
+    <div class="about__top">
+      <div class="about__left">
+        <div class="about__left-inner">
+          <div class="tag">
+            <div class="tag__icon">
+              <img src="figma-data/images/group39499.svg" alt="">
+            </div>
+            <span class="tag__text">Über Enex Bonn</span>
+          </div>
+          <p class="about__desc">Über 100 abgeschlossene Projekte in der Region Bonn. Privat, gewerblich und industriell.<br>Wir streben stets nach individuellen und passenden Lösungen für jeden Kunden.</p>
+        </div>
+      </div>
+      <div class="about__right">
+        <p class="about__headline">Wir begleiten private, gewerbliche und industrielle Projekte mit<span class="muted"> technischem Know-how</span> und <span class="muted">handwerklicher Sorgfalt</span>. Von der Planung bis zur Fertigstellung.</p>
+        <div class="about__image-block">
+          <img class="about-img" src="figma-data/images/frame54.png" alt="">
+          <div class="about__counter-box">
+            <div class="about__counter-arrows">
+              <div class="about__counter-arrow about__counter-arrow--up">
+                <img src="figma-data/images/arrow-right3.svg" alt="">
+              </div>
+              <div class="about__counter-divider">
+                <img src="figma-data/images/vector6.svg" alt="">
+              </div>
+              <div class="about__counter-arrow">
+                <img src="figma-data/images/arrow-right4.svg" alt="">
+              </div>
+            </div>
+            <div class="about__counter-content">
+              <p class="about__counter-label">Abgeschlossene Energie-Projekte</p>
+              <p class="about__counter-number">100<span class="muted">+</span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="logos">
+      <div class="logos__row">
+        <div class="logos__item"><img src="figma-data/images/logos-google.svg" alt="Google"></div>
+        <div class="logos__item"><img src="figma-data/images/logos-google.svg" alt="Google"></div>
+        <div class="logos__item"><img src="figma-data/images/logos-google.svg" alt="Google"></div>
+      </div>
+      <div class="logos__row">
+        <div class="logos__item"><img src="figma-data/images/logos-google.svg" alt="Google"></div>
+        <div class="logos__item"><img src="figma-data/images/logos-google.svg" alt="Google"></div>
+        <div class="logos__item"><img src="figma-data/images/logos-google.svg" alt="Google"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       Services Section (4-Step Scroll Swiper)
+       ======================================================================== -->
+  <section class="services" id="services" data-od-id="services">
+    <!-- Sticky inner container -->
+    <div class="services__inner">
+    <!-- Scroll container with 4 slides -->
+    <div class="services__scroll-container">
+      <!-- Slide 1: Ladetechnik -->
+      <div class="services__slide is-active" data-slide="1">
+        <img class="services__bg" src="figma-data/images/frame47.png" alt="">
+        <!-- Header row: Tag + Counter -->
+        <div class="services__header">
+          <div class="tag tag--light">
+            <div class="tag__icon">
+              <img src="figma-data/images/group39500.svg" alt="">
+            </div>
+            <span class="tag__text">Services</span>
+          </div>
+          <p class="services__counter"><span class="services__counter-text"><span class="services__counter-current">001</span>/004</span></p>
+        </div>
+        <!-- Progress lines (scrubbable) -->
+        <div class="services__lines" role="slider" aria-label="Service slide progress" aria-valuemin="1" aria-valuemax="4" aria-valuenow="1">
+          <div class="services__line-track"></div>
+          <div class="services__line-progress"></div>
+        </div>
+        <!-- Content row: Subtitle + Main -->
+        <div class="services__content">
+          <p class="services__subtitle"><span class="services__subtitle-text">Zukunftssichere Mobilität</span></p>
+          <div class="services__main">
+            <div class="services__text">
+              <h2 class="services__title"><span class="services__title-text">Ladetechnik</span></h2>
+              <p class="services__desc"><span class="services__desc-text">Von der einzelnen Wallbox bis zur skalierbaren Ladeinfrastruktur planen und installieren wir Ladelösungen, die zu Ihrem Bedarf passen.</span></p>
+            </div>
+            <div class="btn-primary">
+              <span>Jetzt Kontaktieren</span>
+            </div>
+          </div>
+        </div>
+        <!-- Card at bottom left -->
+        <div class="services__card-wrapper">
+          <div class="services__card">
+            <img class="services__card-image" src="figma-data/images/markus-spiske.png" alt="">
+            <div class="services__card-content">
+              <p class="services__card-title">Projektname</p>
+              <p class="services__card-location">Frankfurt, Germany</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 2: Standard-installationen -->
+      <div class="services__slide" data-slide="2">
+        <img class="services__bg" src="figma-data/images/frame48.png" alt="">
+        <div class="services__header">
+          <div class="tag tag--light">
+            <div class="tag__icon">
+              <img src="figma-data/images/group39500.svg" alt="">
+            </div>
+            <span class="tag__text">Services</span>
+          </div>
+          <p class="services__counter"><span class="services__counter-text"><span class="services__counter-current">002</span>/004</span></p>
+        </div>
+        <div class="services__lines" role="slider" aria-label="Service slide progress" aria-valuemin="1" aria-valuemax="4" aria-valuenow="2">
+          <div class="services__line-track"></div>
+          <div class="services__line-progress"></div>
+        </div>
+        <div class="services__content">
+          <p class="services__subtitle"><span class="services__subtitle-text">Verlässliche Infrastruktur</span></p>
+          <div class="services__main">
+            <div class="services__text">
+              <h2 class="services__title"><span class="services__title-text">Standard-installationen</span></h2>
+              <p class="services__desc"><span class="services__desc-text">Ob Neubau oder Modernisierung: Wir übernehmen jegliche Elektroinstallationen und Zählerschränke fachgerecht und normkonform.</span></p>
+            </div>
+            <div class="btn-primary">
+              <span>Jetzt Kontaktieren</span>
+            </div>
+          </div>
+        </div>
+        <div class="services__card-wrapper">
+          <div class="services__card">
+            <img class="services__card-image" src="figma-data/images/markus-spiske.png" alt="">
+            <div class="services__card-content">
+              <p class="services__card-title">Projektname</p>
+              <p class="services__card-location">Köln, Germany</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 3: Wärmepumpen-Integration -->
+      <div class="services__slide" data-slide="3">
+        <img class="services__bg" src="figma-data/images/frame49.png" alt="">
+        <div class="services__header">
+          <div class="tag tag--light">
+            <div class="tag__icon">
+              <img src="figma-data/images/group39500.svg" alt="">
+            </div>
+            <span class="tag__text">Services</span>
+          </div>
+          <p class="services__counter"><span class="services__counter-text"><span class="services__counter-current">003</span>/004</span></p>
+        </div>
+        <div class="services__lines" role="slider" aria-label="Service slide progress" aria-valuemin="1" aria-valuemax="4" aria-valuenow="3">
+          <div class="services__line-track"></div>
+          <div class="services__line-progress"></div>
+        </div>
+        <div class="services__content">
+          <p class="services__subtitle"><span class="services__subtitle-text">Effiziente Energieversorgung</span></p>
+          <div class="services__main">
+            <div class="services__text">
+              <h2 class="services__title"><span class="services__title-text">Wärmepumpen-Integration</span></h2>
+              <p class="services__desc"><span class="services__desc-text">Wir integrieren Wärmepumpen sicher und effizient in bestehende oder neue elektrische Systeme. Von der Anschlussplanung bis zur fachgerechten Installation sorgen wir für eine zuverlässige und zukunftsfähige Energieversorgung.</span></p>
+            </div>
+            <div class="btn-primary">
+              <span>Jetzt Kontaktieren</span>
+            </div>
+          </div>
+        </div>
+        <div class="services__card-wrapper">
+          <div class="services__card">
+            <img class="services__card-image" src="figma-data/images/markus-spiske.png" alt="">
+            <div class="services__card-content">
+              <p class="services__card-title">Projektname</p>
+              <p class="services__card-location">Düsseldorf, Germany</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 4: Allgemeine Elektrotechnik -->
+      <div class="services__slide" data-slide="4">
+        <img class="services__bg" src="figma-data/images/frame50.png" alt="">
+        <div class="services__header">
+          <div class="tag tag--light">
+            <div class="tag__icon">
+              <img src="figma-data/images/group39500.svg" alt="">
+            </div>
+            <span class="tag__text">Services</span>
+          </div>
+          <p class="services__counter"><span class="services__counter-text"><span class="services__counter-current">004</span>/004</span></p>
+        </div>
+        <div class="services__lines" role="slider" aria-label="Service slide progress" aria-valuemin="1" aria-valuemax="4" aria-valuenow="4">
+          <div class="services__line-track"></div>
+          <div class="services__line-progress"></div>
+        </div>
+        <div class="services__content">
+          <p class="services__subtitle"><span class="services__subtitle-text">Effiziente Energieversorgung</span></p>
+          <div class="services__main">
+            <div class="services__text">
+              <h2 class="services__title"><span class="services__title-text">Allgemeine Elektrotechnik</span></h2>
+              <p class="services__desc"><span class="services__desc-text">Von kleinen Anpassungen bis zu komplexen elektrotechnischen Anforderungen bieten wir individuelle Lösungen für private, gewerbliche und industrielle Projekte. Passgenau geplant, professionell umgesetzt und auf Ihre Anforderungen abgestimmt.</span></p>
+            </div>
+            <div class="btn-primary">
+              <span>Jetzt Kontaktieren</span>
+            </div>
+          </div>
+        </div>
+        <div class="services__card-wrapper">
+          <div class="services__card">
+            <img class="services__card-image" src="figma-data/images/markus-spiske.png" alt="">
+            <div class="services__card-content">
+              <p class="services__card-title">Projektname</p>
+              <p class="services__card-location">Berlin, Germany</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       Why Section
+       ======================================================================== -->
+  <section class="why" data-od-id="why">
+    <div class="why__header">
+      <div class="tag">
+        <div class="tag__icon">
+          <img src="figma-data/images/group39499.svg" alt="">
+        </div>
+        <span class="tag__text">Warum Enex Bonn</span>
+      </div>
+      <h2 class="why__headline">Qualität und <span class="muted">Zuverlässigkeit</span></h2>
+    </div>
+    <div class="why__grid">
+      <div class="why__card is-expanded">
+        <div class="why__card-top">
+          <div class="why__card-icon">
+            <img src="figma-data/images/material-add.svg" alt="">
+          </div>
+        </div>
+        <div class="why__card-circle"></div>
+        <div class="why__card-title-wrap">
+          <h3 class="why__card-title">Ein Ansprechpartner von Anfang bis Ende</h3>
+        </div>
+        <div class="why__card-overlay">
+          <p class="why__card-overlay-text">Von der ersten Beratung über die Planung bis zur finalen Umsetzung begleiten wir Ihr Projekt persönlich. Direkte Kommunikation, kurze Entscheidungswege und ein fester Ansprechpartner sorgen für Transparenz, Verlässlichkeit und eine reibungslose Zusammenarbeit während jeder Projektphase.</p>
+        </div>
+      </div>
+      <div class="why__card">
+        <div class="why__card-top">
+          <div class="why__card-icon">
+            <img src="figma-data/images/material-add.svg" alt="">
+          </div>
+        </div>
+        <div class="why__card-circle">
+          <img src="figma-data/images/sketch-logo.svg" alt="">
+        </div>
+        <div class="why__card-title-wrap">
+          <h3 class="why__card-title why__card-title--medium">Qualität bis ins Detail</h3>
+        </div>
+        <div class="why__card-overlay">
+          <p class="why__card-overlay-text">Wir arbeiten mit hochwertigen Materialien und modernen Werkzeugen. Jede Kabelverbindung, jede Montage, jede Dokumentation wird mit Sorgfalt und Präzision ausgeführt. Qualität zeigt sich nicht nur im Ergebnis, sondern auch in unserer Arbeitsweise.</p>
+        </div>
+      </div>
+      <div class="why__card">
+        <div class="why__card-top">
+          <div class="why__card-icon">
+            <img src="figma-data/images/material-add.svg" alt="">
+          </div>
+        </div>
+        <div class="why__card-circle">
+          <img src="figma-data/images/rocket.svg" alt="">
+        </div>
+        <div class="why__card-title-wrap">
+          <h3 class="why__card-title why__card-title--medium">Lösungen mit Zukunft</h3>
+        </div>
+        <div class="why__card-overlay">
+          <p class="why__card-overlay-text">Elektromobilität, Energiespeicher, Smart Home — wir denken weiter. Unsere Lösungen sind nicht nur für heute konzipiert, sondern berücksichtigen bereits die Anforderungen von morgen. So bleibt Ihre Investition langfristig wertvoll.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       Reference Section
+       ======================================================================== -->
+  <section class="reference" id="reference" data-od-id="reference">
+    <div class="reference__gradient-left"></div>
+    <div class="reference__gradient-right"></div>
+    <button class="reference__nav-btn reference__nav-btn--prev" aria-label="Previous project">
+      <img src="figma-data/images/arrow-right.svg" alt="">
+    </button>
+    <button class="reference__nav-btn reference__nav-btn--next" aria-label="Next project">
+      <img src="figma-data/images/arrow-right.svg" alt="">
+    </button>
+    <div class="reference__fan">
+      <div class="reference__card reference__card--center">
+        <div class="reference__card-inner">
+          <img src="figma-data/images/rectangle4.png" alt="">
+        </div>
+      </div>
+      <div class="reference__card reference__card--r1">
+        <div class="reference__card-inner">
+          <img src="figma-data/images/rectangle4.png" alt="">
+        </div>
+      </div>
+      <div class="reference__card reference__card--r2">
+        <div class="reference__card-inner">
+          <img src="figma-data/images/rectangle4.png" alt="">
+        </div>
+      </div>
+      <div class="reference__card reference__card--r3">
+        <div class="reference__card-inner">
+          <img src="figma-data/images/rectangle4.png" alt="">
+        </div>
+      </div>
+      <div class="reference__card reference__card--l1">
+        <div class="reference__card-inner">
+          <img src="figma-data/images/rectangle4.png" alt="">
+        </div>
+      </div>
+      <div class="reference__card reference__card--l2">
+        <div class="reference__card-inner">
+          <img src="figma-data/images/rectangle4.png" alt="">
+        </div>
+      </div>
+      <div class="reference__card reference__card--l3">
+        <div class="reference__card-inner">
+          <img src="figma-data/images/rectangle4.png" alt="">
+        </div>
+      </div>
+    </div>
+    <div class="reference__header">
+      <div class="reference__header-inner">
+        <div class="tag">
+          <div class="tag__icon">
+            <img src="figma-data/images/group39499.svg" alt="">
+          </div>
+          <span class="tag__text">Referenzen</span>
+        </div>
+        <h2 class="reference__headline">Ausgewählte <span class="muted">Referenzprojekte</span></h2>
+      </div>
+      <a href="referenzen.html" class="reference__link">Alle Projekte ansehen</a>
+    </div>
+    <div class="reference__info">
+      <p class="reference__info-title">Name of the project here</p>
+      <p class="reference__info-location">Frankfurt, Germany</p>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       Testimonials Section
+       ======================================================================== -->
+  <section class="testimonials" data-od-id="testimonials">
+    <div class="testimonials__header">
+      <div class="tag" style="width: 159px;">
+        <div class="tag__icon">
+          <img src="figma-data/images/group39499.svg" alt="">
+        </div>
+        <span class="tag__text">Testimonials</span>
+      </div>
+      <h2 class="testimonials__headline">Unsere <span class="muted">Kundenstimmen</span></h2>
+    </div>
+    <div class="testimonials__grid">
+      <!-- Tab 1 -->
+      <div class="testimonials__tab is-expanded" data-testimonial="1">
+        <div class="testimonials__tab-image">
+          <img src="figma-data/images/frame79.png" alt="">
+        </div>
+        <div class="testimonials__tab-content">
+          <p class="testimonials__tab-quote">Wir sind seit Jahren Bestandskunde bei Enex Bonn und können die Truppe von ganzem Herzen weiterempfehlen!</p>
+          <div class="testimonials__tab-author">
+            <p class="testimonials__tab-name">Michael Jordan</p>
+            <p class="testimonials__tab-location">Frankfurt, Germany</p>
+          </div>
+        </div>
+        <div class="testimonials__tab-btn">
+          <img src="figma-data/images/arrow-up-right.svg" alt="">
+        </div>
+      </div>
+      <!-- Tab 2 -->
+      <div class="testimonials__tab" data-testimonial="2">
+        <div class="testimonials__tab-image">
+          <img src="figma-data/images/frame81.png" alt="">
+        </div>
+        <div class="testimonials__tab-content">
+          <p class="testimonials__tab-quote">Professionelle Beratung und saubere Umsetzung. Die Ladeinfrastruktur für unser Autohaus wurde termingerecht installiert.</p>
+          <div class="testimonials__tab-author">
+            <p class="testimonials__tab-name">Sarah Müller</p>
+            <p class="testimonials__tab-location">Bonn, Germany</p>
+          </div>
+        </div>
+        <div class="testimonials__tab-btn">
+          <img src="figma-data/images/arrow-up-right.svg" alt="">
+        </div>
+      </div>
+      <!-- Tab 3 -->
+      <div class="testimonials__tab" data-testimonial="3">
+        <div class="testimonials__tab-image">
+          <img src="figma-data/images/frame78.png" alt="">
+        </div>
+        <div class="testimonials__tab-content">
+          <p class="testimonials__tab-quote">Top Service und kompetente Mitarbeiter. Unsere Solaranlage läuft einwandfrei seit der Installation.</p>
+          <div class="testimonials__tab-author">
+            <p class="testimonials__tab-name">Thomas Weber</p>
+            <p class="testimonials__tab-location">Köln, Germany</p>
+          </div>
+        </div>
+        <div class="testimonials__tab-btn">
+          <img src="figma-data/images/arrow-up-right.svg" alt="">
+        </div>
+      </div>
+      <!-- Tab 4 -->
+      <div class="testimonials__tab" data-testimonial="4">
+        <div class="testimonials__tab-image">
+          <img src="figma-data/images/frame80.png" alt="">
+        </div>
+        <div class="testimonials__tab-content">
+          <p class="testimonials__tab-quote">Schnelle Reaktion und flexible Terminplanung. Sehr zufrieden mit der gesamten Zusammenarbeit!</p>
+          <div class="testimonials__tab-author">
+            <p class="testimonials__tab-name">Lisa Schmidt</p>
+            <p class="testimonials__tab-location">Düsseldorf, Germany</p>
+          </div>
+        </div>
+        <div class="testimonials__tab-btn">
+          <img src="figma-data/images/arrow-up-right.svg" alt="">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       CTA Section
+       ======================================================================== -->
+  <section class="cta" id="contact" data-od-id="cta">
+    <img class="cta__bg" src="figma-data/images/cta-bg.png" alt="">
+    <div class="cta__box">
+      <h2 class="cta__headline">Bereit für Ihr <span class="muted">Projekt </span></h2>
+      <div class="cta__divider">
+        <img src="figma-data/images/line4.svg" alt="">
+      </div>
+      <div class="cta__content">
+        <p class="cta__desc">Ob Neuinstallation, Sanierung oder Ladeinfrastruktur – wir beraten Sie persönlich und finden die passende Lösung.</p>
+        <a href="kontakt.html" class="btn-primary">
+          <span>Jetzt Kontaktieren</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       Footer Component
+       ======================================================================== -->
+  <footer class="footer" data-od-id="footer">
+    <div class="footer__top">
+      <div class="footer__brand">
+        <a href="index.html" class="footer__logo">
+          <img src="figma-data/images/enex-logo.svg" alt="ENEX">
+        </a>
+        <p class="footer__desc">Ob Elektroinstallation, Ladeinfrastruktur oder individuelle Lösungen – wir beraten Sie persönlich und finden die passende Lösung für Ihr Projekt.</p>
+      </div>
+      <div class="footer__links">
+        <div class="footer__column">
+          <p class="footer__column-title">Navigation</p>
+          <div class="footer__column-links">
+            <a href="index.html">Home</a>
+            <a href="uber-uns.html">Über uns</a>
+            <a href="leistungen.html">Leistungen</a>
+            <a href="referenzen.html">Referenzen</a>
+            <a href="kontakt.html">Kontakt</a>
+          </div>
+        </div>
+        <div class="footer__column">
+          <p class="footer__column-title">Legal</p>
+          <div class="footer__column-links">
+            <a href="impressum.html">Impressum</a>
+            <a href="#">Datenschutz</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer__divider">
+      <img src="figma-data/images/line5.svg" alt="">
+    </div>
+    <div class="footer__bottom">
+      <p class="footer__copyright">©2026 ENEX Bonn. Alle Rechte vorbehalten.</p>
+      <p class="footer__credit">Made by INSYNC</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

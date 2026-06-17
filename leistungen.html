@@ -1,0 +1,1000 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Leistungen - ENEX Bonn</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=Inter:wght@400;500;600&family=Space+Mono&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    /* Leistungen Page Specific Styles */
+
+    /* Hero Section */
+    .leistungen-hero {
+      position: relative;
+      width: 100%;
+      height: 960px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 177px 40px 20px;
+      overflow: hidden;
+    }
+
+    .leistungen-hero__bg {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+    }
+
+    .leistungen-hero__bg img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .leistungen-hero__bg::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to bottom, rgba(0,0,0,0.5) 36.65%, rgba(0,0,0,0) 100%);
+    }
+
+    .leistungen-hero__content {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      max-width: 900px;
+      margin-right: auto;
+    }
+
+    .leistungen-hero__title {
+      font-family: var(--font-inter);
+      font-weight: 600;
+      font-size: 110px;
+      line-height: 0.9;
+      letter-spacing: -6.6px;
+      color: var(--white);
+      margin: 0 0 24px;
+    }
+
+    .leistungen-hero__title span {
+      color: var(--white-60);
+    }
+
+    .leistungen-hero__subtitle {
+      font-family: var(--font-inter);
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 1.5;
+      letter-spacing: -0.32px;
+      color: var(--white);
+      max-width: 580px;
+      margin: 0;
+    }
+
+    /* Overview Section */
+    .leistungen-overview {
+      background: var(--white);
+      padding: 100px 40px;
+      overflow: hidden;
+    }
+
+    .leistungen-overview__inner {
+      display: flex;
+      flex-direction: column;
+      gap: 80px;
+      align-items: flex-end;
+      position: relative;
+    }
+
+    .leistungen-overview__header {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 60px;
+    }
+
+    .leistungen-overview__text {
+      font-family: var(--font-inter);
+      font-weight: 500;
+      font-size: 50px;
+      line-height: 1.2;
+      letter-spacing: -3px;
+      color: var(--text);
+      margin: 0;
+    }
+
+    /* Overview Image */
+    .leistungen-overview__image {
+      width: 454px;
+      height: 256px;
+      overflow: hidden;
+    }
+
+    .leistungen-overview__image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* Showcase Section */
+    .leistungen-showcase {
+      width: 100%;
+      height: 929px;
+      overflow: hidden;
+    }
+
+    .leistungen-showcase img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* Services Section */
+    .leistungen-services {
+      background: #fafafa;
+      padding: 100px 40px;
+      /* overflow: hidden breaks sticky - removed */
+    }
+
+    .leistungen-services__header {
+      display: flex;
+      flex-direction: column;
+      gap: 60px;
+      align-items: center;
+      width: 100%;
+      max-width: 1360px;
+      margin: 0 auto 80px;
+    }
+
+    .leistungen-services__title {
+      font-family: var(--font-inter);
+      font-weight: 500;
+      font-size: 80px;
+      line-height: 1.1;
+      letter-spacing: -4.8px;
+      color: var(--text);
+      text-align: center;
+      margin: 0;
+    }
+
+    .leistungen-services__title span {
+      color: var(--text-muted);
+    }
+
+    /* Service Cards Stack - Sticky Scroll */
+    .leistungen-cards {
+      position: relative;
+      width: 100%;
+      max-width: 1360px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .leistungen-card {
+      background: var(--white);
+      border: 1px solid var(--border-dark);
+      display: flex;
+      gap: 22px;
+      padding: 12px;
+      position: sticky;
+      width: 100%;
+      max-width: 1360px;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+      transform-origin: center top;
+      transition: transform 0.1s ease-out, filter 0.1s ease-out;
+    }
+
+    .leistungen-card:nth-child(1) {
+      top: 100px;
+      z-index: 1;
+    }
+
+    .leistungen-card:nth-child(2) {
+      top: 130px;
+      z-index: 2;
+      max-width: 1300px;
+    }
+
+    .leistungen-card:nth-child(3) {
+      top: 160px;
+      z-index: 3;
+      max-width: 1240px;
+    }
+
+    .leistungen-card:nth-child(4) {
+      top: 190px;
+      z-index: 4;
+      max-width: 1180px;
+    }
+
+    /* Card spacing for stack scroll */
+    .leistungen-card:not(:last-child) {
+      margin-bottom: 500px;
+    }
+
+    .leistungen-card:last-child {
+      margin-bottom: 300px;
+    }
+
+    .leistungen-card__image {
+      flex: 1;
+      min-width: 0;
+      height: 560px;
+      background: #eee;
+      border: 1px solid var(--border);
+      overflow: hidden;
+    }
+
+    .leistungen-card__image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .leistungen-card__content {
+      flex: 1;
+      min-width: 0;
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .leistungen-card__header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+
+    .leistungen-card__number {
+      font-family: var(--font-mono);
+      font-size: 16px;
+      line-height: 1.4;
+      color: rgba(3,3,3,0.4);
+    }
+
+    .leistungen-card__arrow {
+      width: 64px;
+      height: 64px;
+      background: var(--accent);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: transform 0.2s ease;
+    }
+
+    .leistungen-card__arrow:hover {
+      transform: scale(1.05);
+    }
+
+    .leistungen-card__arrow svg {
+      width: 24px;
+      height: 24px;
+    }
+
+    .leistungen-card__body {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+    }
+
+    .leistungen-card__text {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .leistungen-card__title {
+      font-family: var(--font-inter);
+      font-weight: 400;
+      font-size: 50px;
+      line-height: 1.1;
+      letter-spacing: -3px;
+      color: #030303;
+      margin: 0;
+    }
+
+    .leistungen-card__desc {
+      font-family: var(--font-inter);
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 1.5;
+      letter-spacing: -0.32px;
+      color: rgba(3,3,3,0.8);
+      margin: 0;
+    }
+
+    .leistungen-card__divider {
+      width: 100%;
+      height: 1px;
+      background: var(--border);
+    }
+
+    .leistungen-card__features {
+      display: flex;
+      gap: 12px;
+    }
+
+    .leistungen-feature {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .leistungen-feature__icon {
+      width: 32px;
+      height: 32px;
+    }
+
+    .leistungen-feature__icon img {
+      width: 100%;
+      height: 100%;
+    }
+
+    .leistungen-feature__text {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .leistungen-feature__title {
+      font-family: var(--font-inter);
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 1.4;
+      letter-spacing: -0.64px;
+      color: #030303;
+      margin: 0;
+    }
+
+    .leistungen-feature__desc {
+      font-family: var(--font-inter);
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 1.4;
+      letter-spacing: -0.28px;
+      color: rgba(3,3,3,0.8);
+      margin: 0;
+    }
+
+    /* CTA Section */
+    .leistungen-cta {
+      position: relative;
+      width: 100%;
+      height: 800px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 40px;
+      overflow: hidden;
+    }
+
+    .leistungen-cta__bg {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+    }
+
+    .leistungen-cta__bg img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .leistungen-cta__card {
+      position: relative;
+      z-index: 1;
+      background: var(--white);
+      padding: 60px;
+      width: 670px;
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+    }
+
+    .leistungen-cta__title {
+      font-family: var(--font-inter);
+      font-weight: 500;
+      font-size: 60px;
+      line-height: 1.1;
+      letter-spacing: -2.4px;
+      color: var(--text);
+      margin: 0;
+    }
+
+    .leistungen-cta__title span {
+      color: var(--text-muted);
+    }
+
+    .leistungen-cta__divider {
+      width: 100%;
+      height: 1px;
+      background: var(--border);
+    }
+
+    .leistungen-cta__body {
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+    }
+
+    .leistungen-cta__text {
+      font-family: var(--font-inter);
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 1.5;
+      letter-spacing: -0.32px;
+      color: var(--text);
+      max-width: 470px;
+      margin: 0;
+    }
+
+    /* Responsive */
+    @media (max-width: 1024px) {
+      .leistungen-hero {
+        height: auto;
+        min-height: 600px;
+        padding: 140px 24px 60px;
+      }
+
+      .leistungen-hero__title {
+        font-size: 60px;
+        letter-spacing: -3px;
+      }
+
+      .leistungen-overview {
+        padding: 60px 24px;
+      }
+
+      .leistungen-overview__text {
+        font-size: 32px;
+        letter-spacing: -1.5px;
+      }
+
+      .leistungen-overview__image {
+        width: 100%;
+        height: 200px;
+      }
+
+      .leistungen-showcase {
+        height: 400px;
+      }
+
+      .leistungen-services {
+        padding: 60px 24px;
+      }
+
+      .leistungen-services__title {
+        font-size: 40px;
+        letter-spacing: -2px;
+      }
+
+      .leistungen-card {
+        flex-direction: column;
+        margin-left: 0 !important;
+        max-width: 100% !important;
+        margin-bottom: 24px !important;
+        position: relative !important;
+        top: auto !important;
+      }
+
+      .leistungen-card__image {
+        height: 300px;
+      }
+
+      .leistungen-card__title {
+        font-size: 32px;
+        letter-spacing: -1.5px;
+      }
+
+      .leistungen-card__features {
+        flex-direction: column;
+        gap: 24px;
+      }
+
+      .leistungen-cta {
+        height: auto;
+        min-height: 500px;
+      }
+
+      .leistungen-cta__card {
+        width: 100%;
+        padding: 32px;
+      }
+
+      .leistungen-cta__title {
+        font-size: 36px;
+        letter-spacing: -1.5px;
+      }
+    }
+
+    @media (max-width: 767px) {
+      .leistungen-hero__title {
+        font-size: 40px;
+        letter-spacing: -2px;
+      }
+
+      .leistungen-hero__subtitle {
+        font-size: 14px;
+      }
+
+      .leistungen-overview__image {
+        width: 100%;
+        height: 180px;
+      }
+
+      .leistungen-showcase {
+        height: 300px;
+      }
+
+      .leistungen-overview__text {
+        font-size: 24px;
+        letter-spacing: -1px;
+      }
+
+      .leistungen-services__title {
+        font-size: 28px;
+        letter-spacing: -1px;
+      }
+
+      .leistungen-card__title {
+        font-size: 24px;
+        letter-spacing: -1px;
+      }
+
+      .leistungen-cta__title {
+        font-size: 28px;
+        letter-spacing: -1px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Floating Contact Button -->
+  <a href="kontakt.html" class="floating-contact">
+    <div class="floating-contact__inner">
+      <span>Jetzt kontaktieren</span>
+    </div>
+  </a>
+
+  <!-- Main Navigation -->
+  <nav class="site-nav" role="navigation" aria-label="Main navigation">
+    <a href="index.html" class="site-nav__logo">
+      <img src="figma-data/images/enex-logo-slogan.svg" alt="ENEX Bonn" class="site-nav__logo-desktop">
+      <img src="figma-data/images-mobile/enex-logo-slogan-mobile.svg" alt="ENEX Bonn" class="site-nav__logo-mobile">
+    </a>
+    <div class="site-nav__menu">
+      <a href="index.html">Home</a>
+      <a href="leistungen.html" style="color: var(--white);">Leistungen</a>
+      <a href="referenzen.html">Referenzen</a>
+      <a href="uber-uns.html">Über uns</a>
+    </div>
+    <button class="site-nav__toggle" aria-expanded="false" aria-label="Menü öffnen">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+        <line x1="3" y1="6" x2="21" y2="6" stroke="white" stroke-width="2" stroke-linecap="round"/>
+        <line x1="3" y1="12" x2="21" y2="12" stroke="white" stroke-width="2" stroke-linecap="round"/>
+        <line x1="3" y1="18" x2="21" y2="18" stroke="white" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+    </button>
+  </nav>
+
+  <!-- Mobile Menu Drawer -->
+  <div class="mobile-menu" aria-hidden="true">
+    <div class="mobile-menu__overlay"></div>
+    <div class="mobile-menu__drawer">
+      <button class="mobile-menu__close" aria-label="Menü schließen">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+          <line x1="6" y1="6" x2="18" y2="18" stroke="#2b2e31" stroke-width="2" stroke-linecap="round"/>
+          <line x1="18" y1="6" x2="6" y2="18" stroke="#2b2e31" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </button>
+      <nav class="mobile-menu__nav">
+        <a href="index.html">Home</a>
+        <a href="leistungen.html">Leistungen</a>
+        <a href="referenzen.html">Referenzen</a>
+        <a href="uber-uns.html">Über uns</a>
+      </nav>
+      <a href="kontakt.html" class="mobile-menu__contact">Jetzt Kontaktieren</a>
+    </div>
+  </div>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="leistungen-hero" data-od-id="leistungen-hero">
+      <div class="leistungen-hero__bg">
+        <img src="figma-data/images-leistungen/hero.png" alt="ENEX Leistungen">
+      </div>
+      <div class="leistungen-hero__content">
+        <h1 class="leistungen-hero__title">
+          Unsere <span>Leistungen </span>für Ihr Projekt
+        </h1>
+        <p class="leistungen-hero__subtitle">
+          Elektroinstallationen, Ladetechnik, Wärmepumpen und mehr. Für private, gewerbliche und industrielle Projekte in Bonn und der Region.
+        </p>
+      </div>
+    </section>
+
+    <!-- Overview Section -->
+    <section class="leistungen-overview" data-od-id="leistungen-overview">
+      <div class="leistungen-overview__inner">
+        <div class="leistungen-overview__header">
+          <div class="tag">
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+              <circle cx="6" cy="6" r="5" stroke="#030303" stroke-width="1.5"/>
+              <circle cx="6" cy="6" r="2" fill="#030303"/>
+            </svg>
+            <span>Übersicht der Leistungen</span>
+          </div>
+          <p class="leistungen-overview__text">
+            Wir decken das gesamte Spektrum moderner Elektrotechnik ab. Von der klassischen Installation bis zur Ladeinfrastruktur und Wärmepumpenanbindung, alles aus einer Hand und fachgerecht umgesetzt.
+          </p>
+        </div>
+        <!-- Small image -->
+        <div class="leistungen-overview__image">
+          <img src="figma-data/images-leistungen/showcase.png" alt="ENEX Projekte">
+        </div>
+      </div>
+    </section>
+
+    <!-- Full-width Showcase -->
+    <section class="leistungen-showcase" data-od-id="leistungen-showcase">
+      <img src="figma-data/images-leistungen/showcase.png" alt="ENEX Projekte">
+    </section>
+
+    <!-- Services Section -->
+    <section class="leistungen-services" data-od-id="leistungen-services">
+      <div class="leistungen-services__header">
+        <div class="tag">
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+            <circle cx="6" cy="6" r="5" stroke="#030303" stroke-width="1.5"/>
+            <circle cx="6" cy="6" r="2" fill="#030303"/>
+          </svg>
+          <span>Services</span>
+        </div>
+        <h2 class="leistungen-services__title">
+          Alle Leistungen aus <span>einer Hand</span>
+        </h2>
+      </div>
+
+      <!-- Service Cards Stack -->
+      <div class="leistungen-cards">
+          <!-- Card 1: Ladetechnik -->
+          <div class="leistungen-card" data-od-id="service-ladetechnik">
+            <div class="leistungen-card__image">
+              <img src="figma-data/images-leistungen/service-4.png" alt="Ladetechnik">
+            </div>
+            <div class="leistungen-card__content">
+              <div class="leistungen-card__header">
+                <span class="leistungen-card__number">001/004</span>
+                <div class="leistungen-card__arrow">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M7 17L17 7M17 7H7M17 7V17" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </div>
+              </div>
+              <div class="leistungen-card__body">
+                <div class="leistungen-card__text">
+                  <h3 class="leistungen-card__title">Ladetechnik</h3>
+                  <p class="leistungen-card__desc">
+                    Wir bieten moderne Ladelösungen für Wohn-, Gewerbe- und Industrieimmobilien. Unsere Systeme, von Wallboxen bis zu skalierbarer Ladeinfrastruktur, sind auf Sicherheit, Effizienz und Zuverlässigkeit ausgelegt.
+                  </p>
+                </div>
+                <div class="leistungen-card__divider"></div>
+                <div class="leistungen-card__features">
+                  <div class="leistungen-feature">
+                    <div class="leistungen-feature__icon">
+                      <img src="figma-data/images-leistungen/fi-12327004.svg" alt="">
+                    </div>
+                    <div class="leistungen-feature__text">
+                      <p class="leistungen-feature__title">Für alle Immobilien</p>
+                      <p class="leistungen-feature__desc">Wohn-, Gewerbe- und Industrieimmobilien.</p>
+                    </div>
+                  </div>
+                  <div class="leistungen-feature">
+                    <div class="leistungen-feature__icon">
+                      <img src="figma-data/images-leistungen/layer4.svg" alt="">
+                    </div>
+                    <div class="leistungen-feature__text">
+                      <p class="leistungen-feature__title">Sicher & Zuverlässig</p>
+                      <p class="leistungen-feature__desc">Effiziente Systeme, die lange halten.</p>
+                    </div>
+                  </div>
+                  <div class="leistungen-feature">
+                    <div class="leistungen-feature__icon">
+                      <img src="figma-data/images-leistungen/group2.svg" alt="">
+                    </div>
+                    <div class="leistungen-feature__text">
+                      <p class="leistungen-feature__title">Erweiterbar</p>
+                      <p class="leistungen-feature__desc">Bereit für zukünftiges Wachstum.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2: Standard-installationen -->
+          <div class="leistungen-card" data-od-id="service-installationen">
+            <div class="leistungen-card__image">
+              <img src="figma-data/images-leistungen/service-3.png" alt="Standard-installationen">
+            </div>
+            <div class="leistungen-card__content">
+              <div class="leistungen-card__header">
+                <span class="leistungen-card__number">002/004</span>
+                <div class="leistungen-card__arrow">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M7 17L17 7M17 7H7M17 7V17" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </div>
+              </div>
+              <div class="leistungen-card__body">
+                <div class="leistungen-card__text">
+                  <h3 class="leistungen-card__title">Standard-installationen</h3>
+                  <p class="leistungen-card__desc">
+                    Professionelle Elektroinstallationen für Neubauten, Renovierungen und Modernisierungen. Wir bieten sichere, normgerechte Lösungen für Einfamilienhäuser, Zählerkästen, Verteilungssysteme und alltägliche Elektrobedürfnisse.
+                  </p>
+                </div>
+                <div class="leistungen-card__divider"></div>
+                <div class="leistungen-card__features">
+                  <div class="leistungen-feature">
+                    <div class="leistungen-feature__icon">
+                      <img src="figma-data/images-leistungen/fi-12327003.svg" alt="">
+                    </div>
+                    <div class="leistungen-feature__text">
+                      <p class="leistungen-feature__title">Für alle Bauvorhaben</p>
+                      <p class="leistungen-feature__desc">Neubauten, Aufrüstungen und Renovierungen.</p>
+                    </div>
+                  </div>
+                  <div class="leistungen-feature">
+                    <div class="leistungen-feature__icon">
+                      <img src="figma-data/images-leistungen/layer3.svg" alt="">
+                    </div>
+                    <div class="leistungen-feature__text">
+                      <p class="leistungen-feature__title">Sicher & Konform</p>
+                      <p class="leistungen-feature__desc">Lösungen entsprechen Vorschriften und Standards</p>
+                    </div>
+                  </div>
+                  <div class="leistungen-feature">
+                    <div class="leistungen-feature__icon">
+                      <img src="figma-data/images-leistungen/layer10.svg" alt="">
+                    </div>
+                    <div class="leistungen-feature__text">
+                      <p class="leistungen-feature__title">Alltägliche Elektrobedürfnisse</p>
+                      <p class="leistungen-feature__desc">Umfasst Wohnhäuser und Verteilungssysteme.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3: Wärmepumpen -->
+          <div class="leistungen-card" data-od-id="service-waermepumpen">
+            <div class="leistungen-card__image">
+              <img src="figma-data/images-leistungen/service-2.png" alt="Wärmepumpen">
+            </div>
+            <div class="leistungen-card__content">
+              <div class="leistungen-card__header">
+                <span class="leistungen-card__number">003/004</span>
+                <div class="leistungen-card__arrow">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M7 17L17 7M17 7H7M17 7V17" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </div>
+              </div>
+              <div class="leistungen-card__body">
+                <div class="leistungen-card__text">
+                  <h3 class="leistungen-card__title">Wärmepumpen</h3>
+                  <p class="leistungen-card__desc">
+                    Wir integrieren Wärmepumpensysteme in Ihr Energienetz. Mit Fachkenntnis für Speicher, PV und Gebäudesteuerung sorgen wir für maximale Effizienz und nachhaltigen Betrieb.
+                  </p>
+                </div>
+                <div class="leistungen-card__divider"></div>
+                <div class="leistungen-card__features">
+                  <div class="leistungen-feature">
+                    <div class="leistungen-feature__icon">
+                      <img src="figma-data/images-leistungen/group.svg" alt="">
+                    </div>
+                    <div class="leistungen-feature__text">
+                      <p class="leistungen-feature__title">Nahtlose Integration</p>
+                      <p class="leistungen-feature__desc">Verbindet Wärmepumpen mit Ihrem Energienetz.</p>
+                    </div>
+                  </div>
+                  <div class="leistungen-feature">
+                    <div class="leistungen-feature__icon">
+                      <img src="figma-data/images-leistungen/fi-12638125.svg" alt="">
+                    </div>
+                    <div class="leistungen-feature__text">
+                      <p class="leistungen-feature__title">Effiziente Betriebsweise</p>
+                      <p class="leistungen-feature__desc">Sichert zuverlässige und optimierte Leistung.</p>
+                    </div>
+                  </div>
+                  <div class="leistungen-feature">
+                    <div class="leistungen-feature__icon">
+                      <img src="figma-data/images-leistungen/fi-10351056.svg" alt="">
+                    </div>
+                    <div class="leistungen-feature__text">
+                      <p class="leistungen-feature__title">Zukunftsfähige Energie</p>
+                      <p class="leistungen-feature__desc">Unterstützt nachhaltige Energieinfrastruktur.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 4: Allgemeine Elektrotechnik -->
+          <div class="leistungen-card" data-od-id="service-elektrotechnik">
+            <div class="leistungen-card__image">
+              <img src="figma-data/images-leistungen/service-1.png" alt="Allgemeine Elektrotechnik">
+            </div>
+            <div class="leistungen-card__content">
+              <div class="leistungen-card__header">
+                <span class="leistungen-card__number">004/004</span>
+                <div class="leistungen-card__arrow">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M7 17L17 7M17 7H7M17 7V17" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </div>
+              </div>
+              <div class="leistungen-card__body">
+                <div class="leistungen-card__text">
+                  <h3 class="leistungen-card__title">Allgemeine Elektrotechnik</h3>
+                  <p class="leistungen-card__desc">
+                    Maßgeschneiderte Elektro-Lösungen, die auf die spezifischen Anforderungen jedes Projekts abgestimmt sind. Wir kombinieren Fachwissen und Erfahrung, um zuverlässige Ergebnisse in Wohn-, Gewerbe- und Industrieanwendungen zu liefern.
+                  </p>
+                </div>
+                <div class="leistungen-card__divider"></div>
+                <div class="leistungen-card__features">
+                  <div class="leistungen-feature">
+                    <div class="leistungen-feature__icon">
+                      <img src="figma-data/images-leistungen/idea.svg" alt="">
+                    </div>
+                    <div class="leistungen-feature__text">
+                      <p class="leistungen-feature__title">Maßgeschneiderte Lösungen</p>
+                      <p class="leistungen-feature__desc">Individuelle elektrische Systeme für Haushalte und Unternehmen</p>
+                    </div>
+                  </div>
+                  <div class="leistungen-feature">
+                    <div class="leistungen-feature__icon">
+                      <img src="figma-data/images-leistungen/fi-1688843.svg" alt="">
+                    </div>
+                    <div class="leistungen-feature__text">
+                      <p class="leistungen-feature__title">Fachwissen & Erfahrung</p>
+                      <p class="leistungen-feature__desc">Vereint technisches Fachwissen mit praktischer Umsetzung.</p>
+                    </div>
+                  </div>
+                  <div class="leistungen-feature">
+                    <div class="leistungen-feature__icon">
+                      <img src="figma-data/images-leistungen/layer2.svg" alt="">
+                    </div>
+                    <div class="leistungen-feature__text">
+                      <p class="leistungen-feature__title">Zuverlässige Ergebnisse</p>
+                      <p class="leistungen-feature__desc">Bietet sichere und zuverlässige Elektroinstallationen.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Spacer for last card scroll -->
+        <div style="height: 100px;"></div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="leistungen-cta" data-od-id="leistungen-cta">
+      <div class="leistungen-cta__bg">
+        <img src="figma-data/images-leistungen/cta.png" alt="ENEX Projekt">
+      </div>
+      <div class="leistungen-cta__card">
+        <h2 class="leistungen-cta__title">
+          Bereit für Ihr <span>Projekt </span>
+        </h2>
+        <div class="leistungen-cta__divider"></div>
+        <div class="leistungen-cta__body">
+          <p class="leistungen-cta__text">
+            Ob Neuinstallation, Sanierung oder Ladeinfrastruktur – wir beraten Sie persönlich und finden die passende Lösung.
+          </p>
+          <a href="kontakt.html" class="btn-primary">Jetzt Kontaktieren</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer" data-od-id="footer">
+    <div class="footer__top">
+      <div class="footer__brand">
+        <a href="index.html" class="footer__logo">
+          <img src="figma-data/images/enex-logo.svg" alt="ENEX">
+        </a>
+        <p class="footer__desc">Ob Elektroinstallation, Ladeinfrastruktur oder individuelle Lösungen – wir beraten Sie persönlich und finden die passende Lösung für Ihr Projekt.</p>
+      </div>
+      <div class="footer__links">
+        <div class="footer__column">
+          <p class="footer__column-title">Navigation</p>
+          <div class="footer__column-links">
+            <a href="index.html">Home</a>
+            <a href="uber-uns.html">Über uns</a>
+            <a href="leistungen.html">Leistungen</a>
+            <a href="referenzen.html">Referenzen</a>
+            <a href="kontakt.html">Kontakt</a>
+          </div>
+        </div>
+        <div class="footer__column">
+          <p class="footer__column-title">Legal</p>
+          <div class="footer__column-links">
+            <a href="impressum.html">Impressum</a>
+            <a href="#">Datenschutz</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer__divider">
+      <img src="figma-data/images/line5.svg" alt="">
+    </div>
+    <div class="footer__bottom">
+      <p class="footer__copyright">©2026 ENEX Bonn. Alle Rechte vorbehalten.</p>
+      <p class="footer__credit">Made by INSYNC</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script>
+    // Card Stack Animation
+    (function() {
+      const cards = document.querySelectorAll('.leistungen-card');
+      if (!cards.length) return;
+
+      const stackTops = [100, 130, 160, 190];
+
+      function updateCards() {
+        // Disable on tablet/mobile
+        if (window.innerWidth <= 1024) {
+          cards.forEach(card => {
+            card.style.transform = '';
+            card.style.filter = '';
+          });
+          return;
+        }
+
+        cards.forEach((card, index) => {
+          const rect = card.getBoundingClientRect();
+          const stackTop = stackTops[index];
+          const distanceFromTop = rect.top - stackTop;
+
+          if (distanceFromTop <= 0) {
+            // Card is stuck - apply scale based on how many cards are stacked above
+            const cardsAbove = Array.from(cards).slice(index + 1).filter(c => {
+              return c.getBoundingClientRect().top <= stackTops[Array.from(cards).indexOf(c)] + 10;
+            }).length;
+
+            const scale = 1 - (cardsAbove * 0.02);
+            const brightness = 1 - (cardsAbove * 0.05);
+
+            card.style.transform = `scale(${scale})`;
+            card.style.filter = `brightness(${brightness})`;
+          } else {
+            card.style.transform = 'scale(1)';
+            card.style.filter = 'brightness(1)';
+          }
+        });
+      }
+
+      window.addEventListener('scroll', updateCards, { passive: true });
+      window.addEventListener('resize', updateCards, { passive: true });
+      updateCards();
+    })();
+  </script>
+</body>
+</html>

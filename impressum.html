@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Impressum - ENEX Bonn</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:wght@400;500;600;700&family=Space+Mono&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    /* ==========================================================================
+       Impressum Page Specific Styles
+       ========================================================================== */
+
+    /* Navbar override for white background pages */
+    .site-nav--light .site-nav__menu a {
+      color: rgba(43, 46, 49, 0.8);
+    }
+
+    .site-nav--light .site-nav__menu a:hover {
+      color: var(--text);
+    }
+
+    .site-nav--light.is-scrolled .site-nav__menu a {
+      color: var(--white-80);
+    }
+
+    .site-nav--light.is-scrolled .site-nav__menu a:hover {
+      color: var(--white);
+    }
+
+    /* Footer override - use DM Sans for description */
+    .footer__desc--dm {
+      font-family: var(--font-dm);
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 1.5;
+      letter-spacing: -0.36px;
+    }
+
+    @media (max-width: 767px) {
+      .footer__desc--dm {
+        font-size: 14px;
+        letter-spacing: -0.28px;
+      }
+    }
+
+    .footer__column-title--dm {
+      font-family: var(--font-dm);
+    }
+
+    .footer__column-links--dm a {
+      font-family: var(--font-dm);
+      font-weight: 400;
+    }
+
+    .footer__copyright--dm,
+    .footer__credit--dm {
+      font-family: var(--font-dm);
+      font-weight: 400;
+    }
+
+    /* --------------------------------------------------------------------------
+       Hero Section - Impressum
+       -------------------------------------------------------------------------- */
+    .impressum-hero {
+      position: relative;
+      width: 100%;
+      height: 422px;
+      background: var(--white);
+      overflow: hidden;
+    }
+
+    .impressum-hero__noise {
+      position: absolute;
+      inset: 0;
+      width: 1440px;
+      height: 967px;
+      background-image: url('figma-data/images-kontakt/noise-grain.png');
+      background-size: 675.84px 450.56px;
+      background-position: top left;
+      mix-blend-mode: soft-light;
+      opacity: 0.15;
+      pointer-events: none;
+    }
+
+    .impressum-hero__headline {
+      position: absolute;
+      top: 142px;
+      left: 40px;
+      width: 920px;
+      font-family: var(--font-inter);
+      font-weight: 600;
+      font-size: 100px;
+      line-height: 0.9;
+      letter-spacing: -6px;
+      color: var(--text);
+    }
+
+    .impressum-hero__headline .muted {
+      color: var(--text-muted);
+    }
+
+    /* --------------------------------------------------------------------------
+       Content Section
+       -------------------------------------------------------------------------- */
+    .impressum-content {
+      width: 100%;
+      padding: 40px 40px 140px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      overflow: hidden;
+    }
+
+    .impressum-content__inner {
+      width: 895px;
+      max-width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+    }
+
+    /* Section block with title + paragraphs */
+    .impressum-block {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      width: 100%;
+    }
+
+    .impressum-block__title {
+      font-family: var(--font-inter);
+      font-weight: 500;
+      font-size: 40px;
+      line-height: 1.1;
+      letter-spacing: -2.4px;
+      color: var(--text);
+    }
+
+    .impressum-block__subtitle {
+      font-family: var(--font-inter);
+      font-weight: 500;
+      font-size: 24px;
+      line-height: 1;
+      letter-spacing: -1.44px;
+      color: var(--text);
+    }
+
+    .impressum-block__text {
+      font-family: var(--font-inter);
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 1.5;
+      letter-spacing: -0.32px;
+      color: var(--text);
+    }
+
+    .impressum-block__text p {
+      margin-bottom: 0;
+    }
+
+    .impressum-block__text p + p {
+      margin-top: 0;
+    }
+
+    /* Divider line */
+    .impressum-divider {
+      position: relative;
+      width: 100%;
+      height: 0;
+    }
+
+    .impressum-divider::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: -1px;
+      height: 2px;
+      background: linear-gradient(90deg, var(--text) 0%, transparent 100%);
+      opacity: 0.1;
+    }
+
+    .impressum-divider img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    /* --------------------------------------------------------------------------
+       CTA Section
+       -------------------------------------------------------------------------- */
+    .impressum-cta {
+      position: relative;
+      width: 100%;
+      height: 800px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 40px;
+      overflow: hidden;
+    }
+
+    .impressum-cta__bg {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .impressum-cta__overlay {
+      position: absolute;
+      inset: 0;
+      overflow: hidden;
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    .impressum-cta__overlay img {
+      position: absolute;
+      top: -10%;
+      left: 100%;
+      width: -100%;
+      height: 120%;
+      transform: scaleX(-1);
+    }
+
+    .impressum-cta__card {
+      position: relative;
+      z-index: 5;
+      width: 670px;
+      max-width: 100%;
+      background: var(--white);
+      padding: 60px;
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+    }
+
+    .impressum-cta__headline {
+      font-family: var(--font-inter);
+      font-weight: 500;
+      font-size: 60px;
+      line-height: 1.1;
+      letter-spacing: -2.4px;
+      color: var(--text);
+    }
+
+    .impressum-cta__headline .muted {
+      color: var(--text-muted);
+    }
+
+    .impressum-cta__divider {
+      position: relative;
+      width: 100%;
+      height: 0;
+    }
+
+    .impressum-cta__divider img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    .impressum-cta__body {
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+    }
+
+    .impressum-cta__text {
+      font-family: var(--font-inter);
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 1.5;
+      letter-spacing: -0.32px;
+      color: var(--text);
+      max-width: 470px;
+    }
+
+    .impressum-cta__btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--accent);
+      padding: 14px 24px;
+      font-family: var(--font-inter);
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 1.4;
+      letter-spacing: -0.32px;
+      color: var(--white);
+      text-decoration: none;
+      transition: background 0.2s ease;
+      width: fit-content;
+    }
+
+    .impressum-cta__btn:hover {
+      background: #3ad4ff;
+    }
+
+    /* --------------------------------------------------------------------------
+       Responsive
+       -------------------------------------------------------------------------- */
+    @media (max-width: 1024px) {
+      .impressum-hero {
+        height: auto;
+        min-height: 320px;
+        padding: 120px 24px 60px;
+      }
+
+      .impressum-hero__headline {
+        position: relative;
+        top: auto;
+        left: auto;
+        width: 100%;
+        font-size: 64px;
+        letter-spacing: -3.84px;
+      }
+
+      .impressum-content {
+        padding: 40px 24px 100px;
+      }
+
+      .impressum-content__inner {
+        width: 100%;
+      }
+
+      .impressum-block__title {
+        font-size: 32px;
+        letter-spacing: -1.92px;
+      }
+
+      .impressum-block__subtitle {
+        font-size: 20px;
+        letter-spacing: -1.2px;
+      }
+
+      .impressum-cta {
+        height: auto;
+        min-height: 600px;
+        padding: 24px;
+      }
+
+      .impressum-cta__card {
+        width: 100%;
+        padding: 40px 24px;
+      }
+
+      .impressum-cta__headline {
+        font-size: 40px;
+        letter-spacing: -1.6px;
+      }
+    }
+
+    @media (max-width: 767px) {
+      .impressum-hero {
+        min-height: 280px;
+        padding: 100px 20px 40px;
+      }
+
+      .impressum-hero__headline {
+        font-size: 48px;
+        letter-spacing: -2.88px;
+      }
+
+      .impressum-content {
+        padding: 32px 20px 80px;
+      }
+
+      .impressum-block__title {
+        font-size: 28px;
+        letter-spacing: -1.68px;
+      }
+
+      .impressum-block__subtitle {
+        font-size: 18px;
+        letter-spacing: -1.08px;
+      }
+
+      .impressum-block__text {
+        font-size: 14px;
+        letter-spacing: -0.28px;
+      }
+
+      .impressum-cta {
+        min-height: 500px;
+        padding: 20px;
+      }
+
+      .impressum-cta__card {
+        padding: 32px 20px;
+        gap: 24px;
+      }
+
+      .impressum-cta__headline {
+        font-size: 32px;
+        letter-spacing: -1.28px;
+      }
+
+      .impressum-cta__text {
+        font-size: 14px;
+      }
+
+      .impressum-cta__btn {
+        width: 100%;
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Floating Contact Button -->
+  <a href="kontakt.html" class="floating-contact">
+    <div class="floating-contact__inner">
+      <span>Jetzt kontaktieren</span>
+    </div>
+  </a>
+
+  <!-- Main Navigation - Light variant for white background -->
+  <nav class="site-nav site-nav--light" role="navigation" aria-label="Main navigation">
+    <a href="index.html" class="site-nav__logo">
+      <img src="figma-data/images/enex-logo-slogan.svg" alt="ENEX Bonn" class="site-nav__logo-desktop">
+      <img src="figma-data/images-mobile/enex-logo-slogan-mobile.svg" alt="ENEX Bonn" class="site-nav__logo-mobile">
+    </a>
+    <div class="site-nav__menu">
+      <a href="index.html">Home</a>
+      <a href="leistungen.html">Leistungen</a>
+      <a href="referenzen.html">Referenzen</a>
+      <a href="uber-uns.html">Über uns</a>
+    </div>
+    <button class="site-nav__toggle" aria-expanded="false" aria-label="Menü öffnen">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+        <line x1="3" y1="6" x2="21" y2="6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        <line x1="3" y1="12" x2="21" y2="12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        <line x1="3" y1="18" x2="21" y2="18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+    </button>
+  </nav>
+
+  <!-- Mobile Menu Drawer -->
+  <div class="mobile-menu" aria-hidden="true">
+    <div class="mobile-menu__overlay"></div>
+    <div class="mobile-menu__drawer">
+      <button class="mobile-menu__close" aria-label="Menü schließen">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+          <line x1="6" y1="6" x2="18" y2="18" stroke="#2b2e31" stroke-width="2" stroke-linecap="round"/>
+          <line x1="18" y1="6" x2="6" y2="18" stroke="#2b2e31" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </button>
+      <nav class="mobile-menu__nav">
+        <a href="index.html">Home</a>
+        <a href="leistungen.html">Leistungen</a>
+        <a href="referenzen.html">Referenzen</a>
+        <a href="uber-uns.html">Über uns</a>
+      </nav>
+      <a href="kontakt.html" class="mobile-menu__contact">Jetzt Kontaktieren</a>
+    </div>
+  </div>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="impressum-hero" data-od-id="impressum-hero">
+      <div class="impressum-hero__noise"></div>
+      <h1 class="impressum-hero__headline">
+        Richtlinien<br>
+        <span class="muted">& Bedingungen</span>
+      </h1>
+    </section>
+
+    <!-- Content Section -->
+    <section class="impressum-content" data-od-id="impressum-content">
+      <div class="impressum-content__inner">
+
+        <!-- Terms & Conditions -->
+        <div class="impressum-block">
+          <h2 class="impressum-block__title">Terms & conditions</h2>
+          <div class="impressum-block__text">
+            <p>Lorem ipsum dolor sit amet consectetur. Magnis fames quam tellus ipsum in eget viverra sit. Senectus bibendum convallis sit pellentesque aliquam. Pharetra suspendisse quis et lectus sed in turpis neque. Nisl.</p>
+          </div>
+        </div>
+
+        <div class="impressum-divider">
+          <img src="figma-data/images-kontakt/divider-line.svg" alt="">
+        </div>
+
+        <div class="impressum-block">
+          <h3 class="impressum-block__subtitle">Who we are and how to contact us</h3>
+          <div class="impressum-block__text">
+            <p>Lorem ipsum dolor sit amet consectetur. Ut non platea gravida nam. Lacus nec viverra dictumst at varius. Consectetur lorem nisi purus vulputate elementum a mi neque et. Eget vulputate risus mauris amet erat aliquet vulputate consectetur. Aenean diam donec eleifend malesuada.</p>
+            <p>Lobortis viverra dictumst pulvinar nisl at eget. Cursus sed orci sit amet tortor. At vitae eu interdum amet tincidunt semper duis mauris. Dui et convallis dui eu enim ullamcorper volutpat netus. Ut proin cras ut eget ac nunc. Porta amet eu auctor eget imperdiet tellus phasellus vulputate. Amet habitant elementum euismod nisi nunc sem. Cras id ac eget quam. Leo dictum at platea magna nisl.</p>
+            <p>Sed elit donec sed eget nisi metus. Augue nibh sed nunc nisl ut suspendisse felis. Et nulla molestie morbi id egestas. Lectus sit fringilla mattis nulla. Integer viverra consequat in elementum. Eget non bibendum eleifend.</p>
+          </div>
+        </div>
+
+        <div class="impressum-block">
+          <h3 class="impressum-block__subtitle">By using our site you accept these terms</h3>
+          <div class="impressum-block__text">
+            <p>Lorem ipsum dolor sit amet consectetur. At nascetur dui lacus feugiat consectetur sed ac. At pharetra felis fermentum ultrices volutpat et quam semper mi. Risus tristique ultrices non ut. Placerat praesent morbi adipiscing facilisis imperdiet leo volutpat non. Consectetur lorem elit nunc pellentesque. Nam magna aenean aenean sociis cursus feugiat risus sem id.</p>
+            <p>At malesuada vulputate quis sapien pulvinar pellentesque fusce mauris a. Diam tortor etiam etiam pharetra commodo libero lectus habitant senectus. Posuere enim in mattis in. Vestibulum sed lorem fames etiam viverra sed. Habitant at vitae cursus vulputate. Dolor tempor pulvinar auctor bibendum feugiat porttitor. Morbi lobortis pretium id metus diam. Sapien consectetur dictum ut nunc turpis elit. Bibendum nunc egestas at dolor amet orci semper nibh.</p>
+            <p>Mollis in cursus cursus neque. Lobortis magna diam aliquam scelerisque. Egestas ut lectus nibh fringilla cum.</p>
+          </div>
+        </div>
+
+        <div class="impressum-block">
+          <h3 class="impressum-block__subtitle">There are other terms that may apply to you</h3>
+          <div class="impressum-block__text">
+            <p>Lorem ipsum dolor sit amet consectetur. Porttitor metus nisl lobortis turpis. Feugiat lectus lorem nibh in mi vestibulum. Malesuada posuere in sed sed accumsan viverra pulvinar sapien leo. Aenean sem elementum nunc eget. Nec tristique nullam bibendum viverra sagittis. Eget egestas eget velit vitae elementum orci tristique amet ipsum.</p>
+            <p>Urna augue vel ligula vel. Mauris eu ornare etiam sit. Aliquet cras nulla nullam nulla ut diam quam. Habitant sagittis neque ullamcorper morbi enim morbi dictum morbi pulvinar. Eget elementum at commodo felis. Sed ullamcorper fringilla amet sed et.</p>
+          </div>
+        </div>
+
+        <div class="impressum-block">
+          <h3 class="impressum-block__subtitle">We are not responsible for websites we link to</h3>
+          <div class="impressum-block__text">
+            <p>Lorem ipsum dolor sit amet consectetur. Malesuada id aliquam mauris sollicitudin adipiscing malesuada ipsum et. Nunc at augue lectus rhoncus nam suscipit. Pretium sit tortor faucibus nisl vel sit. Lacinia egestas fermentum vitae adipiscing augue. Tellus rutrum in ac rhoncus curabitur vulputate commodo. Eu velit praesent arcu.</p>
+          </div>
+        </div>
+
+        <div class="impressum-block">
+          <h3 class="impressum-block__subtitle">Do not rely on information on this site</h3>
+          <div class="impressum-block__text">
+            <p>Lorem ipsum dolor sit amet consectetur. Nunc tincidunt eu habitant bibendum. Sagittis posuere odio sodales feugiat donec. Consequat feugiat diam non malesuada maecenas enim. Euismod nibh tristique turpis vitae ullamcorper eu commodo nec blandit. Faucibus luctus nisl enim ac interdum proin ultricies. Ultrices at est pellentesque et. A enim diam sit vulputate amet.</p>
+            <p>Enim feugiat interdum quam urna euismod. Risus phasellus mi ullamcorper velit diam. Nulla tempor id ut urna volutpat enim nunc commodo auctor. Tristique feugiat sit ut sit congue mi praesent lectus viverra. Elementum pretium ut tortor mollis. Morbi amet velit urna nisi. Imperdiet dui eget enim eu nisl tortor enim.</p>
+          </div>
+        </div>
+
+        <div class="impressum-divider">
+          <img src="figma-data/images-kontakt/divider-line.svg" alt="">
+        </div>
+
+        <!-- Privacy Policy -->
+        <div class="impressum-block">
+          <h2 class="impressum-block__title">Privacy Policy</h2>
+          <div class="impressum-block__text">
+            <p>Lorem ipsum dolor sit amet consectetur. Faucibus amet pretium eget nibh sed mattis. Sit massa parturient facilisis porttitor. Leo viverra fermentum aliquet neque arcu arcu velit ut tristique. Imperdiet tellus rutrum ac bibendum arcu scelerisque eget proin. Volutpat ipsum ipsum phasellus quam fringilla non tellus sit. Leo euismod pulvinar volutpat id. In sed erat diam elit egestas. Quam adipiscing sed vulputate quisque. Nibh ac integer vitae viverra erat diam nisl. Purus laoreet enim a mi. Mattis interdum vel varius sed etiam fermentum. Dignissim aliquam in nunc vulputate ornare enim ultricies fermentum elementum. Id lobortis tellus amet aliquam phasellus leo risus. Enim vitae arcu arcu vivamus montes etiam phasellus.</p>
+          </div>
+        </div>
+
+        <div class="impressum-block">
+          <h3 class="impressum-block__subtitle">Purpose of this privacy policy</h3>
+          <div class="impressum-block__text">
+            <p>Lorem ipsum dolor sit amet consectetur. Fermentum eget mattis aliquam mi pretium pellentesque eget vitae. Diam et maecenas ut sit mauris. Ut fermentum at tellus non sem vitae. Placerat dignissim consectetur facilisi vestibulum ultrices ut nisl varius.</p>
+            <p>Et et justo eros id. Massa suscipit ullamcorper cras vulputate at nulla. Mauris sit odio venenatis et sit. Quam elementum leo ultrices ac massa ac purus tristique. Integer malesuada id interdum sem justo. Id ornare vel vestibulum in. Condimentum quam auctor libero lobortis et at aliquam viverra in. Felis hac elementum donec ultricies. Et eget amet turpis neque elementum eleifend vel porta. Nec amet fermentum mauris nisl integer et quam magnis pharetra. Posuere ipsum imperdiet blandit pellentesque non id malesuada sit neque. Eget tincidunt ultrices ut aliquet. Non amet imperdiet ultricies purus. Donec eu at consectetur enim erat urna purus.</p>
+            <p>Morbi phasellus consectetur sed nullam sit a diam. Pulvinar felis diam vestibulum venenatis leo tincidunt felis.</p>
+          </div>
+        </div>
+
+        <div class="impressum-divider">
+          <img src="figma-data/images-kontakt/divider-line.svg" alt="">
+        </div>
+
+        <!-- Cookies -->
+        <div class="impressum-block">
+          <h2 class="impressum-block__title">Cookies</h2>
+          <div class="impressum-block__text">
+            <p>Lorem ipsum dolor sit amet consectetur. Nec eget sed felis tellus amet et. Nisi faucibus pellentesque luctus in pharetra dignissim sapien fermentum. Egestas vitae fringilla sollicitudin quisque dignissim vel. Aliquet ultricies nunc in lorem. Odio curabitur ultrices neque mauris sed. Mi volutpat lacus at scelerisque fames nam. Nunc.</p>
+          </div>
+        </div>
+
+        <div class="impressum-block">
+          <h3 class="impressum-block__subtitle">Change of purpose</h3>
+          <div class="impressum-block__text">
+            <p>Lorem ipsum dolor sit amet consectetur. Et orci quis et non venenatis in. Arcu accumsan nulla neque nec faucibus tincidunt rutrum sociis. Tortor arcu vitae lectus sit at vitae. Augue consectetur nunc nisi orci augue. Turpis dictum sed lectus id morbi consectetur. Nec et morbi aliquam pulvinar amet vitae nullam. Quam in fames magna amet aliquam. Pretium non morbi luctus sollicitudin vitae. Consequat odio id phasellus tincidunt augue faucibus. Ac dolor arcu lacus at diam purus vitae ante. Quam nascetur ac sem egestas luctus vitae nunc. Sit montes semper gravida urna blandit est turpis morbi sit.</p>
+            <p>Feugiat sed ipsum risus leo blandit eget eu neque odio. Ante gravida ultricies sed posuere tellus vitae libero porttitor mattis. Scelerisque et id sed velit vulputate ut risus. Donec eget pellentesque orci feugiat sed lorem ac neque. Donec enim non consequat non cras erat. Laoreet a vitae lectus vestibulum vulputate. Vestibulum arcu non pellentesque in at. Egestas a neque cursus nibh accumsan nisl. Neque cras sed velit a. At consectetur id.</p>
+          </div>
+        </div>
+
+        <div class="impressum-block">
+          <h3 class="impressum-block__subtitle">Data security</h3>
+          <div class="impressum-block__text">
+            <p>Lorem ipsum dolor sit amet consectetur. Arcu integer pretium eget quis. Magnis augue mi vestibulum pretium sed id. Vitae maecenas aliquet velit et diam pretium egestas. Volutpat nullam nascetur sed malesuada maecenas quis eget sed tristique. Vestibulum sed viverra lectus id.</p>
+            <p>Scelerisque viverra blandit aliquam vestibulum. Mus ut ac viverra magna amet. Mattis massa mauris tempus sollicitudin metus cras sit dui amet. Accumsan purus a nibh dis. Morbi fusce est lacus ipsum sagittis eget facilisis. Cursus aliquet integer habitasse faucibus. Risus ullamcorper ornare sit arcu massa cursus. Vivamus amet fermentum leo sed magna ipsum nec nunc viverra. Amet senectus eu scelerisque feugiat curabitur dui.</p>
+          </div>
+        </div>
+
+        <div class="impressum-divider">
+          <img src="figma-data/images-kontakt/divider-line.svg" alt="">
+        </div>
+
+        <!-- Glossary -->
+        <div class="impressum-block">
+          <h2 class="impressum-block__title">Glossary</h2>
+          <div class="impressum-block__text">
+            <p>Lorem ipsum dolor sit amet consectetur. Nec eget sed felis tellus amet et. Nisi faucibus pellentesque luctus in pharetra dignissim sapien fermentum. Egestas vitae fringilla sollicitudin quisque dignissim vel. Aliquet ultricies nunc in lorem. Odio curabitur ultrices neque mauris sed. Mi volutpat lacus at scelerisque fames nam. Nunc.</p>
+          </div>
+        </div>
+
+        <div class="impressum-block">
+          <h3 class="impressum-block__subtitle">Purpose of this privacy policy</h3>
+          <div class="impressum-block__text">
+            <p>Lorem ipsum dolor sit amet consectetur. Et orci quis et non venenatis in. Arcu accumsan nulla neque nec faucibus tincidunt rutrum sociis. Tortor arcu vitae lectus sit at vitae. Augue consectetur nunc nisi orci augue. Turpis dictum sed lectus id morbi consectetur. Nec et morbi aliquam pulvinar amet vitae nullam. Quam in fames magna amet aliquam. Pretium non morbi luctus sollicitudin vitae. Consequat odio id phasellus tincidunt augue faucibus. Ac dolor arcu lacus at diam purus vitae ante. Quam nascetur ac sem egestas luctus vitae nunc. Sit montes semper gravida urna blandit est turpis morbi sit.</p>
+            <p>Feugiat sed ipsum risus leo blandit eget eu neque odio. Ante gravida ultricies sed posuere tellus vitae libero porttitor mattis. Scelerisque et id sed velit vulputate ut risus. Donec eget pellentesque orci feugiat sed lorem ac neque. Donec enim non consequat non cras erat. Laoreet a vitae lectus vestibulum vulputate. Vestibulum arcu non pellentesque in at. Egestas a neque cursus nibh accumsan nisl. Neque cras sed velit a. At consectetur id.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="impressum-cta" data-od-id="impressum-cta">
+      <img src="figma-data/images-kontakt/frame39549.png" alt="" class="impressum-cta__bg">
+      <div class="impressum-cta__overlay">
+        <img src="figma-data/images-kontakt/frame39550.png" alt="">
+      </div>
+      <div class="impressum-cta__card">
+        <h2 class="impressum-cta__headline">
+          Bereit für Ihr <span class="muted">Projekt</span>
+        </h2>
+        <div class="impressum-cta__divider">
+          <img src="figma-data/images-kontakt/line4.svg" alt="">
+        </div>
+        <div class="impressum-cta__body">
+          <p class="impressum-cta__text">
+            Ob Neuinstallation, Sanierung oder Ladeinfrastruktur – wir beraten Sie persönlich und finden die passende Lösung.
+          </p>
+          <a href="kontakt.html" class="impressum-cta__btn">Jetzt Kontaktieren</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" data-od-id="footer">
+      <div class="footer__top">
+        <div class="footer__brand">
+          <a href="index.html" class="footer__logo">
+            <img src="figma-data/images/enex-logo.svg" alt="ENEX">
+          </a>
+          <p class="footer__desc footer__desc--dm">Ob Elektroinstallation, Ladeinfrastruktur oder individuelle Lösungen – wir beraten Sie persönlich und finden die passende Lösung für Ihr Projekt.</p>
+        </div>
+        <div class="footer__links">
+          <div class="footer__column">
+            <p class="footer__column-title footer__column-title--dm">Navigation</p>
+            <div class="footer__column-links footer__column-links--dm">
+              <a href="index.html">Home</a>
+              <a href="uber-uns.html">Über uns</a>
+              <a href="leistungen.html">Leistungen</a>
+              <a href="referenzen.html">Referenzen</a>
+              <a href="kontakt.html">Kontakt</a>
+            </div>
+          </div>
+          <div class="footer__column">
+            <p class="footer__column-title footer__column-title--dm">Legal</p>
+            <div class="footer__column-links footer__column-links--dm">
+              <a href="impressum.html">Impressum</a>
+              <a href="#">Datenschutz</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer__divider">
+        <img src="figma-data/images-kontakt/line5.svg" alt="">
+      </div>
+      <div class="footer__bottom">
+        <p class="footer__copyright footer__copyright--dm">Copyright Enex Bonn © 2026. All Right Reserved</p>
+        <p class="footer__credit footer__credit--dm">Made by INSYNC</p>
+      </div>
+    </footer>
+  </main>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

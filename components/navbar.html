@@ -1,0 +1,52 @@
+<!-- ==========================================================================
+   Navbar Component
+   Usage: Include this in your HTML pages
+   ========================================================================== -->
+
+<!-- Floating Contact Button -->
+<a href="kontakt.html" class="floating-contact">
+  <div class="floating-contact__inner">
+    <span>Jetzt kontaktieren</span>
+  </div>
+</a>
+
+<!-- Main Navigation -->
+<nav class="site-nav" role="navigation" aria-label="Main navigation">
+  <a href="index.html" class="site-nav__logo">
+    <img src="figma-data/images/enex-logo-slogan.svg" alt="ENEX Bonn" class="site-nav__logo-desktop">
+    <img src="figma-data/images-mobile/enex-logo-slogan-mobile.svg" alt="ENEX Bonn" class="site-nav__logo-mobile">
+  </a>
+  <div class="site-nav__menu">
+    <a href="index.html">Home</a>
+    <a href="leistungen.html">Leistungen</a>
+    <a href="referenzen.html">Referenzen</a>
+    <a href="uber-uns.html">Über uns</a>
+  </div>
+  <button class="site-nav__toggle" aria-expanded="false" aria-label="Menü öffnen">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+      <line x1="3" y1="6" x2="21" y2="6" stroke="white" stroke-width="2" stroke-linecap="round"/>
+      <line x1="3" y1="12" x2="21" y2="12" stroke="white" stroke-width="2" stroke-linecap="round"/>
+      <line x1="3" y1="18" x2="21" y2="18" stroke="white" stroke-width="2" stroke-linecap="round"/>
+    </svg>
+  </button>
+</nav>
+
+<!-- Mobile Menu Drawer -->
+<div class="mobile-menu" aria-hidden="true">
+  <div class="mobile-menu__overlay"></div>
+  <div class="mobile-menu__drawer">
+    <button class="mobile-menu__close" aria-label="Menü schließen">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+        <line x1="6" y1="6" x2="18" y2="18" stroke="#2b2e31" stroke-width="2" stroke-linecap="round"/>
+        <line x1="18" y1="6" x2="6" y2="18" stroke="#2b2e31" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+    </button>
+    <nav class="mobile-menu__nav">
+      <a href="index.html">Home</a>
+      <a href="leistungen.html">Leistungen</a>
+      <a href="referenzen.html">Referenzen</a>
+      <a href="uber-uns.html">Über uns</a>
+    </nav>
+    <a href="kontakt.html" class="mobile-menu__contact">Jetzt Kontaktieren</a>
+  </div>
+</div>

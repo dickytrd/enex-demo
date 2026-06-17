@@ -1,0 +1,854 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kontakt - ENEX Bonn</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:wght@400;500;600;700&family=Space+Mono&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    /* ==========================================================================
+       Kontakt Page Specific Styles
+       ========================================================================== */
+
+    /* Navbar override for white background pages */
+    .site-nav--light .site-nav__menu a {
+      color: rgba(43, 46, 49, 0.8);
+    }
+
+    .site-nav--light .site-nav__menu a:hover {
+      color: var(--text);
+    }
+
+    .site-nav--light.is-scrolled .site-nav__menu a {
+      color: var(--white-80);
+    }
+
+    .site-nav--light.is-scrolled .site-nav__menu a:hover {
+      color: var(--white);
+    }
+
+    /* Footer override - use DM Sans for description */
+    .footer__desc--dm {
+      font-family: var(--font-dm);
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 1.5;
+      letter-spacing: -0.36px;
+    }
+
+    @media (max-width: 767px) {
+      .footer__desc--dm {
+        font-size: 14px;
+        letter-spacing: -0.28px;
+      }
+    }
+
+    /* Footer links - use DM Sans */
+    .footer__column-title--dm {
+      font-family: var(--font-dm);
+    }
+
+    .footer__column-links--dm a {
+      font-family: var(--font-dm);
+      font-weight: 400;
+    }
+
+    .footer__copyright--dm,
+    .footer__credit--dm {
+      font-family: var(--font-dm);
+      font-weight: 400;
+    }
+
+    /* Hero Section - Kontakt specific */
+    .kontakt-hero {
+      position: relative;
+      width: 100%;
+      height: 422px;
+      background: var(--white);
+      overflow: hidden;
+    }
+
+    .kontakt-hero__noise {
+      position: absolute;
+      inset: 0;
+      width: 1440px;
+      height: 967px;
+      background-image: url('figma-data/images-kontakt/noise-grain.png');
+      background-size: 675.84px 450.56px;
+      background-position: top left;
+      mix-blend-mode: soft-light;
+      opacity: 0.15;
+      pointer-events: none;
+    }
+
+    .kontakt-hero__headline {
+      position: absolute;
+      top: 142px;
+      left: 40px;
+      width: 920px;
+      font-family: var(--font-inter);
+      font-weight: 600;
+      font-size: 100px;
+      line-height: 0.9;
+      letter-spacing: -6px;
+      color: var(--text);
+    }
+
+    .kontakt-hero__headline .muted {
+      color: var(--text-muted);
+    }
+
+    /* Contact Section */
+    .contact-section {
+      width: 100%;
+      padding: 40px 40px 140px;
+      display: flex;
+      flex-direction: column;
+      gap: 60px;
+      overflow: hidden;
+    }
+
+    .contact-section__wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      width: 100%;
+    }
+
+    /* Left Column - Contact Info */
+    .contact-info {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+      flex-shrink: 0;
+    }
+
+    .contact-info__header {
+      display: flex;
+      flex-direction: column;
+      width: 495px;
+    }
+
+    .contact-info__header-inner {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    .contact-info__title {
+      font-family: var(--font-inter);
+      font-weight: 500;
+      font-size: 40px;
+      line-height: 1.1;
+      letter-spacing: -2.4px;
+      color: var(--text);
+    }
+
+    .contact-info__desc {
+      font-family: var(--font-inter);
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 1.5;
+      letter-spacing: -0.32px;
+      color: var(--text);
+      width: 495px;
+    }
+
+    .contact-info__details {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      width: 100%;
+    }
+
+    .contact-info__block {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .contact-info__label {
+      font-family: var(--font-inter);
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 1.2;
+      letter-spacing: -1.2px;
+      color: var(--dark);
+    }
+
+    .contact-info__value {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+      font-family: var(--font-inter);
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 1.5;
+      letter-spacing: -0.32px;
+      color: var(--text);
+    }
+
+    .contact-info__separator {
+      font-family: 'Helvetica Neue', sans-serif;
+      font-size: 14px;
+      color: rgba(80, 100, 68, 0.6);
+    }
+
+    .contact-info__divider {
+      width: 100%;
+      height: 1px;
+    }
+
+    .contact-info__divider img {
+      width: 100%;
+      height: 1px;
+    }
+
+    .contact-info__address {
+      font-family: var(--font-inter);
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 1.5;
+      letter-spacing: -0.32px;
+      color: var(--text);
+    }
+
+    .contact-info__logo {
+      width: 227px;
+      height: 63.373px;
+    }
+
+    .contact-info__logo img {
+      width: 100%;
+      height: 100%;
+    }
+
+    /* Right Column - Contact Form */
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: 48px;
+      width: 677px;
+      flex-shrink: 0;
+    }
+
+    .contact-form__fields {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      width: 100%;
+    }
+
+    .contact-form__row {
+      display: flex;
+      gap: 24px;
+      width: 100%;
+    }
+
+    .contact-form__field {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      flex: 1;
+      min-width: 0;
+    }
+
+    .contact-form__field--full {
+      width: 100%;
+    }
+
+    .contact-form__label {
+      font-family: var(--font-inter);
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 1;
+      letter-spacing: -0.64px;
+      color: var(--text);
+    }
+
+    .contact-form__input {
+      width: 100%;
+      padding: 16px;
+      border: 1px solid rgba(43, 46, 49, 0.2);
+      border-radius: 5px;
+      background: transparent;
+      font-family: var(--font-inter);
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 1.5;
+      letter-spacing: -0.8px;
+      color: var(--text);
+      outline: none;
+      transition: border-color 0.2s ease;
+    }
+
+    .contact-form__input::placeholder {
+      color: rgba(43, 46, 49, 0.2);
+    }
+
+    .contact-form__input:focus {
+      border-color: var(--accent);
+    }
+
+    .contact-form__textarea {
+      height: 180px;
+      resize: none;
+    }
+
+    .contact-form__message-field {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      width: 100%;
+    }
+
+    .contact-form__submit {
+      display: inline-flex;
+      align-items: center;
+      background: var(--accent);
+      padding: 14px 40px;
+      border: none;
+      cursor: pointer;
+      transition: background 0.2s ease;
+      width: max-content;
+    }
+
+    .contact-form__submit:hover {
+      background: color-mix(in oklab, var(--accent), black 10%);
+    }
+
+    .contact-form__submit span {
+      font-family: var(--font-inter);
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 1.4;
+      letter-spacing: -0.64px;
+      color: var(--white);
+      white-space: nowrap;
+    }
+
+    /* Section Divider */
+    .section-divider {
+      width: 100%;
+      height: 1px;
+    }
+
+    .section-divider img {
+      width: 100%;
+      height: 1px;
+    }
+
+    /* CTA Section - Kontakt specific */
+    .kontakt-cta {
+      width: 100%;
+      height: 800px;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-end;
+      padding: 40px;
+      overflow: hidden;
+    }
+
+    .kontakt-cta__bg {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+    }
+
+    .kontakt-cta__bg-primary {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .kontakt-cta__bg-secondary {
+      position: absolute;
+      top: -10%;
+      left: 100%;
+      width: -100%;
+      height: 120%;
+      object-fit: cover;
+    }
+
+    .kontakt-cta__box {
+      background: var(--white);
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+      padding: 60px;
+      width: 670px;
+      position: relative;
+      z-index: 2;
+      overflow: hidden;
+    }
+
+    .kontakt-cta__headline {
+      font-family: var(--font-inter);
+      font-weight: 500;
+      font-size: 60px;
+      line-height: 1.1;
+      letter-spacing: -2.4px;
+      color: var(--text);
+    }
+
+    .kontakt-cta__headline .muted {
+      color: var(--text-muted);
+    }
+
+    .kontakt-cta__divider {
+      width: 100%;
+      height: 1px;
+    }
+
+    .kontakt-cta__divider img {
+      width: 100%;
+      height: 1px;
+    }
+
+    .kontakt-cta__content {
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+    }
+
+    .kontakt-cta__desc {
+      font-family: var(--font-inter);
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 1.5;
+      letter-spacing: -0.32px;
+      color: var(--text);
+      width: 470px;
+    }
+
+    /* ==========================================================================
+       Responsive - Tablet (1024px)
+       ========================================================================== */
+    @media (max-width: 1024px) {
+      .kontakt-hero {
+        height: auto;
+        min-height: 300px;
+        padding: 100px 24px 40px;
+      }
+
+      .kontakt-hero__headline {
+        position: relative;
+        top: auto;
+        left: auto;
+        width: 100%;
+        font-size: 64px;
+        letter-spacing: -3.84px;
+      }
+
+      .contact-section {
+        padding: 40px 24px 100px;
+      }
+
+      .contact-section__wrapper {
+        flex-direction: column;
+        gap: 60px;
+      }
+
+      .contact-info__header {
+        width: 100%;
+      }
+
+      .contact-info__desc {
+        width: 100%;
+      }
+
+      .contact-form {
+        width: 100%;
+      }
+
+      .kontakt-cta {
+        padding: 24px;
+      }
+
+      .kontakt-cta__box {
+        width: 100%;
+        max-width: 670px;
+        padding: 40px;
+      }
+
+      .kontakt-cta__headline {
+        font-size: 48px;
+        letter-spacing: -1.92px;
+      }
+
+      .kontakt-cta__desc {
+        width: 100%;
+      }
+    }
+
+    /* ==========================================================================
+       Responsive - Mobile (767px)
+       ========================================================================== */
+    @media (max-width: 767px) {
+      .kontakt-hero {
+        height: auto;
+        min-height: 200px;
+        padding: 80px 20px 32px;
+      }
+
+      .kontakt-hero__noise {
+        width: 100%;
+        background-size: 300px 200px;
+      }
+
+      .kontakt-hero__headline {
+        font-size: 40px;
+        letter-spacing: -2.4px;
+        line-height: 1;
+      }
+
+      .contact-section {
+        padding: 32px 20px 80px;
+        gap: 40px;
+      }
+
+      .contact-section__wrapper {
+        flex-direction: column;
+        gap: 40px;
+      }
+
+      .contact-info {
+        gap: 32px;
+      }
+
+      .contact-info__title {
+        font-size: 28px;
+        letter-spacing: -1.68px;
+      }
+
+      .contact-info__desc {
+        font-size: 14px;
+        letter-spacing: -0.28px;
+      }
+
+      .contact-info__label {
+        font-size: 16px;
+        letter-spacing: -0.64px;
+      }
+
+      .contact-info__value {
+        font-size: 14px;
+        letter-spacing: -0.28px;
+        flex-wrap: wrap;
+      }
+
+      .contact-info__address {
+        font-size: 14px;
+        letter-spacing: -0.28px;
+      }
+
+      .contact-info__logo {
+        width: 180px;
+        height: auto;
+      }
+
+      .contact-form {
+        gap: 32px;
+      }
+
+      .contact-form__row {
+        flex-direction: column;
+        gap: 24px;
+      }
+
+      .contact-form__label {
+        font-size: 14px;
+        letter-spacing: -0.56px;
+      }
+
+      .contact-form__input {
+        font-size: 16px;
+        letter-spacing: -0.64px;
+        padding: 14px;
+      }
+
+      .contact-form__textarea {
+        height: 140px;
+      }
+
+      .contact-form__submit {
+        width: 100%;
+        justify-content: center;
+        padding: 14px 24px;
+      }
+
+      .kontakt-cta {
+        height: auto;
+        min-height: 600px;
+        padding: 20px;
+      }
+
+      .kontakt-cta__box {
+        width: 100%;
+        padding: 24px;
+        gap: 24px;
+      }
+
+      .kontakt-cta__headline {
+        font-size: 32px;
+        letter-spacing: -1.28px;
+      }
+
+      .kontakt-cta__desc {
+        font-size: 14px;
+        letter-spacing: -0.28px;
+      }
+
+      .kontakt-cta__content {
+        gap: 24px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Floating Navbar -->
+  <nav class="site-nav site-nav--light">
+    <a href="index.html" class="site-nav__logo">
+      <img src="figma-data/images/enex-logo-slogan.svg" alt="ENEX Logo" class="site-nav__logo-desktop">
+      <img src="figma-data/images-mobile/enex-logo-slogan-mobile.svg" alt="ENEX Logo" class="site-nav__logo-mobile">
+    </a>
+    <div class="site-nav__menu">
+      <a href="index.html">Home</a>
+      <a href="leistungen.html">Leistungen</a>
+      <a href="referenzen.html">Referenzen</a>
+      <a href="uber-uns.html">Über uns</a>
+    </div>
+    <button class="site-nav__toggle" aria-label="Menu öffnen">
+      <img src="figma-data/images-mobile/menu-hamburger.svg" alt="Menu">
+    </button>
+  </nav>
+
+  <!-- Mobile Menu Drawer -->
+  <div class="mobile-menu">
+    <div class="mobile-menu__overlay"></div>
+    <div class="mobile-menu__drawer">
+      <button class="mobile-menu__close" aria-label="Menu schließen">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+          <path d="M18 6L6 18M6 6l12 12" stroke="#2b2e31" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </button>
+      <nav class="mobile-menu__nav">
+        <a href="index.html">Home</a>
+        <a href="leistungen.html">Leistungen</a>
+        <a href="referenzen.html">Referenzen</a>
+        <a href="uber-uns.html">Über uns</a>
+        <a href="kontakt.html">Kontakt</a>
+      </nav>
+      <a href="kontakt.html" class="mobile-menu__contact">Jetzt kontaktieren</a>
+    </div>
+  </div>
+
+  <!-- Floating Contact Button -->
+  <a href="kontakt.html" class="floating-contact">
+    <div class="floating-contact__inner">
+      <span>Jetzt kontaktieren</span>
+    </div>
+  </a>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="kontakt-hero">
+      <div class="kontakt-hero__noise"></div>
+      <h1 class="kontakt-hero__headline">
+        Wir freuen uns auf Ihre <span class="muted">Anfrage</span>
+      </h1>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+      <div class="contact-section__wrapper">
+        <!-- Left Column - Contact Info -->
+        <div class="contact-info">
+          <div class="contact-info__header">
+            <div class="contact-info__header-inner">
+              <h2 class="contact-info__title">Kontaktaufnahme</h2>
+              <p class="contact-info__desc">
+                Haben Sie Fragen oder möchten einen Termin vereinbaren?<br>
+                Kontaktieren Sie uns gerne via E-Mail, Telefon oder unser Kontaktformular.
+              </p>
+            </div>
+          </div>
+
+          <div class="contact-info__details">
+            <div class="contact-info__block">
+              <p class="contact-info__label">Kontakt</p>
+              <div class="contact-info__value">
+                <span>+49 228 55525988</span>
+                <span class="contact-info__separator">|</span>
+                <span>info@enex-bonn.de</span>
+              </div>
+            </div>
+
+            <div class="contact-info__divider">
+              <img src="figma-data/images-kontakt/divider-line.svg" alt="">
+            </div>
+
+            <div class="contact-info__block">
+              <p class="contact-info__label">Adresse</p>
+              <p class="contact-info__address">
+                Am Weidenbach 40<br>
+                53229 Bonn<br>
+                Deutschland
+              </p>
+            </div>
+          </div>
+
+          <div class="contact-info__logo">
+            <img src="figma-data/images-kontakt/enex-logo-slogan-contact.svg" alt="ENEX Logo">
+          </div>
+        </div>
+
+        <!-- Right Column - Contact Form -->
+        <form class="contact-form">
+          <div class="contact-form__fields">
+            <!-- Row 1: Vorname + Nachname -->
+            <div class="contact-form__row">
+              <div class="contact-form__field">
+                <label class="contact-form__label">Vorname*</label>
+                <input type="text" class="contact-form__input" placeholder="Max" required>
+              </div>
+              <div class="contact-form__field">
+                <label class="contact-form__label">Nachname*</label>
+                <input type="text" class="contact-form__input" placeholder="Mustermann" required>
+              </div>
+            </div>
+
+            <!-- E-Mail -->
+            <div class="contact-form__field contact-form__field--full">
+              <label class="contact-form__label">E-Mail*</label>
+              <input type="email" class="contact-form__input" placeholder="Mustermann123@gmail.com" required>
+            </div>
+
+            <!-- Adresse -->
+            <div class="contact-form__field contact-form__field--full">
+              <label class="contact-form__label">Adresse</label>
+              <input type="text" class="contact-form__input" placeholder="Musterstraße 123">
+            </div>
+
+            <!-- Postcode -->
+            <div class="contact-form__field contact-form__field--full">
+              <label class="contact-form__label">Postcode*</label>
+              <input type="text" class="contact-form__input" placeholder="53229" required>
+            </div>
+
+            <!-- Telefon -->
+            <div class="contact-form__field contact-form__field--full">
+              <label class="contact-form__label">Telefon</label>
+              <input type="tel" class="contact-form__input" placeholder="+49 1590 3425242">
+            </div>
+
+            <!-- Unternehmen -->
+            <div class="contact-form__field contact-form__field--full">
+              <label class="contact-form__label">Unternehmen</label>
+              <input type="text" class="contact-form__input" placeholder="Max Mustermann GmbH">
+            </div>
+
+            <!-- Nachricht -->
+            <div class="contact-form__message-field">
+              <label class="contact-form__label">Nachricht</label>
+              <textarea class="contact-form__input contact-form__textarea" placeholder="Was sollten wir wissen"></textarea>
+            </div>
+          </div>
+
+          <button type="submit" class="contact-form__submit">
+            <span>Absenden</span>
+          </button>
+        </form>
+      </div>
+
+      <div class="section-divider">
+        <img src="figma-data/images-kontakt/line5.svg" alt="">
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="kontakt-cta">
+      <div class="kontakt-cta__bg">
+        <img src="figma-data/images-kontakt/frame39549.png" alt="" class="kontakt-cta__bg-primary">
+      </div>
+
+      <div class="kontakt-cta__box">
+        <h2 class="kontakt-cta__headline">
+          Bereit für Ihr <span class="muted">Projekt </span>
+        </h2>
+
+        <div class="kontakt-cta__divider">
+          <img src="figma-data/images-kontakt/line4.svg" alt="">
+        </div>
+
+        <div class="kontakt-cta__content">
+          <p class="kontakt-cta__desc">
+            Ob Neuinstallation, Sanierung oder Ladeinfrastruktur – wir beraten Sie persönlich und finden die passende Lösung.
+          </p>
+
+          <a href="kontakt.html" class="btn-primary">
+            <span>Jetzt Kontaktieren</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer__top">
+        <div class="footer__brand">
+          <div class="footer__logo">
+            <img src="figma-data/images-kontakt/enex-logo-footer.svg" alt="ENEX Logo">
+          </div>
+          <p class="footer__desc footer__desc--dm">
+            Ob Elektroinstallation, Ladeinfrastruktur oder individuelle Lösungen – wir beraten Sie persönlich und finden die passende Lösung für Ihr Projekt.
+          </p>
+        </div>
+
+        <div class="footer__links">
+          <div class="footer__column">
+            <p class="footer__column-title footer__column-title--dm">Navigation</p>
+            <div class="footer__column-links footer__column-links--dm">
+              <a href="index.html">Home</a>
+              <a href="uber-uns.html">Über uns</a>
+              <a href="leistungen.html">Leistungen</a>
+              <a href="referenzen.html">Referenzen</a>
+              <a href="kontakt.html">Kontakt</a>
+            </div>
+          </div>
+
+          <div class="footer__column">
+            <p class="footer__column-title footer__column-title--dm">Legal</p>
+            <div class="footer__column-links footer__column-links--dm">
+              <a href="impressum.html">Impressum</a>
+              <a href="#">Datenschutz</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer__divider">
+        <img src="figma-data/images-kontakt/line6.svg" alt="">
+      </div>
+
+      <div class="footer__bottom">
+        <p class="footer__copyright footer__copyright--dm">Copyright Enex Bonn © 2026. All Right Reserved</p>
+        <p class="footer__credit footer__credit--dm">Made by INSYNC</p>
+      </div>
+    </footer>
+  </main>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,1009 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Referenzen - ENEX Bonn</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Inter:wght@400;500;600&family=Space+Mono&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    /* Referenzen Page Specific Styles */
+
+    /* Hero Section */
+    .referenzen-hero {
+      position: relative;
+      width: 100%;
+      background: var(--white);
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      padding: 160px 40px 40px;
+      overflow: hidden;
+    }
+
+    .referenzen-hero__content {
+      display: flex;
+      flex-direction: column;
+      gap: 160px;
+      width: 100%;
+      max-width: 1360px;
+    }
+
+    .referenzen-hero__title {
+      font-family: var(--font-inter);
+      font-weight: 600;
+      font-size: 110px;
+      line-height: 0.9;
+      letter-spacing: -6.6px;
+      color: var(--text);
+      margin: 0;
+      max-width: 1022px;
+    }
+
+    .referenzen-hero__title span {
+      color: var(--text-muted);
+    }
+
+    .referenzen-hero__bottom {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      width: 100%;
+    }
+
+    .referenzen-hero__subtitle {
+      font-family: var(--font-inter);
+      font-weight: 500;
+      font-size: 28px;
+      line-height: 1.2;
+      letter-spacing: -1.68px;
+      color: var(--text);
+      margin: 0;
+      max-width: 561px;
+    }
+
+    .referenzen-hero__link {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      text-decoration: none;
+    }
+
+    .referenzen-hero__link span {
+      font-family: var(--font-inter);
+      font-weight: 500;
+      font-size: 24px;
+      line-height: 1.4;
+      letter-spacing: -0.96px;
+      color: var(--text);
+    }
+
+    .referenzen-hero__link-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 100px;
+      background: var(--accent);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .referenzen-hero__link-icon svg {
+      width: 24px;
+      height: 24px;
+    }
+
+    /* Image Showcase */
+    .referenzen-showcase {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 1440 / 688;
+      overflow: hidden;
+    }
+
+    .referenzen-showcase img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* Intro Section */
+    .referenzen-intro {
+      background: #fafafa;
+      padding: 80px 40px;
+      overflow: hidden;
+    }
+
+    .referenzen-intro__inner {
+      display: flex;
+      flex-direction: column;
+      gap: 200px;
+      max-width: 1360px;
+    }
+
+    .referenzen-intro__content {
+      display: flex;
+      flex-direction: column;
+      gap: 60px;
+      position: relative;
+    }
+
+    .referenzen-intro__text {
+      font-family: var(--font-inter);
+      font-weight: 500;
+      font-size: 50px;
+      line-height: 1.2;
+      letter-spacing: -3px;
+      color: var(--text);
+      margin: 0;
+      position: relative;
+    }
+
+    .referenzen-intro__image-inline {
+      position: absolute;
+      width: 175px;
+      height: 76px;
+      border-radius: 100px;
+      overflow: hidden;
+      left: 306px;
+      top: 69px;
+    }
+
+    .referenzen-intro__image-inline img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .referenzen-intro__icon {
+      position: absolute;
+      width: 64px;
+      height: 64px;
+      border-radius: 100px;
+      background: var(--accent);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      left: 228px;
+      top: 256px;
+    }
+
+    .referenzen-intro__icon img {
+      width: 32px;
+      height: 32px;
+    }
+
+    .referenzen-intro__cta {
+      position: absolute;
+      left: 688px;
+      top: 321px;
+      padding: 10px 24px;
+      border-radius: 100px;
+      background: var(--accent);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      height: 56px;
+    }
+
+    .referenzen-intro__cta span {
+      font-family: var(--font-dm);
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 1.5;
+      letter-spacing: -0.8px;
+      color: var(--white);
+      white-space: nowrap;
+    }
+
+    /* Stats Row */
+    .referenzen-stats {
+      display: flex;
+      gap: 20px;
+      width: 100%;
+    }
+
+    .referenzen-stat {
+      flex: 1;
+      background: var(--white);
+      padding: 48px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .referenzen-stat__label {
+      font-family: var(--font-inter);
+      font-weight: 500;
+      font-size: 24px;
+      line-height: 1.2;
+      letter-spacing: -0.96px;
+      color: var(--text);
+      margin: 0;
+    }
+
+    .referenzen-stat__value {
+      font-family: var(--font-inter);
+      font-weight: 600;
+      font-size: 64px;
+      line-height: 1;
+      letter-spacing: -3.84px;
+      color: var(--text);
+      margin: 0;
+    }
+
+    .referenzen-stat__value span {
+      color: var(--accent);
+    }
+
+    /* Projects Section */
+    .referenzen-projects {
+      background: var(--white);
+      padding: 100px 40px;
+      overflow: hidden;
+    }
+
+    .referenzen-projects__inner {
+      max-width: 1360px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 80px;
+      align-items: center;
+    }
+
+    .referenzen-projects__header {
+      display: flex;
+      flex-direction: column;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .referenzen-projects__title {
+      font-family: var(--font-inter);
+      font-weight: 500;
+      font-size: 80px;
+      line-height: 1.1;
+      letter-spacing: -4.8px;
+      color: var(--text);
+      text-align: center;
+      margin: 0;
+    }
+
+    .referenzen-projects__title span {
+      color: var(--text-muted);
+    }
+
+    /* Projects Gallery */
+    .referenzen-gallery {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+      align-items: center;
+      width: 100%;
+    }
+
+    .referenzen-gallery__row {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+      position: relative;
+      width: 100%;
+      overflow: hidden;
+    }
+
+    .referenzen-gallery__item {
+      flex-shrink: 0;
+      overflow: hidden;
+    }
+
+    .referenzen-gallery__item--small {
+      width: 310px;
+      height: 210px;
+    }
+
+    .referenzen-gallery__item--large {
+      width: 680px;
+      height: 460px;
+    }
+
+    .referenzen-gallery__item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .referenzen-gallery__nav {
+      position: absolute;
+      top: 208px;
+      width: 44px;
+      height: 44px;
+      border-radius: 100px;
+      background: var(--accent);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      border: none;
+      z-index: 10;
+    }
+
+    .referenzen-gallery__nav--prev {
+      left: 300px;
+    }
+
+    .referenzen-gallery__nav--next {
+      right: 0;
+    }
+
+    .referenzen-gallery__nav svg {
+      width: 24px;
+      height: 24px;
+    }
+
+    /* Project Detail */
+    .referenzen-detail {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      align-items: center;
+      text-align: center;
+    }
+
+    .referenzen-detail__category {
+      font-family: var(--font-inter);
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 1.2;
+      letter-spacing: -0.8px;
+      color: var(--accent);
+    }
+
+    .referenzen-detail__title {
+      font-family: var(--font-inter);
+      font-weight: 500;
+      font-size: 40px;
+      line-height: 1.1;
+      letter-spacing: -2.4px;
+      color: var(--text);
+      margin: 0;
+    }
+
+    .referenzen-detail__divider {
+      width: 100%;
+      height: 1px;
+      background: var(--border);
+    }
+
+    .referenzen-detail__desc {
+      font-family: var(--font-inter);
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 1.5;
+      letter-spacing: -0.32px;
+      color: var(--text);
+      margin: 0;
+      max-width: 600px;
+    }
+
+    .referenzen-detail__cta {
+      padding: 14px 24px;
+      background: var(--accent);
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+    }
+
+    .referenzen-detail__cta span {
+      font-family: var(--font-dm);
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 1.4;
+      letter-spacing: -0.48px;
+      color: var(--white);
+      white-space: nowrap;
+    }
+
+    /* CTA Section */
+    .referenzen-cta {
+      position: relative;
+      width: 100%;
+      height: 800px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 40px;
+      overflow: hidden;
+    }
+
+    .referenzen-cta__bg {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+    }
+
+    .referenzen-cta__bg img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .referenzen-cta__card {
+      position: relative;
+      z-index: 1;
+      background: var(--white);
+      padding: 60px;
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+      width: 670px;
+    }
+
+    .referenzen-cta__title {
+      font-family: var(--font-inter);
+      font-weight: 500;
+      font-size: 60px;
+      line-height: 1.1;
+      letter-spacing: -2.4px;
+      color: var(--text);
+      margin: 0;
+    }
+
+    .referenzen-cta__title span {
+      color: var(--text-muted);
+    }
+
+    .referenzen-cta__divider {
+      width: 100%;
+      height: 1px;
+      background: var(--border);
+    }
+
+    .referenzen-cta__content {
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+    }
+
+    .referenzen-cta__desc {
+      font-family: var(--font-inter);
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 1.5;
+      letter-spacing: -0.32px;
+      color: var(--text);
+      margin: 0;
+      max-width: 470px;
+    }
+
+    .referenzen-cta__btn {
+      padding: 14px 24px;
+      background: var(--accent);
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      align-self: flex-start;
+    }
+
+    .referenzen-cta__btn span {
+      font-family: var(--font-inter);
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 1.4;
+      letter-spacing: -0.32px;
+      color: var(--white);
+      white-space: nowrap;
+    }
+
+    /* Footer */
+    .referenzen-footer {
+      background: var(--white);
+      padding: 80px 40px 40px;
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+    }
+
+    .referenzen-footer__top {
+      display: flex;
+      justify-content: space-between;
+      max-width: 1360px;
+    }
+
+    .referenzen-footer__brand {
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+    }
+
+    .referenzen-footer__logo {
+      width: 143px;
+      height: 40px;
+    }
+
+    .referenzen-footer__logo img {
+      width: 100%;
+      height: 100%;
+    }
+
+    .referenzen-footer__brand-text {
+      font-family: var(--font-dm);
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 1.5;
+      letter-spacing: -0.36px;
+      color: var(--text);
+      margin: 0;
+      max-width: 470px;
+    }
+
+    .referenzen-footer__links {
+      display: flex;
+      width: 502px;
+    }
+
+    .referenzen-footer__col {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    .referenzen-footer__col-title {
+      font-family: var(--font-dm);
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 1.5;
+      letter-spacing: -0.28px;
+      color: var(--text-muted);
+      margin: 0;
+    }
+
+    .referenzen-footer__col-links {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .referenzen-footer__col-links a {
+      font-family: var(--font-dm);
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 1.5;
+      letter-spacing: -0.32px;
+      color: var(--text);
+      text-decoration: none;
+    }
+
+    .referenzen-footer__divider {
+      width: 100%;
+      height: 1px;
+      background: var(--border);
+    }
+
+    .referenzen-footer__bottom {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .referenzen-footer__copyright,
+    .referenzen-footer__credit {
+      font-family: var(--font-dm);
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 1.5;
+      letter-spacing: -0.28px;
+      color: var(--text-muted);
+      margin: 0;
+    }
+
+    /* Responsive */
+    @media (max-width: 1024px) {
+      .referenzen-hero {
+        padding: 120px 24px 40px;
+      }
+
+      .referenzen-hero__content {
+        gap: 80px;
+      }
+
+      .referenzen-hero__title {
+        font-size: 64px;
+        letter-spacing: -3px;
+      }
+
+      .referenzen-hero__subtitle {
+        font-size: 20px;
+        letter-spacing: -0.8px;
+      }
+
+      .referenzen-intro {
+        padding: 60px 24px;
+      }
+
+      .referenzen-intro__inner {
+        gap: 100px;
+      }
+
+      .referenzen-intro__text {
+        font-size: 32px;
+        letter-spacing: -1.5px;
+      }
+
+      .referenzen-intro__image-inline,
+      .referenzen-intro__icon,
+      .referenzen-intro__cta {
+        display: none;
+      }
+
+      .referenzen-stats {
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      .referenzen-stat__label {
+        font-size: 18px;
+      }
+
+      .referenzen-stat__value {
+        font-size: 48px;
+      }
+
+      .referenzen-projects {
+        padding: 60px 24px;
+      }
+
+      .referenzen-projects__title {
+        font-size: 48px;
+        letter-spacing: -2px;
+      }
+
+      .referenzen-gallery__row {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .referenzen-gallery__item--small {
+        width: calc(50% - 10px);
+        height: 160px;
+      }
+
+      .referenzen-gallery__item--large {
+        width: 100%;
+        height: 300px;
+      }
+
+      .referenzen-gallery__nav {
+        display: none;
+      }
+
+      .referenzen-detail__title {
+        font-size: 28px;
+        letter-spacing: -1px;
+      }
+
+      .referenzen-cta {
+        height: auto;
+        min-height: 500px;
+      }
+
+      .referenzen-cta__card {
+        width: 100%;
+        padding: 32px;
+      }
+
+      .referenzen-cta__title {
+        font-size: 36px;
+        letter-spacing: -1.5px;
+      }
+
+      .referenzen-footer__top {
+        flex-direction: column;
+        gap: 40px;
+      }
+
+      .referenzen-footer__links {
+        width: 100%;
+      }
+    }
+
+    @media (max-width: 767px) {
+      .referenzen-hero__title {
+        font-size: 40px;
+        letter-spacing: -2px;
+      }
+
+      .referenzen-hero__subtitle {
+        font-size: 16px;
+      }
+
+      .referenzen-hero__bottom {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 32px;
+      }
+
+      .referenzen-hero__link span {
+        font-size: 18px;
+      }
+
+      .referenzen-intro__text {
+        font-size: 24px;
+        letter-spacing: -1px;
+      }
+
+      .referenzen-stat__label {
+        font-size: 16px;
+      }
+
+      .referenzen-stat__value {
+        font-size: 36px;
+      }
+
+      .referenzen-projects__title {
+        font-size: 32px;
+        letter-spacing: -1.5px;
+      }
+
+      .referenzen-gallery__item--small {
+        width: 100%;
+      }
+
+      .referenzen-detail__title {
+        font-size: 24px;
+      }
+
+      .referenzen-cta__title {
+        font-size: 28px;
+        letter-spacing: -1px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Floating Contact Button -->
+  <a href="kontakt.html" class="floating-contact">
+    <div class="floating-contact__inner">
+      <span>Jetzt kontaktieren</span>
+    </div>
+  </a>
+
+  <!-- Main Navigation -->
+  <nav class="site-nav" role="navigation" aria-label="Main navigation">
+    <a href="index.html" class="site-nav__logo">
+      <img src="figma-data/images/enex-logo-slogan.svg" alt="ENEX Bonn" class="site-nav__logo-desktop">
+      <img src="figma-data/images-mobile/enex-logo-slogan-mobile.svg" alt="ENEX Bonn" class="site-nav__logo-mobile">
+    </a>
+    <div class="site-nav__menu">
+      <a href="index.html">Home</a>
+      <a href="leistungen.html">Leistungen</a>
+      <a href="referenzen.html" style="color: var(--white);">Referenzen</a>
+      <a href="uber-uns.html">Über uns</a>
+    </div>
+    <button class="site-nav__toggle" aria-expanded="false" aria-label="Menü öffnen">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+        <line x1="3" y1="6" x2="21" y2="6" stroke="white" stroke-width="2" stroke-linecap="round"/>
+        <line x1="3" y1="12" x2="21" y2="12" stroke="white" stroke-width="2" stroke-linecap="round"/>
+        <line x1="3" y1="18" x2="21" y2="18" stroke="white" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+    </button>
+  </nav>
+
+  <!-- Mobile Menu Drawer -->
+  <div class="mobile-menu" aria-hidden="true">
+    <div class="mobile-menu__overlay"></div>
+    <div class="mobile-menu__drawer">
+      <button class="mobile-menu__close" aria-label="Menü schließen">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+          <line x1="6" y1="6" x2="18" y2="18" stroke="#2b2e31" stroke-width="2" stroke-linecap="round"/>
+          <line x1="18" y1="6" x2="6" y2="18" stroke="#2b2e31" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </button>
+      <nav class="mobile-menu__nav">
+        <a href="index.html">Home</a>
+        <a href="leistungen.html">Leistungen</a>
+        <a href="referenzen.html">Referenzen</a>
+        <a href="uber-uns.html">Über uns</a>
+      </nav>
+      <a href="kontakt.html" class="mobile-menu__contact">Jetzt Kontaktieren</a>
+    </div>
+  </div>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="referenzen-hero" data-od-id="referenzen-hero">
+      <div class="referenzen-hero__content">
+        <h1 class="referenzen-hero__title">
+          Unsere<span> Projekte</span>
+        </h1>
+        <div class="referenzen-hero__bottom">
+          <p class="referenzen-hero__subtitle">
+            Ein Auszug aus Projekten, die wir für private, gewerbliche und industrielle Kunden in der Region Bonn umgesetzt haben.
+          </p>
+          <a href="#projekte" class="referenzen-hero__link">
+            <span>Mehr erfahren</span>
+            <div class="referenzen-hero__link-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M12 5L12 19" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M19 12L12 19L5 12" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Image Showcase -->
+    <section class="referenzen-showcase" data-od-id="referenzen-showcase">
+      <img src="figma-data/images-referenzen/image-showcase.png" alt="ENEX Projekte Showcase">
+    </section>
+
+    <!-- Intro Section -->
+    <section class="referenzen-intro" data-od-id="referenzen-intro">
+      <div class="referenzen-intro__inner">
+        <div class="referenzen-intro__content">
+          <div class="tag">
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+              <circle cx="6" cy="6" r="5" stroke="#030303" stroke-width="1.5"/>
+              <circle cx="6" cy="6" r="2" fill="#030303"/>
+            </svg>
+            <span>Intro</span>
+          </div>
+          <p class="referenzen-intro__text">
+            Jedes Projekt birgt einzigartige Herausforderungen und Anforderungen. Durch sorgfältige Planung, technische Expertise und akribische Ausführung bieten wir elektrische Lösungen die den heutigen Bedürfnissen entsprechen und gleichzeitig Zukunftssicher sind.
+          </p>
+          <div class="referenzen-intro__image-inline">
+            <img src="figma-data/images-referenzen/frame-39601.png" alt="Projekt">
+          </div>
+          <div class="referenzen-intro__icon">
+            <img src="figma-data/images-referenzen/fi-icon.svg" alt="Icon">
+          </div>
+          <a href="#projekte" class="referenzen-intro__cta">
+            <span>Referenzen ansehen</span>
+          </a>
+        </div>
+
+        <!-- Stats Row -->
+        <div class="referenzen-stats">
+          <div class="referenzen-stat">
+            <p class="referenzen-stat__label">Abgeschlossene<br>Projekte</p>
+            <p class="referenzen-stat__value">340<span>+</span></p>
+          </div>
+          <div class="referenzen-stat">
+            <p class="referenzen-stat__label">Engagement für<br>Zuverlässigkeit</p>
+            <p class="referenzen-stat__value">24<span>/7</span></p>
+          </div>
+          <div class="referenzen-stat">
+            <p class="referenzen-stat__label">Jahre Erfahrung<br>gesammelt</p>
+            <p class="referenzen-stat__value">15<span>+</span></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="referenzen-projects" id="projekte" data-od-id="referenzen-projects">
+      <div class="referenzen-projects__inner">
+        <div class="referenzen-projects__header">
+          <div class="tag">
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+              <circle cx="6" cy="6" r="5" stroke="#030303" stroke-width="1.5"/>
+              <circle cx="6" cy="6" r="2" fill="#030303"/>
+            </svg>
+            <span>Projekte</span>
+          </div>
+          <h2 class="referenzen-projects__title">
+            Ein Auszug unserer <span>Projekte</span>
+          </h2>
+        </div>
+
+        <!-- Projects Gallery -->
+        <div class="referenzen-gallery">
+          <div class="referenzen-gallery__row">
+            <div class="referenzen-gallery__item referenzen-gallery__item--small">
+              <img src="figma-data/images-referenzen/image-28.png" alt="Projekt">
+            </div>
+            <div class="referenzen-gallery__item referenzen-gallery__item--small">
+              <img src="figma-data/images-referenzen/image-16.png" alt="Projekt">
+            </div>
+            <div class="referenzen-gallery__item referenzen-gallery__item--large">
+              <img src="figma-data/images-referenzen/image-14.png" alt="Projekt">
+            </div>
+            <div class="referenzen-gallery__item referenzen-gallery__item--small">
+              <img src="figma-data/images-referenzen/image-15.png" alt="Projekt">
+            </div>
+            <button class="referenzen-gallery__nav referenzen-gallery__nav--prev" aria-label="Previous">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M15 18L9 12L15 6" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+            <button class="referenzen-gallery__nav referenzen-gallery__nav--next" aria-label="Next">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M9 18L15 12L9 6" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+          </div>
+
+          <!-- Project Detail -->
+          <div class="referenzen-detail">
+            <p class="referenzen-detail__category">Ladetechnik</p>
+            <h3 class="referenzen-detail__title">Wallbox-Installation für ein Privathaus in Bonn</h3>
+            <div class="referenzen-detail__divider"></div>
+            <p class="referenzen-detail__desc">
+              Wir haben Zählerkasten und Leitungskapazität geprüft, die richtige Wallbox empfohlen, alles normgerecht installiert und am Ende eine vollständige Systemprüfung durchgeführt.
+            </p>
+            <a href="kontakt.html" class="referenzen-detail__cta">
+              <span>Jetzt Kontaktieren</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="referenzen-cta" data-od-id="referenzen-cta">
+      <div class="referenzen-cta__bg">
+        <img src="figma-data/images-referenzen/frame-39549.png" alt="Background">
+      </div>
+      <div class="referenzen-cta__card">
+        <h2 class="referenzen-cta__title">
+          Bereit für Ihr <span>Projekt </span>
+        </h2>
+        <div class="referenzen-cta__divider"></div>
+        <div class="referenzen-cta__content">
+          <p class="referenzen-cta__desc">
+            Ob Neuinstallation, Sanierung oder Ladeinfrastruktur – wir beraten Sie persönlich und finden die passende Lösung.
+          </p>
+          <a href="kontakt.html" class="referenzen-cta__btn">
+            <span>Jetzt Kontaktieren</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="referenzen-footer" data-od-id="referenzen-footer">
+      <div class="referenzen-footer__top">
+        <div class="referenzen-footer__brand">
+          <a href="index.html" class="referenzen-footer__logo">
+            <img src="figma-data/images-referenzen/enex-logo.svg" alt="ENEX">
+          </a>
+          <p class="referenzen-footer__brand-text">
+            Ob Elektroinstallation, Ladeinfrastruktur oder individuelle Lösungen – wir beraten Sie persönlich und finden die passende Lösung für Ihr Projekt.
+          </p>
+        </div>
+        <div class="referenzen-footer__links">
+          <div class="referenzen-footer__col">
+            <p class="referenzen-footer__col-title">Navigation</p>
+            <div class="referenzen-footer__col-links">
+              <a href="index.html">Home</a>
+              <a href="uber-uns.html">Über uns</a>
+              <a href="leistungen.html">Leistungen</a>
+              <a href="referenzen.html">Referenzen</a>
+              <a href="kontakt.html">Kontakt</a>
+            </div>
+          </div>
+          <div class="referenzen-footer__col">
+            <p class="referenzen-footer__col-title">Legal</p>
+            <div class="referenzen-footer__col-links">
+              <a href="impressum.html">Impressum</a>
+              <a href="#">Datenschutz</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="referenzen-footer__divider"></div>
+      <div class="referenzen-footer__bottom">
+        <p class="referenzen-footer__copyright">Copyright Enex Bonn © 2026. All Right Reserved</p>
+        <p class="referenzen-footer__credit">Made by INSYNC</p>
+      </div>
+    </footer>
+  </main>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
